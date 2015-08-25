@@ -124,6 +124,12 @@ en:
       phone_number_label: "Phone number"
       organization_name_label: "Organization name"
       notifications: Notifications
+      delete_account: Delete my account
+      delete_account_title: "Do you want to delete definitely your account?"
+      delete_account_alert: "If you delete your account you can not login to the site and your user account will be completely removed."
+      delete_account_reason: "Why you want to delete your account..."
+      delete_account_cancel: Keep using my account
+      delete_account_delete: Delete my account
   simple_captcha:
     placeholder: "Enter the image value"
     label: "Enter the code in the box"

@@ -46,6 +46,31 @@
         </div>
       </div>
     <% end %>
-
   </div>
+
+  <!-- Delete user account -->
+  <div class="small-12 column">
+    <div class="row">
+      <div class="small-12 column">
+      <%= link_to t("account.show.delete_account"), "#", class: "delete" %>
+      </div>
+    </div>
+
+    <!-- This block only appears when the user clics on 'Delete my account' link -->
+    <div class="row">
+      <div class="small-12 medium-6 column">
+        <div class="alert-box radius alert margin-top">
+          <strong><%= t("account.show.delete_account_alert") %></strong>
+        </div>
+        <form>
+          <label><%= t('account.show.delete_account_title')%></label>
+          <textarea placeholder="<%= t('account.show.delete_account_reason')%>"></textarea>
+          <a href="#" class="button radius tiny success"><%= t("account.show.delete_account_cancel") %></a>
+          <a href="#" class="button radius tiny alert"><%= t("account.show.delete_account_delete") %></a>
+        </form>
+      </div>
+    </div>
+    <!-- /. This block only appears when the user clics on 'Delete my account' link -->
+  </div>
+  <!-- /. Delete user account -->
 </div>

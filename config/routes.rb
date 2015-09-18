@@ -159,6 +159,10 @@ Rails.application.routes.draw do
     resource :stats, only: [:show]
   end
 
+  namespace :offices do
+    get '/:action', controller: 'ui'
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

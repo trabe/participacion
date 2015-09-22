@@ -1,0 +1,54 @@
+en:
+  manage:
+    print: "Print"
+    dashboard:
+      index:
+        title: "Offices"
+    menu:
+      create_user: "Create user"
+      verify_user: "Verify user"
+      create_proposal: "Create proposal"
+      support_proposal: "Support proposal"
+      print_proposal: "Print proposal"
+    index:
+      title: "Offices manage"
+    create_user:
+      title: "Create user"
+      username_label: "Username"
+      email_label: "Email"
+      password_label: "Password"
+      password_confirmation_label: "Confirma password"
+      submit: "Create user"
+    verify_user:
+      search_placeholder: "Search user by name or email"
+      search: "Search"
+      verify_user: "Verify user"
+      verify: "Verify"
+      send_email: "Send verification email"
+      verification: "Verification"
+      document_type_label: "Tipo de documento"
+      document_type:
+        spanish_id: "DNI"
+        passport: "Pasaporte"
+        residence_card: "Tarjeta de residencia"
+      document_number: "Número de documento"
+      date_of_birth: "Fecha de nacimiento"
+      verify_residence: "Verificar residencia"
+      census_success: "La información introducida es correcta."
+      census_error: "El Padrón de Madrid no ha podido verificar la información."
+      verify_success: "Usuario verificado correctamente."
+      verify_info: "Se ha enviado un enlace de confirmación al email asociado a este usuario."
+    create_proposal:
+      title: "Create proposal"
+      login_label: "Username, email or Document"
+      login_password_label: "Password"
+      login_submit: "Sign in"
+    support_proposal:
+      title: "Support proposal"
+      login_label: "Username, email or Document"
+      login_password_label: "Password"
+      login_submit: "Sign in"
+      search_placeholder: "Search by title, author, content or proposal code..."
+      search: "Search"
+    print_proposal:
+      title: "Print proposals"

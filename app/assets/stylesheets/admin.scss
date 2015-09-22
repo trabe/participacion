@@ -4,6 +4,7 @@
 // 02. Sidebar
 // 03. List elements
 // 04. Stats
+// 05. Uweb
 //
 
 // 01. Global styles
@@ -64,8 +65,9 @@ body.admin {
     [class^="icon-"] {
       display: inline-block;
       font-size: rem-calc(24);
-      padding-right: rem-calc(24);
-      padding-top: rem-calc(4);
+      line-height: rem-calc(48);
+      padding-right: rem-calc(12);
+      vertical-align: middle;
     }
 
     li {
@@ -199,6 +201,10 @@ body.admin {
   padding: rem-calc(6) rem-calc(12);
 }
 
+.login-as {
+  @extend .official;
+}
+
 .button.tiny.success {
   margin-left: rem-calc(12);
 }
@@ -215,3 +221,13 @@ body.admin {
 .stats {
   background: white;
 }
+
+// 05. Uweb
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.postfix {
+  height: rem-calc(48);
+  line-height: rem-calc(48);
+}
+
+

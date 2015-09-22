@@ -1,0 +1,25 @@
+<!-- UWEB -->
+<h2><%= t("manage.create_user.title") %></h2>
+
+<%= form_for :create_user do |f| %>
+
+  <div class="row">
+    <div class="small-12 medium-9 column">
+
+      <%= f.label_tag t("manage.create_user.username_label") %>
+      <%= f.text_field  :username, maxlength: User.username_max_length, placeholder: t("manage.create_user.username_label"), label: false %>
+
+      <%= f.email_field :email, placeholder: t("manage.create_user.email_label") %>
+
+      <%= f.password_field :password, autocomplete: "off",
+                           placeholder: t("manage.create_user.password_label"),
+                           label: t("manage.create_user.password_label") %>
+
+      <%= f.password_field :password_confirmation, autocomplete: "off",
+                           label: t("manage.create_user.password_confirmation_label"),
+                           placeholder: t("manage.create_user.password_confirmation_label") %>
+
+      <%= f.submit t("manage.create_user.submit"), class: "button radius expand" %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<!-- UWEB -->
+<h2><%= t("manage.verify_user.verify_user") %></h2>
+
+<form>
+  <div class="row">
+    <div class="small-9 column">
+      <div class="row collapse">
+        <div class="small-10 column">
+          <input type="text" placeholder="<%= t('manage.verify_user.search_placeholder') %>">
+        </div>
+        <div class="small-2 column">
+          <a href="#" class="button postfix radius success"><%= t("manage.verify_user.search") %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- The styles for list of results is the same of this one -->
+<!--
+
+<h3><%#= page_entries_info @officials %></h3>
+
+<ul class="admin-list">
+<%# @officials.each do |official| %>
+  <li>
+    <%#= link_to official.name, edit_admin_official_path(official) %>
+    <span class="bullet">&nbsp;&bull;&nbsp;</span>
+    (user's email if exists)
+    <%#= link_to t("manage.verify_user.verify_user"), edit_admin_official_path(official), class: "button radius tiny right" %>
+  </li>
+<%# end %>
+</ul>
+-->
+<!-- /. The styles for list of results is the same of this one -->

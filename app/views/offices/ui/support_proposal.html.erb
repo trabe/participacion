@@ -1,0 +1,40 @@
+<!-- UWEB -->
+<h2>
+  <%= t("manage.support_proposal.title") %>
+  <!-- when login, show login as -->
+    <span class="login-as right"><strong>Nombre de usuario <%#= @user.name %></strong> (Email si ya lo tiene<%#= @user.email %>)</span>
+  <!-- /. when login, show login as -->
+</h2>
+
+<form>
+
+  <div class="row">
+    <div class="small-12 medium-6 column small-centered">
+
+      <label><%= t("manage.support_proposal.login_label") %></label>
+      <input type="text" placeholder="<%= t("manage.support_proposal.login_label") %>">
+
+      <label> <%= t("manage.support_proposal.login_password_label") %></label>
+      <input type="password" placeholder="<%= t('manage.support_proposal.login_password_label')%>">
+
+      <input type="submit" value="<%= t('manage.support_proposal.login_submit') %>" class="button radius expand">
+    </div>
+  </div>
+</form>
+
+<!-- when login show a search form (serach by: title, content, author and proposal code)-->
+
+<form>
+  <div class="row">
+    <div class="small-9 column">
+      <div class="row collapse">
+        <div class="small-10 column">
+          <input type="text" placeholder="<%= t('manage.support_proposal.search_placeholder') %>">
+        </div>
+        <div class="small-2 column">
+          <a href="#" class="button postfix radius success"><%= t("manage.support_proposal.search") %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

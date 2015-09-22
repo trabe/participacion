@@ -1,0 +1,54 @@
+es:
+  manage:
+    print: "Imprimir"
+    dashboard:
+      index:
+        title: "Oficinas"
+    menu:
+      create_user: "Crear usuario"
+      verify_user: "Verificar usuario"
+      create_proposal: "Crear propuesta"
+      support_proposal: "Apoyar propuesta"
+      print_proposal: "Imprimir propuestas"
+    index:
+      title: "Gestión Oficinas"
+    create_user:
+      title: "Crear usuario"
+      username_label: "Nombre de usuario"
+      email_label: "Email"
+      password_label: "Contraseña"
+      password_confirmation_label: "Confirmar contraseña"
+      submit: "Crear usuario"
+    verify_user:
+      search_placeholder: "Buscar usuario por nombre o email"
+      search: "Buscar"
+      verify_user: "Verificar usuario"
+      verify: "Verificar"
+      send_email: "Enviar email de verificación"
+      verification: "Verificación"
+      document_type_label: "Tipo de documento"
+      document_type:
+        spanish_id: "DNI"
+        passport: "Pasaporte"
+        residence_card: "Tarjeta de residencia"
+      document_number: "Número de documento"
+      date_of_birth: "Fecha de nacimiento"
+      verify_residence: "Verificar residencia"
+      census_success: "La información introducida es correcta."
+      census_error: "El Padrón de Madrid no ha podido verificar la información."
+      verify_success: "Usuario verificado correctamente."
+      verify_info: "Se ha enviado un enlace de confirmación al email asociado a este usuario."
+    create_proposal:
+      title: "Crear propuesta"
+      login_label: "Nombre de usuario, email o DNI"
+      login_password_label: "Contraseña"
+      login_submit: "Entrar"
+    support_proposal:
+      title: "Apoyar propuesta"
+      login_label: "Nombre de usuario, email o DNI"
+      login_password_label: "Contraseña"
+      login_submit: "Entrar"
+      search_placeholder: "Buscar por título, autor, contenido o código de propuesta..."
+      search: "Buscar"
+    print_proposal:
+      title: "Imprimir propuestas"

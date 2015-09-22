@@ -1,0 +1,63 @@
+<!-- UWEB -->
+<h2>
+  <%= t("manage.verify_user.verify_user") %>: <%= t("manage.verify_user.verification") %>
+  <span class="login-as right"><strong>Nombre de usuario <%#= @user.name %></strong> (Email si ya lo tiene<%#= @user.email %>)</span>
+</h2>
+
+<!-- This form is the same of "residence/new" but only with document and date of birth -->
+<form>
+
+  <div class="small-12 medium-8">
+    <div class="small-12 medium-4">
+      <label><%= t("manage.verify_user.document_type_label") %></label>
+      <select>
+        <option><%= t("manage.verify_user.document_type.spanish_id") %></option>
+        <option><%= t("manage.verify_user.document_type.passport") %></option>
+        <option><%= t("manage.verify_user.document_type.residence_card") %></option>
+      </select>
+    </div>
+    <div class="small-12 medium-5">
+      <label><%= t("manage.verify_user.document_number") %></label>
+      <input type="text" placeholder="<%= t('manage.verify_user.document_number') %>">
+    </div>
+  </div>
+
+  <div class="date small-12 medium-6 clear">
+    <label><%= t("manage.verify_user.date_of_birth") %></label>
+    <select></select>
+      <%#= f.date_select :date_of_birth,
+                prompt: true,
+                start_year: 1900, end_year: 16.years.ago.year,
+                label: false %>
+  </div>
+
+  <div class="small-12 clear">
+    <input type="submit" value="<%= t("manage.verify_user.verify_residence") %>" class="button radius">
+  </div>
+
+</form>
+<!-- /. This form is the same of "residence/new" but only with document and date of birth -->
+
+<!-- If Census data it's ok show this -->
+  <div class="alert-box success radius">
+    <%= t("manage.verify_user.census_success")%>
+  </div>
+
+  <a href="#" class="button radius success"><%= t("manage.verify_user.verify_user") %></a>
+
+    <!-- when clic on verify: if user have an email show -->
+      <div class="alert-box info radius">
+        <%= t("manage.verify_user.verify_info")%>
+      </div>
+    <!-- else -->
+      <div class="alert-box success radius">
+        <%= t("manage.verify_user.verify_success")%>
+      </div>
+    <!-- end -->
+
+<!-- else -->
+  <div class="alert-box alert radius">
+    <%= t("manage.verify_user.census_error")%>
+  </div>
+<!-- end -->
+

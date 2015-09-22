@@ -1,7 +1,7 @@
 class Offices::UiController < ApplicationController
   skip_authorization_check
 
-  # layout 'offices'
+  layout 'offices'
 
   def test
   end

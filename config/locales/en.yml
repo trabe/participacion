@@ -31,6 +31,7 @@ en:
       more_information: "More information"
       debates: Debates
       proposals: Proposals
+      manage: "Manage"
     footer:
       description: "This portal use %{consul}, is %{open_source}. Madrid, for the whole world."
       open_source: "software libre"

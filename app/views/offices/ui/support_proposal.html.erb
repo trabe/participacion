@@ -2,27 +2,39 @@
 <h2>
   <%= t("manage.support_proposal.title") %>
   <!-- when login, show login as -->
-    <span class="login-as right"><strong>Nombre de usuario <%#= @user.name %></strong> (Email si ya lo tiene<%#= @user.email %>)</span>
+    <span class="login-as right"><%= t("manage.login_as") %> <strong>DNI</strong>  <%= link_to t("manage.logout"), "#" %></span>
   <!-- /. when login, show login as -->
 </h2>
 
-<form>
+<!-- DELETE ME -->
+<span style="color: red;">
+Como para apoyar una propuesta tiene que ser un usuario verificado, el usuario SIEMPRE tendrá que dar el DNI.
+</span>
+<!-- /.DELETE ME -->
 
-  <div class="row">
-    <div class="small-12 medium-6 column small-centered">
+<div class="row">
+  <div class="small-12 medium-6 column">
+    <form>
+      <label><%= t("manage.support_proposal.document_type_label") %></label>
+      <select>
+        <option><%= t("manage.support_proposal.document_type.spanish_id") %></option>
+        <option><%= t("manage.support_proposal.document_type.passport") %></option>
+        <option><%= t("manage.support_proposal.document_type.residence_card") %></option>
+      </select>
 
-      <label><%= t("manage.support_proposal.login_label") %></label>
-      <input type="text" placeholder="<%= t("manage.support_proposal.login_label") %>">
-
-      <label> <%= t("manage.support_proposal.login_password_label") %></label>
-      <input type="password" placeholder="<%= t('manage.support_proposal.login_password_label')%>">
-
+      <label><%= t("manage.support_proposal.document_number") %></label>
+      <input type="text" placeholder="<%= t('manage.support_proposal.document_number') %>">
       <input type="submit" value="<%= t('manage.support_proposal.login_submit') %>" class="button radius expand">
-    </div>
+    </form>
   </div>
-</form>
+</div>
 
-<!-- when login show a search form (serach by: title, content, author and proposal code)-->
+<!-- DELETE ME -->
+<span style="color: red;">
+Una vez logueado aparecen los datos del bloque gris de arriba a la derecha.<br>
+Y aparece un buscador de propuestas por: título, contenido, autor y código de propuesta.
+</span>
+<!-- /.DELETE ME -->
 
 <form>
   <div class="row">
@@ -38,3 +50,9 @@
     </div>
   </div>
 </form>
+
+<!-- DELETE ME -->
+<span style="color: red;">
+Se muestran los resultados de búsqueda al igual que en "/proposals?utf8=✓&search=X" y se apoyan de la misma manera.
+</span>
+<!-- /.DELETE ME -->

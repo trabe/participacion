@@ -2,13 +2,19 @@
 <h2>
   <%= t("manage.create_proposal.title") %>
   <!-- when login, show login as -->
-    <span class="login-as right"><strong>Nombre de usuario <%#= @user.name %></strong> (Email si ya lo tiene<%#= @user.email %>)</span>
+    <span class="login-as right"><%= t("manage.login_as") %> <strong>decabeza <%#= @user.name %>| alberto@mail.com | 72894561D </strong> <%= link_to t("manage.logout"), "#" %></span>
   <!-- /. when login, show login as -->
 </h2>
 
+<!-- DELETE ME -->
+<span style="color: red;">
+El funcionario se identifica con nombre de usuario/email y contraseña. Aquí el DNI NO hace falta para nada.
+</span>
+<!-- /.DELETE ME -->
+
 <form>
   <div class="row">
-    <div class="small-12 medium-6 column small-centered">
+    <div class="small-12 medium-6 column">
 
       <label><%= t("manage.create_proposal.login_label") %></label>
       <input type="text" placeholder="<%= t("manage.create_proposal.login_label") %>">
@@ -21,4 +27,9 @@
   </div>
 </form>
 
-<!-- When worker login show here the same form of "/proposals/_form.html.erb" without terms checkbox and captcha -->
+<!-- DELETE ME -->
+<span style="color: red;">
+Una vez logueado aparecen los datos del bloque gris de arriba a la derecha.<br>
+Y aparece el mismo formulario de "/proposals/_form.html.erb" sin el "checkbox de Acepto condiciones..." ni el "captcha".
+</span>
+<!-- /.DELETE ME -->

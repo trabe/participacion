@@ -1,3 +1,7 @@
+<!-- UWEB -->
+<%# if current_user.manager? %>
+  <!-- Don't show menus for managers -->
+<%# else %>
 <ul class="right">
   <% if user_signed_in? %>
     <li>

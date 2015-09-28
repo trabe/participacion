@@ -7,16 +7,9 @@
     </li>
 
     <li <%= "class=active" if controller_name == "index" %>>
-      <%= link_to "/offices/create_user" do %>
+      <%= link_to "/offices/users" do %>
         <i class="icon-user"></i>
-        <%= t("manage.menu.create_user") %>
-      <% end %>
-    </li>
-
-    <li <%= "class=active" if controller_name == "debates" %>>
-      <%= link_to "/offices/verify_user" do %>
-        <i class="icon-check"></i>
-        <%= t("manage.menu.verify_user") %>
+        <%= t("manage.menu.users") %>
       <% end %>
     </li>
 

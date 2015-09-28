@@ -1,0 +1,185 @@
+<!-- UWEB -->
+<h2><%= t("manage.users.title") %></h2>
+
+<!-- DELETE ME -->
+<p style="color: red;">1. El <em>gestor</em> SIEMPRE solicita el DNI al <em>usuario</em>.</p>
+<!-- /.DELETE ME -->
+
+<div class="row">
+  <div class="small-12 medium-8 column">
+    <form>
+      <div class="small-12 medium-4">
+        <label><%= t("manage.users.document_type_label") %></label>
+        <select>
+          <option><%= t("manage.users.document_type.spanish_id") %></option>
+          <option><%= t("manage.users.document_type.passport") %></option>
+          <option><%= t("manage.users.document_type.residence_card") %></option>
+        </select>
+      </div>
+      <div class="small-12 medium-5">
+        <label><%= t("manage.users.document_number") %></label>
+        <input type="text" placeholder="<%= t('manage.users.document_number') %>">
+        <input type="submit" value="<%= t('manage.users.check') %>" class="button radius">
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- DELETE ME -->
+<p style="color: red;">2. Se verifica con nuestra base de datos (ver si tiene cuenta asociada) y con el padrón:<br>
+2.1.Si este DNI no tiene una cuenta asociada y NO ESTÁ empadronado en el municipio de Madrid aparece el mensaje de error del padrón y el formulario para crear un nuevo usuario:</p>
+<!-- ⁄. DELETE ME -->
+
+<div class="alert-box alert radius">
+  <%= t("manage.users.census_error") %>
+</div>
+
+<h2><%= t("manage.users.create_user") %></h2>
+
+<div class="alert-box info radius">
+  <%= t("manage.users.user_level_info") %>
+</div>
+
+<!-- DELETE ME -->
+<p style="color: red;">El <em>gestor</em> rellena este formulario. El email PUEDE estar vacío (seleccionando el checkbox el campo email se pone disabled).<br> La contraseña se genera de forma automática.</p>
+<!-- ⁄. DELETE ME -->
+
+<%= form_for :create_user do |f| %>
+  <div class="row">
+    <div class="small-12 medium-9 column">
+
+      <%= f.label_tag t("manage.users.username_label") %>
+      <%= f.text_field  :username, maxlength: User.username_max_length, placeholder: t("manage.users.username_label"), label: false %>
+
+      <%= f.email_field :email, placeholder: t("manage.users.email_label") %>
+
+      <%= f.label :remember_me do %>
+        <%= f.check_box :remember_me, label: false %>
+        <span class="checkbox"><%= t("manage.users.no_email") %></span>
+      <% end %>
+
+      <%= f.submit t("manage.users.submit"), class: "button radius success expand" %>
+    </div>
+  </div>
+<% end %>
+
+<!-- DELETE ME -->
+<p style="color: red;">Una vez creado el usuario aparece este bloque.</p>
+<!-- /.DELETE ME -->
+
+<div class="alert-box success radius">
+  <%= t("manage.users.success") %>
+</div>
+
+<div class="row">
+  <div class="small-12 medium-9 column">
+    <div id="printme">
+      <h2><%= t("manage.users.data") %></h2>
+      <p><strong><%= t("manage.users.username") %></strong> alberto</p>
+      <p><strong><%= t("manage.users.email") %></strong> alberto@mail.com </p>
+      <p><strong><%= t("manage.users.password") %></strong> Alj7F6r2</p>
+    </div>
+
+    <a onclick="print();" class="button warning radius"><%= t("manage.users.print") %></a>
+  </div>
+</div>
+
+<!-- DELETE ME -->
+<p style="color: red;">Al pulsar en imprimir se abren los datos en una pestaña aparte. Ya he puesto un pequeño script que hace eso :)</p>
+<!-- /.DELETE ME -->
+
+<!-- Maybe something like this works for print data -->
+<script type="text/javascript">
+  function print(){
+    var object=document.getElementById('printme');
+    var browser=window.open('','_blank');
+    browser.document.write(object.innerHTML);
+    browser.document.close();
+    browser.print();
+    browser.close();
+  }
+</script>
+<!-- /. Maybe something like this works for print data -->
+
+<!-- DELETE ME -->
+<p style="color: red;">2.2. Si este DNI NO TIENE una cuenta asociada pero está en el Padrón aparece el mensaje confirmación y dos botones.</p>
+<!-- ⁄. DELETE ME -->
+
+<div class="alert-box success radius">
+  <%= t("manage.users.census_success") %>
+</div>
+
+<!-- DELETE ME -->
+<p style="color: red;">Si pulsa en crear un usuario (directamente a Nivel 3) aparece el mismo form del punto 2.1.</p>
+<!-- ⁄. DELETE ME -->
+
+<a href="#" class="button success radius"><%= t("manage.users.create_user") %></a>
+
+<!-- DELETE ME -->
+<p style="color: red;">Al buscar en el resultado (debería aparecer sólo 1) podrá enviar un email con un link de verificación (a nivel 3)</p>
+<!-- ⁄. DELETE ME -->
+
+<form>
+  <div class="row">
+    <div class="small-9 column">
+      <div class="row collapse">
+        <div class="small-8 column">
+          <input type="text" placeholder="<%= t('manage.users.search_user_placeholder') %>">
+        </div>
+        <div class="small-4 column">
+          <a href="#" class="button postfix radius success"><%= t("manage.users.search_user") %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<ul class="admin-list">
+  <li>
+    <strong>Nombre de usuario</strong>
+    <span class="bullet">&nbsp;&bull;&nbsp;</span>
+    <strong>Email</strong>
+    <a href="#" class="button radius right"><%= t("manage.users.send_email") %></a>
+  </li>
+</ul>
+
+<!-- DELETE ME -->
+<p style="color: red;">2.3. Si este DNI YA TIENE una cuenta asociada aparecen el mensaje confirmación, los datos del <em>usuario</em> (para que el <em>gestor</em> confirme que son correctos) el código de seguridad (para imprimir) y el botón para verificarle.</p>
+<!-- ⁄. DELETE ME -->
+
+<div class="alert-box success radius">
+  <%= t("manage.users.census_success_account") %>
+</div>
+
+<div id="printmycode">
+  <h2><%= t("manage.users.code_title") %></h2>
+  <p><strong><%= t("manage.users.username") %></strong> alberto</p>
+  <p><strong><%= t("manage.users.email") %></strong> alberto@mail.com </p>
+  <p><strong><%= t("manage.users.code") %> <span class="secure-code">564325</strong></p>
+</div>
+
+<a onclick="printCode();" class="button warning radius"><%= t("manage.users.print_code") %></a>
+<a href="#" class="button success radius"><%= t("manage.users.verify_user") %></a>
+
+<!-- Maybe something like this works for print data -->
+<script type="text/javascript">
+  function printCode(){
+    var object=document.getElementById('printmycode');
+    var browser=window.open('','_blank');
+    browser.document.write(object.innerHTML);
+    browser.document.close();
+    browser.print();
+    browser.close();
+  }
+</script>
+<!-- /. Maybe something like this works for print data -->
+
+<!-- DELETE ME -->
+<span class="clear" style="color: red; display: block;">
+Si se le imprime el código el usuario lo hace en casa felizmente. Si se le verifica en este momento se convierte a usuario de Nivel 3.
+</span>
+<!-- /.DELETE ME -->
+
+<div class="alert-box success radius">
+  <%= t("manage.users.verify_success") %>
+</div>

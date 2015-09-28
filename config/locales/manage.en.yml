@@ -7,15 +7,18 @@ en:
       index:
         title: "Offices"
     menu:
-      create_user: "Create user"
-      verify_user: "Verify user"
+      users: "Users"
       create_proposal: "Create proposal"
       support_proposal: "Support proposal"
       print_proposal: "Print proposal"
     index:
       title: "Offices manage"
-    create_user:
-      title: "Create user"
+    users:
+      title: "Manage user"
+      create_user: "Crete user"
+      search_user: "Search existing user"
+      search_user_placeholder: "Search by username or email"
+      user_level_info: "This user can participate on debates and create new proposals."
       username_label: "Username"
       email_label: "Email"
       no_email: "The user has not an email"
@@ -26,13 +29,11 @@ en:
       email: "Email:"
       password: "Password:"
       print: "Print access data"
-    verify_user:
       verify_user: "Verify user"
       verify: "Verify"
       check: "Check"
-      residence_not_verified: "The residence has not verified yet. Fill the following form:"
-      residence_success: "The residence has been verified correctly."
-      postal_code: "Postal code"
+      census_success: "This document is in the Census of Madrid record but doesn´t have an associated account yet."
+      census_success_account: "This document already has an associated account. Check the data is correct."
       verification: "Verification"
       document_type_label: "Tipo de documento"
       document_type:
@@ -40,12 +41,12 @@ en:
         passport: "Passport"
         residence_card: "Residence card"
       document_number: "Document number"
-      date_of_birth: "Date of Birth"
-      verify_residence: "Verificar residencia"
-      census_error: "El Padrón de Madrid no ha podido verificar la información."
-      code: "Secure code | Open Goverment"
+      census_error: "This document isn't registered on Census of Madrid."
+      code_title: "Secure code | Open Goverment"
+      code: "Secure code:"
       print_code: "Print secure code"
-      verify_success: "Usuario verificado correctamente."
+      verify_success: "User verified correctly."
+      send_email: "Send verification email"
     create_proposal:
       title: "Create proposal"
       login_label: "Username or email"
@@ -53,7 +54,7 @@ en:
       login_submit: "Sign in"
     support_proposal:
       title: "Support proposal"
-      document_type_label: "Tipo de documento"
+      document_type_label: "Document type"
       document_type:
         spanish_id: "Document"
         passport: "Passport"

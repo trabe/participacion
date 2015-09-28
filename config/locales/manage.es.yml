@@ -7,15 +7,18 @@ es:
       index:
         title: "Oficinas"
     menu:
-      create_user: "Crear usuario"
-      verify_user: "Verificar usuario"
+      users: "Usuarios"
       create_proposal: "Crear propuesta"
       support_proposal: "Apoyar propuesta"
       print_proposal: "Imprimir propuestas"
     index:
       title: "Gestión Oficinas"
-    create_user:
-      title: "Crear usuario"
+    users:
+      title: "Gestionar usuario"
+      create_user: "Crear usuario"
+      search_user: "Buscar usuario existente"
+      search_user_placeholder: "Buscar por nombre de usuario o email"
+      user_level_info: "Este usuario podrá participar en los debates y crear nuevas propuestas."
       username_label: "Nombre de usuario"
       email_label: "Email"
       no_email: "El usuario no tiene un email"
@@ -26,13 +29,11 @@ es:
       email: "Email:"
       password: "Contraseña:"
       print: "Imprimir datos de acceso"
-    verify_user:
       verify_user: "Verificar usuario"
       verify: "Verificar"
       check: "Comprobar"
-      residence_not_verified: "La residencia todavía no ha sido verificada. Rellene los siguientes campos:"
-      residence_success: "La residencia ha sido verificada correctamente."
-      postal_code: "Código postal"
+      census_success: "Este documento está en el Registro del Padrón Municipal de Madrid pero todavía no tiene una cuenta asociada."
+      census_success_account: "Este documento ya tiene una cuenta asociada. Compruebe que los datos son correctos."
       verification: "Verificación"
       document_type_label: "Tipo de documento"
       document_type:
@@ -40,12 +41,12 @@ es:
         passport: "Pasaporte"
         residence_card: "Tarjeta de residencia"
       document_number: "Número de documento"
-      date_of_birth: "Fecha de nacimiento"
-      verify_residence: "Verificar residencia"
-      census_error: "El Padrón de Madrid no ha podido verificar la información."
-      code: "Código de seguridad | Gobierno abierto"
+      census_error: "Este documento no está registrado en el Padrón Municipal de Madrid."
+      code_title: "Código de seguridad | Gobierno abierto"
+      code: "Código de seguridad:"
       print_code: "Imprimir código de seguridad"
       verify_success: "Usuario verificado correctamente."
+      send_email: "Enviar email de verificación"
     create_proposal:
       title: "Crear propuesta"
       login_label: "Nombre de usuario o email"

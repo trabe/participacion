@@ -230,4 +230,7 @@ body.admin {
   line-height: rem-calc(48);
 }
 
-
+.secure-code {
+  color: $alert-color;
+  font-size: rem-calc(20);
+}

@@ -4,7 +4,7 @@
 // 02. Sidebar
 // 03. List elements
 // 04. Stats
-// 05. Uweb
+// 05. Management
 //
 
 // 01. Global styles
@@ -222,7 +222,7 @@ body.admin {
   background: white;
 }
 
-// 05. Uweb
+// 05. Management
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .postfix {
@@ -230,7 +230,28 @@ body.admin {
   line-height: rem-calc(48);
 }
 
-.secure-code {
-  color: $alert-color;
-  font-size: rem-calc(20);
+.user-permissions {
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+
+    li {
+      font-size: rem-calc(14);
+      margin-bottom: rem-calc(12);
+
+      span {
+        color: $text-medium;
+        font-size: rem-calc(12);
+      }
+
+      .icon-check {
+        color: $check;
+      }
+
+      .icon-x {
+        color: $delete;
+      }
+    }
+  }
 }

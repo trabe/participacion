@@ -5,23 +5,23 @@ El empleado se identifica SIEMPRE con DNI.
 </span>
 <!-- /.DELETE ME -->
 
-<h2><%= t("manage.create_proposal.title") %></h2>
+<h2><%= t("management.create_proposal.title") %></h2>
 
 <div class="row">
   <div class="small-12 medium-8 column">
     <form>
       <div class="small-12 medium-4">
-        <label><%= t("manage.document_type_label") %></label>
+        <label><%= t("management.document_type_label") %></label>
         <select>
-          <option><%= t("manage.document_type.spanish_id") %></option>
-          <option><%= t("manage.document_type.passport") %></option>
-          <option><%= t("manage.document_type.residence_card") %></option>
+          <option><%= t("management.document_type.spanish_id") %></option>
+          <option><%= t("management.document_type.passport") %></option>
+          <option><%= t("management.document_type.residence_card") %></option>
         </select>
       </div>
       <div class="small-12 medium-5">
-        <label><%= t("manage.document_number") %></label>
-        <input type="text" placeholder="<%= t('manage.document_number') %>">
-        <input type="submit" value="<%= t('manage.login') %>" class="button radius">
+        <label><%= t("management.document_number") %></label>
+        <input type="text" placeholder="<%= t('management.document_number') %>">
+        <input type="submit" value="<%= t('management.login') %>" class="button radius">
       </div>
     </form>
   </div>
@@ -35,4 +35,4 @@ Y el mismo formulario de "/proposals/_form.html.erb" sin el "checkbox de Acepto 
 <!-- /.DELETE ME -->
 
 
-<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong>  <%= t("manage.username_label") %> <strong>Alberto</strong>  <%= t("manage.email_label") %> <strong>alberto@mail.com</strong>  <%= link_to t("manage.logout"), "#", class: "right" %></p>
+<p class="account-info"><%= t("management.document_type_label") %> <strong>DNI</strong>  <%= t("management.document_number") %> <strong>73562454D</strong>  <%= t("management.username_label") %> <strong>Alberto</strong>  <%= t("management.email_label") %> <strong>alberto@mail.com</strong>  <%= link_to t("management.logout"), "#", class: "right" %></p>

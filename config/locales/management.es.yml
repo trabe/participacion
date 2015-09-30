@@ -1,5 +1,5 @@
 es:
-  manage:
+  management:
     print: "Imprimir"
     print_info: "Imprimir esta información"
     logout: "Salir"

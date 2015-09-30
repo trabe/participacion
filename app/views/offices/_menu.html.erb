@@ -3,34 +3,34 @@
 <nav class="admin-sidebar">
   <ul id="moderation_menu">
     <li>
-      <%= link_to t("manage.dashboard.index.title"), moderation_root_path %>
+      <%= link_to t("management.dashboard.index.title"), moderation_root_path %>
     </li>
 
     <li <%= "class=active" if controller_name == "index" %>>
       <%= link_to "/offices/users" do %>
         <i class="icon-user"></i>
-        <%= t("manage.menu.users") %>
+        <%= t("management.menu.users") %>
       <% end %>
     </li>
 
     <li <%= "class=active" if controller_name == "users" %>>
       <%= link_to "/offices/create_proposal" do %>
         <i class="icon-proposals"></i>
-        <%= t("manage.menu.create_proposal") %>
+        <%= t("management.menu.create_proposal") %>
       <% end %>
     </li>
 
     <li <%= "class=active" if controller_name == "bulk" %>>
       <%= link_to "/offices/support_proposal" do %>
         <i class="icon-like"></i>
-        <%= t("manage.menu.support_proposal") %>
+        <%= t("management.menu.support_proposal") %>
       <% end %>
     </li>
 
     <li <%= "class=active" if controller_name == "comments" %>>
       <%= link_to "/offices/print_proposal" do %>
         <i class="icon-print"></i>
-        <%= t("manage.menu.print_proposal") %>
+        <%= t("management.menu.print_proposal") %>
       <% end %>
     </li>
   </ul>

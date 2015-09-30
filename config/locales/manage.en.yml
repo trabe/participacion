@@ -2,7 +2,6 @@ en:
   manage:
     print: "Print"
     print_info: "Print this information"
-    login_as: "Login as:"
     logout: "Logout"
     dashboard:
       index:
@@ -47,24 +46,15 @@ en:
       create_user: "Create new user account"
       create_user_info: "We proceed to create a user with the following information:"
       create_user_submit: "Create user"
-      create_user_success:
+      create_user_success_html:
         "We have sent an email to the email address above to verify that is yours.
         We recommend you change your password at first use. To do so enter to %{url} with your username and password,
         go to <b>'My account'</b> and click the <b>'Change my credentials'</b> button"
+      verify_user: "Verify user"
     create_proposal:
       title: "Create proposal"
-      login_label: "Username or email"
-      login_password_label: "Password"
-      login_submit: "Sign in"
     support_proposal:
       title: "Support proposal"
-      document_type_label: "Document type"
-      document_type:
-        spanish_id: "Document"
-        passport: "Passport"
-        residence_card: "Residence card"
-      document_number: "Document number"
-      login_submit: "Sign in"
       search_placeholder: "Search by title, author, content or proposal code..."
       search: "Search"
     print_proposal:

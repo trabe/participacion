@@ -2,7 +2,6 @@ es:
   manage:
     print: "Imprimir"
     print_info: "Imprimir esta información"
-    login_as: "Identificado como:"
     logout: "Salir"
     dashboard:
       index:
@@ -51,20 +50,11 @@ es:
         "Le hemos mandado un correo electrónico a la dirección de correo anterior para verificar que es suya.
         Le recomendamos cambiar la contraseña en su primer uso. Para ello entre en %{url} con su usuario y contraseña,
         acceda a la sección <b>'Mi cuenta'</b> y haga clic en el botón <b>'Cambiar datos de acceso'</b>"
+      verify_user: "Verificar usuario"
     create_proposal:
       title: "Crear propuesta"
-      login_label: "Nombre de usuario o email"
-      login_password_label: "Contraseña"
-      login_submit: "Entrar"
     support_proposal:
       title: "Apoyar propuesta"
-      document_type_label: "Tipo de documento"
-      document_type:
-        spanish_id: "DNI"
-        passport: "Pasaporte"
-        residence_card: "Tarjeta de residencia"
-      document_number: "Número de documento"
-      login_submit: "Entrar"
       search_placeholder: "Buscar por título, autor, contenido o código de propuesta..."
       search: "Buscar"
     print_proposal:

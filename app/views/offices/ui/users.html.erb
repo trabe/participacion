@@ -1,52 +1,116 @@
 <!-- UWEB -->
-<h2><%= t("manage.users.title") %></h2>
+
 
 <!-- DELETE ME -->
+Todas las imágenes están en: <a href="https://github.com/AyuntamientoMadrid/participacion/issues/573" target="_blank">https://github.com/AyuntamientoMadrid/participacion/issues/573</a>
+<p style="color: red;">------ USUARIOS IMAGEN 1 ------ </p>
 <p style="color: red;">1. El <em>gestor</em> SIEMPRE solicita el DNI al <em>usuario</em>.</p>
-<!-- /.DELETE ME -->
+<!-- ⁄. DELETE ME -->
+
+<h2><%= t("manage.users.title") %></h2>
 
 <div class="row">
   <div class="small-12 medium-8 column">
     <form>
       <div class="small-12 medium-4">
-        <label><%= t("manage.users.document_type_label") %></label>
+        <label><%= t("manage.document_type_label") %></label>
         <select>
-          <option><%= t("manage.users.document_type.spanish_id") %></option>
-          <option><%= t("manage.users.document_type.passport") %></option>
-          <option><%= t("manage.users.document_type.residence_card") %></option>
+          <option><%= t("manage.document_type.spanish_id") %></option>
+          <option><%= t("manage.document_type.passport") %></option>
+          <option><%= t("manage.document_type.residence_card") %></option>
         </select>
       </div>
       <div class="small-12 medium-5">
-        <label><%= t("manage.users.document_number") %></label>
-        <input type="text" placeholder="<%= t('manage.users.document_number') %>">
-        <input type="submit" value="<%= t('manage.users.check') %>" class="button radius">
+        <label><%= t("manage.document_number") %></label>
+        <input type="text" placeholder="<%= t('manage.document_number') %>">
+        <input type="submit" value="<%= t('manage.check') %>" class="button radius">
       </div>
     </form>
   </div>
 </div>
 
 <!-- DELETE ME -->
+<p style="color: red;">------ USUARIOS IMAGEN 2 ------ </p>
 <p style="color: red;">2. Se verifica con nuestra base de datos (ver si tiene cuenta asociada) y después con el padrón:<br>
 2.1. Si este DNI no tiene una cuenta asociada y NO ESTÁ empadronado en el municipio de Madrid</p>
 <!-- ⁄. DELETE ME -->
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong></p>
 
 <div class="alert-box alert radius">
   <%= t("manage.users.census_error") %>
 </div>
 
+<div class="user-permissions">
+
+  <p><%= t("manage.users.census_error_info") %></p>
+
+  <ul>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_debates") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_proposal") %></li>
+    <li><i class="icon-x"></i> <%= t("manage.users.user_permission_support_proposal") %></li>
+    <li><i class="icon-x"></i> <%= t("manage.users.user_permission_votes") %></li>
+  </ul>
+
+  <p>
+    <%= t("manage.users.has_not_account_html",
+        url: link_to(t("manage.users.portal_url"), t("manage.users.portal_url"),
+        target: "_blank")).html_safe %>
+  </p>
+
+</div>
+
+<a href="#" class="button warning radius"><%= t("manage.print_info") %></a>
+
 <!-- DELETE ME -->
-<p style="color: red;">2.2. Si este DNI tiene una cuenta asociada y ESTÁ empadronado en el municipio de Madrid</p>
+<p style="color: red;">------ USUARIOS IMAGEN 3 ------ </p>
+<p style="color: red;">2.2. Si este DNI tiene una cuenta asociada y ya está verificado (Nivel 3)</p>
 <!-- ⁄. DELETE ME -->
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong>  <%= t("manage.username_label") %> <strong>Alberto</strong>  <%= t("manage.email_label") %> <strong>alberto@mail.com</strong> </p>
+
+<div class="alert-box success radius">
+  <%= t("manage.users.already_verified") %>
+</div>
+
+<div class="user-permissions">
+
+  <p><%= t("manage.users.census_success_info") %></p>
+
+  <ul>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_debates") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_proposal") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_support_proposal") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_votes") %></li>
+  </ul>
+
+</div>
+
+<a href="#" class="button warning radius"><%= t("manage.print_info") %></a>
+
+
+<!-- DELETE ME -->
+<p style="color: red;">------ USUARIOS IMAGEN 4 ------ </p>
+<p style="color: red;">2.3. Si este DNI tiene una cuenta asociada y ESTÁ empadronado en el municipio de Madrid</p>
+<!-- ⁄. DELETE ME -->
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong>  <%= t("manage.username_label") %> <strong>Alberto</strong>  <%= t("manage.email_label") %> <strong>alberto@mail.com</strong> </p>
 
 <div class="alert-box success radius">
   <%= t("manage.users.census_success_account") %>
 </div>
 
-<div id="printmycode">
-  <h2><%= t("manage.users.verify_title") %></h2>
-  <p><strong><%= t("manage.users.document") %></strong> 73452673D</p>
-  <p><strong><%= t("manage.users.username") %></strong> alberto</p>
-  <p><strong><%= t("manage.users.email") %></strong> alberto@mail.com </p>
+<div class="user-permissions">
+
+  <p><%= t("manage.users.census_success_info") %></p>
+
+  <ul>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_debates") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_proposal") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_support_proposal") %></li>
+    <li><i class="icon-x"></i> <%= t("manage.users.user_permission_votes") %></li>
+  </ul>
+
 </div>
 
 <a href="#" class="button success radius"><%= t("manage.users.verify_user") %></a>
@@ -56,44 +120,50 @@
 </div>
 
 <!-- DELETE ME -->
-<p style="color: red;">2.3. Si este DNI tiene una cuenta asociada y ya está verificado (Nivel 3)</p>
-<!-- ⁄. DELETE ME -->
-
-<div class="alert-box success radius">
-  <%= t("manage.users.already_verify") %>
-</div>
-
-<!-- DELETE ME -->
+<p style="color: red;">------ USUARIOS IMAGEN 5 ------ </p>
 <p style="color: red;">2.4. Si este DNI NO TIENE una cuenta asociada pero está en el Padrón aparece esto:</p>
 <!-- ⁄. DELETE ME -->
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong></p>
 
 <div class="alert-box success radius">
   <%= t("manage.users.census_success") %>
 </div>
 
-<p><%= t("manage.users.has_account") %></p>
+<ul>
+  <li>
+    <strong><%= t("manage.users.has_account") %></strong>
 
-<form>
-  <input type="text" placeholder="<%= t('manage.users.search_user_placeholder') %>">
-  <input type="submit" class="button radius" value="<%= t("manage.users.send_email") %>">
-</form>
+    <p><%= t("manage.users.has_account_note") %></p>
+
+    <form>
+      <input type="text" placeholder="<%= t('manage.users.has_account_placeholder') %>">
+      <input type="submit" class="button radius" value="<%= t("manage.users.has_account_send_email") %>">
+    </form>
+  </li>
+
+  <li>
+    <strong><%= t("manage.users.has_not_account") %></strong>
+
+    <p class="margin-top">
+      <a href="#" class="button radius success"><%= t("manage.users.create_user") %></a>
+    </p>
+  </li>
+
+<!-- DELETE ME -->
+<p style="color: red;">------ USUARIOS IMAGEN 6 ------ </p>
+<p style="color: red;">2.4.1 Email de verificación enviado</p>
+<!-- ⁄. DELETE ME -->
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong>  <%= t("manage.username_label") %> <strong>Alberto</strong>  <%= t("manage.email_label") %> <strong>alberto@mail.com</strong> </p>
 
 <div class="alert-box success radius">
   <%= t("manage.users.email_sent") %>
 </div>
 
-<p>
-  <%= t("manage.users.not_has_account",
-    create: link_to(t("manage.users.create_account"), "#")).html_safe %>
-</p>
-
-<h2>
-  <%= t("manage.users.create_user") %>
-</h2>
-
 <div class="user-permissions">
 
-  <p><%= t("manage.users.user_level_info") %></p>
+  <p><%= t("manage.users.census_success_info") %></p>
 
   <ul>
     <li><i class="icon-check"></i> <%= t("manage.users.user_permission_debates") %></li>
@@ -101,28 +171,58 @@
     <li><i class="icon-check"></i> <%= t("manage.users.user_permission_support_proposal") %></li>
     <li><i class="icon-check"></i> <%= t("manage.users.user_permission_votes") %></li>
   </ul>
+
 </div>
+
+<a href="#" class="button warning radius"><%= t("manage.print_info") %></a>
+
+<!-- DELETE ME -->
+<p style="color: red;">------ USUARIOS IMAGEN 7 ------ </p>
+<p style="color: red;">2.4.2 Creando un usuario nuevo</p>
+<!-- ⁄. DELETE ME -->
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong></p>
+
+<p><%= t("manage.users.create_user_info") %></p>
 
 <div class="row">
   <div class="small-12 medium-9 column">
   <form>
-    <label><%= t("manage.users.document_label") %></label>
-    <input type="text" placeholder="73529735R" disabled>
 
-    <label><%= t("manage.users.username_label") %></label>
-    <input type="text" placeholder="<%= t('manage.users.username_label')%>">
+    <label><%= t("manage.username_label") %></label>
+    <input type="text" placeholder="<%= t('manage.username_label')%>">
 
-    <label><%= t('manage.users.email_label')%></label>
-    <input type="text" placeholder="<%= t('manage.users.email_label')%>">
+    <label><%= t('manage.email_label')%></label>
+    <input type="text" placeholder="<%= t('manage.email_label')%>">
 
-    <label><%= t('manage.users.password_label')%></label>
-    <input type="text" placeholder="<%= t('manage.users.password_label')%>">
-
-    <input type="submit" value="<%= t('manage.users.submit') %>" class="button radius success expand">
+    <input type="submit" value="<%= t('manage.users.create_user_submit') %>" class="button radius success expand">
     </form>
   </div>
 </div>
 
-<div class="alert-box success radius">
-  <%= t("manage.users.success") %>
+<!-- DELETE ME -->
+<p style="color: red;">------ USUARIOS IMAGEN 8 ------ </p>
+<p style="color: red;">2.4.3 Usuario nuevo creado</p>
+<!-- ⁄. DELETE ME -->
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong>  <%= t("manage.username_label") %> <strong>Alberto</strong>  <%= t("manage.email_label") %> <strong>alberto@mail.com</strong> </p>
+
+<p><%= t("manage.users.create_user_success_html",
+      url: link_to(t("manage.users.portal_url"), t("manage.users.portal_url"),
+      target: "_blank")).html_safe %>
+</p>
+
+<div class="user-permissions">
+
+  <p><%= t("manage.users.census_success_info") %></p>
+
+  <ul>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_debates") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_proposal") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_support_proposal") %></li>
+    <li><i class="icon-check"></i> <%= t("manage.users.user_permission_votes") %></li>
+  </ul>
+
 </div>
+
+<a href="#" class="button warning radius"><%= t("manage.print_info") %></a>

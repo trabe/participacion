@@ -1,40 +1,40 @@
 <!-- UWEB -->
-<h2>
-  <%= t("manage.support_proposal.title") %>
-  <!-- when login, show login as -->
-    <span class="login-as right"><%= t("manage.login_as") %> <strong>DNI</strong>  <%= link_to t("manage.logout"), "#" %></span>
-  <!-- /. when login, show login as -->
-</h2>
-
 <!-- DELETE ME -->
 <span style="color: red;">
-Como para apoyar una propuesta tiene que ser un usuario verificado, el usuario SIEMPRE tendrá que dar el DNI.
+El empleado se identifica SIEMPRE con DNI.
 </span>
 <!-- /.DELETE ME -->
 
-<div class="row">
-  <div class="small-12 medium-6 column">
-    <form>
-      <label><%= t("manage.support_proposal.document_type_label") %></label>
-      <select>
-        <option><%= t("manage.support_proposal.document_type.spanish_id") %></option>
-        <option><%= t("manage.support_proposal.document_type.passport") %></option>
-        <option><%= t("manage.support_proposal.document_type.residence_card") %></option>
-      </select>
+<h2><%= t("manage.support_proposal.title") %></h2>
 
-      <label><%= t("manage.support_proposal.document_number") %></label>
-      <input type="text" placeholder="<%= t('manage.support_proposal.document_number') %>">
-      <input type="submit" value="<%= t('manage.support_proposal.login_submit') %>" class="button radius expand">
+<div class="row">
+  <div class="small-12 medium-8 column">
+    <form>
+      <div class="small-12 medium-4">
+        <label><%= t("manage.document_type_label") %></label>
+        <select>
+          <option><%= t("manage.document_type.spanish_id") %></option>
+          <option><%= t("manage.document_type.passport") %></option>
+          <option><%= t("manage.document_type.residence_card") %></option>
+        </select>
+      </div>
+      <div class="small-12 medium-5">
+        <label><%= t("manage.document_number") %></label>
+        <input type="text" placeholder="<%= t('manage.document_number') %>">
+        <input type="submit" value="<%= t('manage.login') %>" class="button radius">
+      </div>
     </form>
   </div>
 </div>
 
 <!-- DELETE ME -->
 <span style="color: red;">
-Una vez logueado aparecen los datos del bloque gris de arriba a la derecha.<br>
+Una vez logueado aparecen los datos del usuario.<br>
 Y aparece un buscador de propuestas por: título, contenido, autor y código de propuesta.
 </span>
 <!-- /.DELETE ME -->
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong>  <%= t("manage.username_label") %> <strong>Alberto</strong>  <%= t("manage.email_label") %> <strong>alberto@mail.com</strong> </p>
 
 <form>
   <div class="row">

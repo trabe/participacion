@@ -1,35 +1,38 @@
 <!-- UWEB -->
-<h2>
-  <%= t("manage.create_proposal.title") %>
-  <!-- when login, show login as -->
-    <span class="login-as right"><%= t("manage.login_as") %> <strong>decabeza <%#= @user.name %>| alberto@mail.com | 72894561D </strong> <%= link_to t("manage.logout"), "#" %></span>
-  <!-- /. when login, show login as -->
-</h2>
-
 <!-- DELETE ME -->
 <span style="color: red;">
-El funcionario se identifica con nombre de usuario/email y contraseña. Aquí el DNI NO hace falta para nada.
+El empleado se identifica SIEMPRE con DNI.
 </span>
 <!-- /.DELETE ME -->
 
-<form>
-  <div class="row">
-    <div class="small-12 medium-6 column">
+<h2><%= t("manage.create_proposal.title") %></h2>
 
-      <label><%= t("manage.create_proposal.login_label") %></label>
-      <input type="text" placeholder="<%= t("manage.create_proposal.login_label") %>">
-
-      <label> <%= t("manage.create_proposal.login_password_label") %></label>
-      <input type="password" placeholder="<%= t('manage.create_proposal.login_password_label')%>">
-
-      <input type="submit" value="<%= t('manage.create_proposal.login_submit') %>" class="button radius expand">
-    </div>
+<div class="row">
+  <div class="small-12 medium-8 column">
+    <form>
+      <div class="small-12 medium-4">
+        <label><%= t("manage.document_type_label") %></label>
+        <select>
+          <option><%= t("manage.document_type.spanish_id") %></option>
+          <option><%= t("manage.document_type.passport") %></option>
+          <option><%= t("manage.document_type.residence_card") %></option>
+        </select>
+      </div>
+      <div class="small-12 medium-5">
+        <label><%= t("manage.document_number") %></label>
+        <input type="text" placeholder="<%= t('manage.document_number') %>">
+        <input type="submit" value="<%= t('manage.login') %>" class="button radius">
+      </div>
+    </form>
   </div>
-</form>
+</div>
 
 <!-- DELETE ME -->
 <span style="color: red;">
-Una vez logueado aparecen los datos del bloque gris de arriba a la derecha.<br>
-Y aparece el mismo formulario de "/proposals/_form.html.erb" sin el "checkbox de Acepto condiciones..." ni el "captcha".
+Una vez logueado aparecen los datos del usuario.<br>
+Y el mismo formulario de "/proposals/_form.html.erb" sin el "checkbox de Acepto condiciones...", sin el "captcha" y que el texto desarrollado de la propuesta o bien esté oculto o sea opcional. (En las oficinas sólo rellenarán el campo de resumen de la propuesta)
 </span>
 <!-- /.DELETE ME -->
+
+
+<p class="account-info"><%= t("manage.document_type_label") %> <strong>DNI</strong>  <%= t("manage.document_number") %> <strong>73562454D</strong>  <%= t("manage.username_label") %> <strong>Alberto</strong>  <%= t("manage.email_label") %> <strong>alberto@mail.com</strong> </p>

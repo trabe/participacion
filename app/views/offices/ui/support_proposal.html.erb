@@ -34,7 +34,13 @@ Y aparece un buscador de propuestas por: título, contenido, autor y código de 
 </span>
 <!-- /.DELETE ME -->
 
-<p class="account-info"><%= t("management.document_type_label") %> <strong>DNI</strong>  <%= t("management.document_number") %> <strong>73562454D</strong>  <%= t("management.username_label") %> <strong>Alberto</strong>  <%= t("management.email_label") %> <strong>alberto@mail.com</strong> <%= link_to t("management.logout"), "#", class: "right" %></p>
+<div class="account-info">
+  <p><%= link_to t("management.logout"), "#", class: "right" %></p>
+  <p><%= t("management.document_type_label") %> <strong>DNI</strong></p>
+  <p><%= t("management.document_number") %> <strong>73562454D</strong></p>
+  <p><%= t("management.username_label") %> <strong>Alberto</strong></p>
+  <p><%= t("management.email_label") %> <strong>alberto@mail.com</strong></p>
+</div>
 
 <form>
   <div class="row">

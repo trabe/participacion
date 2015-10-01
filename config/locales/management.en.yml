@@ -34,8 +34,6 @@ en:
       user_permission_proposal: "Create proposals"
       user_permission_support_proposal: "Support proposals"
       user_permission_votes: "Participate on final voting"
-      has_not_account_html: "To create an user enter to %{url} and click on the <b>'Register'</b> option at the top right of the screen."
-      portal_url: "http://decide.madrid.es"
       already_verified: "This account is already verified."
       has_account: "If already has an account on the website"
       has_not_account: "If the person has not created an user account yet"

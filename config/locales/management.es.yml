@@ -34,8 +34,6 @@ es:
       user_permission_proposal: "Crear nuevas propuestas"
       user_permission_support_proposal: "Apoyar propuestas"
       user_permission_votes: "Participar en las votaciones finales"
-      has_not_account_html: "Para crear un usuario entre en %{url} y haga clic en la opción <b>'Registrarse'</b> en la parte superior derecha de la pantalla."
-      portal_url: "http://decide.madrid.es"
       already_verified: "Esta cuenta de usuario ya está verificada."
       has_account: "Si la persona ya ha creado una cuenta de usuario en la web"
       has_not_account: "Si la persona todavía no ha creado una cuenta de usuario en la web"

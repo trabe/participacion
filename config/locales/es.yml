@@ -365,3 +365,6 @@ es:
     google_oauth2:
       sign_in: Entra con Google
       sign_up: Regístrate con Google
+    cas:
+      sign_in: Entra con tu usario de la UDC
+      sign_up: Regístrate con tu usuario de la UDC

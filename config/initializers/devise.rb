@@ -243,6 +243,13 @@ Devise.setup do |config|
   config.omniauth :facebook, Rails.application.secrets.facebook_key, Rails.application.secrets.facebook_secret
   config.omniauth :google_oauth2, Rails.application.secrets.google_oauth2_key, Rails.application.secrets.google_oauth2_secret
 
+  config.omniauth :ldap, :title => "Federico",
+                    :host => 'ldap-federico-master-devel',
+                    :port => 636,
+                    :method => :ssl,
+                    :base => 'ou=people,dc=udc,dc=es',
+                    :uid => 'uid'
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

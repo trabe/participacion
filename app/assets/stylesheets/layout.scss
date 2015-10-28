@@ -446,12 +446,12 @@ header {
 }
 
 .contain-to-grid {
-  background: #112E51;
+  background: $background;
 }
 
 .top-bar {
-  background: #112E51 !important;
-  color: white;
+  background: $background !important;
+  color: $text-medium;
   height: rem-calc(48);
   max-width: 1170px !important;
   padding: 0 rem-calc(12);
@@ -464,7 +464,7 @@ header {
     height: rem-calc(48);
 
     a {
-      color: white;
+      color: $text-medium;
       font-family: 'Lato';
       font-size: rem-calc(16);
       font-weight: lighter;
@@ -508,9 +508,8 @@ header {
         }
 
         @media (min-width: $medium-breakpoint) {
-          height: 96px;
-          margin-right: rem-calc(12);
-          margin-top: 0;
+          margin-right: rem-calc(18);
+          margin-top: rem-calc(24);
           width: 96px;
         }
       }
@@ -617,7 +616,7 @@ header {
 
     li:not(.has-form) a:not(.button) {
       background: none;
-      color: white;
+      color: $text;
       padding: rem-calc(12) 0;
 
       @media (min-width: $small-breakpoint) {
@@ -627,7 +626,7 @@ header {
 
       &:hover {
         background: none;
-        color: white;
+        color: $text-medium;
         text-decoration: underline;
         transition: text-decoration 275ms;
       }
@@ -1408,20 +1407,8 @@ table {
   }
 }
 
-.button.button-google {
-  background: #DE4C34;
-
-  &:before {
-    background: #CE3E26;
-    content: "B";
-    font-family: "icons" !important;
-    font-size: rem-calc(24);
-    left: 0;
-    line-height: $line-height*2;
-    padding: 0 rem-calc(20);
-    position: absolute;
-    top: 0;
-  }
+.button.button-cas {
+  background: #D31F8B;
 }
 
 .social-share-button-google_plus {

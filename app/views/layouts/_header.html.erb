@@ -1,50 +1,14 @@
 <header class="<%= header_css %>">
-  <section class="top-links show-for-medium-up">
-    <div class="row">
-      <%= render "shared/locale_switcher" %>
-      <div class="external-links">
-        <%= link_to t("layouts.header.participation"), root_path, class: ("selected" unless current_page?("/transparency") || current_page?("/opendata")) %>&nbsp;|
-        <%= link_to t("layouts.header.external_link_transparency"), "/transparency", class: ("selected" if current_page?("/transparency")) %>&nbsp;|
-        <%= link_to t("layouts.header.external_link_opendata"), "/opendata", class: ("selected" if current_page?("/opendata")) %>
-          &nbsp;|&nbsp;
-          <div class="social inline-block">
-            <%= link_to "https://twitter.com/abriendomadrid", target: "_blank", title: t("social.twitter") do %>
-              <span class="sr-only"><%= t("social.twitter") %></span>
-              <i class="icon-twitter"></i>
-            <% end %>
-            <%= link_to "https://www.facebook.com/Abriendo-Madrid-1475577616080350/", target: "_blank", title: t("social.facebook") do %>
-              <span class="sr-only"><%= t("social.facebook") %></span>
-              <i class="icon-facebook"></i>
-            <% end %>
-            <%= link_to "/blog", target: "_blank", title: t("social.blog") do %>
-              <span class="sr-only"><%= t("social.blog") %></span>
-              <i class="icon-blog"></i>
-            <% end %>
-            <%= link_to "https://www.youtube.com/channel/UCFmaChI9quIY7lwHplnacfg", target: "_blank", title: t("social.youtube") do %>
-              <span class="sr-only"><%= t("social.youtube") %></span>
-              <i class="icon-youtube"></i>
-            <% end %>
-          </div>
-      </div>
-    </div>
-  </section>
-
   <div class="contain-to-grid clear">
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="toggle-topbar menu-icon"><a href="#"><span><%= t("application.menu")%></span></a></li>
         <li class="name">
           <%= link_to root_path do %>
-            <%= image_tag('header_logo_madrid.png', class: 'show-for-medium-up left', size: '96x96', alt: t("layouts.header.logo")) %>
+            <%= image_tag('header_logo_udc.png', class: 'show-for-medium-up left', alt: t("layouts.header.logo")) %>
             <%= t("layouts.header.open_gov", open: "#{t('layouts.header.open')}").html_safe %> <span>|</span>
             <span class="logo-site">
-              <% if transparency_page? %>
-                <%= t("layouts.header.transparency") %>
-              <% elsif opendata_page? %>
-                <%= t("layouts.header.open_data") %>
-              <% else %>
-                <%= t("layouts.header.participation") %>
-              <% end %>
+              <%= t("layouts.header.participation") %>
             </span>
           <% end %>
         </li>
@@ -64,10 +28,6 @@
       <%= link_to t("layouts.header.debates"), debates_path, class: ("active" if current_page?(controller: "/debates")) %>
       <%= link_to t("layouts.header.proposals"), proposals_path, class: ("active" if current_page?(controller: "/proposals")) %>
       <%= link_to t("layouts.header.more_information"), "/more_information", class: ("active" if current_page?("/more_information"))  %>
-      <%= link_to t("layouts.header.external_link_blog_url"), target: "_blank" do %>
-        <%= t("layouts.header.external_link_blog") %>
-        <i class="icon-external"></i>
-      <% end %>
       </div>
       <div class="small-12 medium-4 column right">
         <%= yield :header_addon %>
@@ -84,35 +44,6 @@
         <%= link_to t("layouts.header.more_information"), "/more_information", class: "more-info" %>
       </div>
 
-      <div class="show-for-medium-up small-12 medium-5 column text-center">
-        <i class="icon-debates icon-home-big"></i>
-        <i class="icon-debates icon-home-small"></i>
-      </div>
-    </div>
-  <% end %>
-
-  <% if transparency_page? %>
-    <div class="row home-page">
-      <div class="small-12 medium-7 column">
-        <h1><%= t("pages.transparency") %></h1>
-        <p>Estamos trabajando en el nuevo Portal de Transparencia del Ayuntamiento de Madrid, para que no quede ni una esquina del Ayuntamiento que no puedas ver.</p>
-        <p>Por ahora puedes visitar el portal que existía hasta ahora:</p>
-        <%= link_to "Ir al Portal de Transparencia", t("layouts.header.external_link_transparency_url"), target: "_blank", class: "button radius" %>
-      </div>
-      <div class="show-for-medium-up small-12 medium-5 column text-center">
-        <i class="icon-debates icon-home-big"></i>
-        <i class="icon-debates icon-home-small"></i>
-      </div>
-    </div>
-  <% end %>
-
-  <% if opendata_page? %>
-    <div class="row home-page">
-      <div class="small-12 medium-7 column">
-        <h1><%= t("pages.opendata") %></h1>
-        <p>Estamos trabajando en el nuevo Portal de Datos Abiertos del Ayuntamiento de Madrid, por ahora puedes visitar el portal que existía hasta ahora:</p>
-        <%= link_to "Ir al Portal de Datos Abiertos", t("layouts.header.external_link_opendata_url"), target: "_blank", class: "button radius" %>
-      </div>
       <div class="show-for-medium-up small-12 medium-5 column text-center">
         <i class="icon-debates icon-home-big"></i>
         <i class="icon-debates icon-home-small"></i>

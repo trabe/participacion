@@ -356,12 +356,6 @@ en:
   omniauth:
     finish_signup:
       title: Add Email
-    twitter:
-      sign_in: Sign in with Twitter
-      sign_up: Sign up with Twitter
-    facebook:
-      sign_in: Sign in with Facebook
-      sign_up: Sign up with Facebook
-    google_oauth2:
-      sign_in: Sign in with Google
-      sign_up: Sign up with Google
+    cas:
+      sign_in: Sign in with your UDC user
+      sign_up: Sign up with your UDC user

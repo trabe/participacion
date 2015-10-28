@@ -11,16 +11,16 @@
 // 01. Fonts
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: Calibri, "Gill Sans" , "Trebuchet MS" , sans-serif; /*'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
 $line-height: rem-calc(24);
 
 // 02. Colors
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$body:              #E9E9E9;
-$background:        #EDEFF0;
+$body:              #FFFFFF;
+$background:        #FFFFFF;
 $border:            #DEE0E3;
-$brand:             #0077B9;
+$brand:             #D31F8B;
 
 $text:              #222222;
 $text-medium:       #999999;

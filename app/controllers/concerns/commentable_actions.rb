@@ -74,7 +74,7 @@ module CommentableActions
   private
 
     def track_event
-      ahoy.track "#{resource_name}_created".to_sym, "#{resource_name}_id": resource.id
+      ahoy.track "#{resource_name}_created".to_sym, {"#{resource_name}_id".to_sym => resource.id}
     end
 
     def tag_cloud

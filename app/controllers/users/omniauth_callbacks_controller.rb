@@ -8,8 +8,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_with :facebook_login, :facebook
   end
 
-  def google_oauth2
-    sign_in_with :google_login, :google_oauth2
+  [:twitter, :facebook, :google_oauth2, :cas].each do |provider|
+    provides_callback_for provider
   end
 
   def after_sign_in_path_for(resource)

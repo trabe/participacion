@@ -108,7 +108,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-sans-serif;
-  font-weight: bold;
+  font-weight: lighter;
 }
 
 h1 {
@@ -676,8 +676,8 @@ header {
   a {
     color: $text;
     display: inline-block;
-    font-size: rem-calc(14);
-    font-weight: bold;
+    font-size: rem-calc(18);
+    text-transform: uppercase;
     line-height: $line-height*2;
     position: relative;
     text-align: left;
@@ -882,7 +882,6 @@ footer {
 
     h1 {
       font-size: rem-calc(30);
-      font-weight: bolder;
     }
   }
 }

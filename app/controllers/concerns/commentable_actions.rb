@@ -63,11 +63,11 @@ module CommentableActions
   private
 
     def track_event
-      ahoy.track "#{resource_name}_created".to_sym, "#{resource_name}_id": resource.id
+      ahoy.track "#{resource_name}_created".to_sym, {"#{resource_name}_id".to_sym => resource.id}
     end
 
     def tag_cloud
-      resource_model.tag_counts.order("#{resource_name.pluralize}_count": :desc, name: :asc).limit(20)
+      resource_model.tag_counts.order({"#{resource_name.pluralize}_count".to_sym => :desc, :name => :asc}).limit(20)
     end
 
     def load_featured_tags

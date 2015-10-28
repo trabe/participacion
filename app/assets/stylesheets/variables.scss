@@ -12,7 +12,7 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 $font-logo:           'Lato' !important;
-$font-sans:           'Source Sans Pro', 'Helvetica', 'Arial', sans-serif !important;
+$font-sans:           "Calibri", "Gill Sans" , "Trebuchet MS" , sans-serif;
 
 $font-normal:         400;
 $font-bold:           700;
@@ -45,10 +45,11 @@ $line-height:         rem-calc(24);
 // 02. Colors
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$brand:             #004A83;
-$body:              #E9E9E9;
-$background:        #EDEFF0;
+
+$body:              #FFFFFF;
+$background:        #FFFFFF;
 $border:            #DEE0E3;
+$brand:             #D31F8B;
 $dark:              darken($brand, 10%);
 
 $text:              #222222;

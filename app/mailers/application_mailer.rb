@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
   helper :settings
-  default from: "participacion@madrid.es"
+  default from: "participacion@udc.es"
   layout 'mailer'
 end

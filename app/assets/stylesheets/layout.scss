@@ -313,13 +313,14 @@ header {
 }
 
 .contain-to-grid {
-  background: $brand;
+
+  background: $background;
 }
 
 .top-bar {
-  background: $brand !important;
-  color: white;
-  min-height: $line-height*2;
+  background: $background !important;
+  color: $text-medium;
+  height: rem-calc(48);
   max-width: 1170px !important;
   padding: 0 $line-height/2;
 
@@ -335,11 +336,43 @@ header {
     }
 
     a {
-      @include logo;
+      color: $text-medium;
+      font-family: 'Lato';
+      font-size: rem-calc(16);
+      font-weight: lighter;
       line-height: $line-height*2;
 
       @media (min-width: $small-breakpoint) {
-        line-height: rem-calc(80); // Same as logo image height
+        font-size: rem-calc(24);
+        line-height: $line-height*4;
+
+        span, span.logo-site {
+          font-size: rem-calc(16);
+        }
+      }
+
+      @media (min-width: $medium-breakpoint) {
+        font-size: rem-calc(30);
+        line-height: $line-height*4;
+
+        span, span.logo-site {
+          font-size: rem-calc(20);
+        }
+      }
+
+      img {
+        height: 48px;
+        width: 48px;
+
+        @media (min-width: $small-breakpoint) {
+          margin-top: rem-calc(24);
+        }
+
+        @media (min-width: $medium-breakpoint) {
+          margin-right: rem-calc(18);
+          margin-top: rem-calc(24);
+          width: 96px;
+        }
       }
     }
   }
@@ -451,6 +484,56 @@ header {
         padding-left: rem-calc(15);
         text-align: center;
       }
+    }
+  }
+
+  ul li > a {
+    font-size: rem-calc(14);
+  }
+
+  ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+    background-color: #007095 !important;
+  }
+
+  ul li, ul li:hover:not(.has-form) > a:not(.button) {
+    line-height: $line-height;
+
+    @media (min-width: $small-breakpoint) {
+      background: none;
+      border: 0;
+      line-height: $line-height*4;
+    }
+  }
+
+  ul {
+    margin-left: rem-calc(12);
+
+    @media (min-width: $small-breakpoint) {
+      margin-left: 0;
+    }
+
+    li:not(.has-form) a:not(.button) {
+      background: none;
+      color: $text;
+      padding: rem-calc(12) 0;
+
+      @media (min-width: $small-breakpoint) {
+        line-height: $line-height*4;
+        padding: 0 rem-calc(12);
+      }
+
+      &:hover {
+        background: none;
+        color: $text-medium;
+        text-decoration: underline;
+        transition: text-decoration 275ms;
+      }
+    }
+
+    li.active:not(.has-form) a:not(.button) {
+      background: none;
+      height: rem-calc(96);
+      line-height: $line-height*4;
     }
   }
 }
@@ -1240,20 +1323,8 @@ table {
   }
 }
 
-.button.button-google {
-  background: #DE4C34;
-
-  &:before {
-    background: #CE3E26;
-    content: "B";
-    font-family: "icons" !important;
-    font-size: rem-calc(24);
-    left: 0;
-    line-height: $line-height*2;
-    padding: 0 rem-calc(20);
-    position: absolute;
-    top: 0;
-  }
+.button.button-cas {
+  background: #D31F8B;
 }
 
 .social-share-button-google_plus {

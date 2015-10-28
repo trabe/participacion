@@ -83,7 +83,7 @@
             <% if user_signed_in? %>
               <span class="divider">&nbsp;|&nbsp;</span>
               <%= link_to(comment_link_text(comment), "",
-                          class: "js-add-comment-link", data: {'id': dom_id(comment)}) %>
+                          class: "js-add-comment-link", data: {'id' => dom_id(comment)}) %>
 
               <%= render 'comments/actions', comment: comment %>
 

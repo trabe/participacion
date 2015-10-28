@@ -8,7 +8,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_with :facebook_login, :facebook
   end
 
-  [:twitter, :facebook, :google_oauth2, :cas].each do |provider|
+  [:cas].each do |provider|
     provides_callback_for provider
   end
 

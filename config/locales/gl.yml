@@ -366,3 +366,6 @@ gl:
     google_oauth2:
       sign_in: Entra con Google
       sign_up: Rexístrate con Google
+    cas:
+      sign_in: Entra co teu usuario da UDC
+      sign_up: Rexístrate co teu usuario da UDC

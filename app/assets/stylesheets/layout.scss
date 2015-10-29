@@ -789,7 +789,7 @@ h3.sidebar-title {
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .auth-page {
-  background: $brand image-url("auth_bg.jpg");
+  background: #eeeeee image-url("auth_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -797,20 +797,39 @@ h3.sidebar-title {
     @include logo;
 
     a {
-      color: white;
-      display: block;
-      line-height: rem-calc(80); // Same as logo image height
-      text-align: center;
-
-      @media (min-width: $small-breakpoint) {
-        display: inline-block;
-        text-align: left;
+// TODO: Just in case we were breaking auth-page css rebasing. Delete after rebase compkete
+// <<<<<<< b2fa1ee6a05437ded9c6a504fa197e595a82b628
+//       color: white;
+//       display: block;
+//       line-height: rem-calc(80); // Same as logo image height
+//       text-align: center;
+//
+//       @media (min-width: $small-breakpoint) {
+//         display: inline-block;
+//         text-align: left;
+// =======
+      span.logo-site {
+        vertical-align: middle;
       }
     }
   }
 }
 
 .auth {
+
+  min-height: rem-calc(480);
+
+  h2 {
+    clear: both;
+    font-size: rem-calc(18);
+    font-weight: normal;
+    line-height: $line-height;
+
+    @media (min-width: $small-breakpoint) {
+      font-size: rem-calc(30);
+      line-height: $line-height*2;
+    }
+  }
 
   .back, .icon-angle-left {
     @include back;
@@ -1392,7 +1411,11 @@ table {
 }
 
 .button.button-cas {
-  background: #D31F8B;
+  background: $udc5 image-url("mini_logo_udc_white.png");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 50px auto;
+  font-size: rem-calc(18);
 }
 
 .social-share-button-google_plus {

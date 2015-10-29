@@ -98,7 +98,7 @@ class Proposal < ActiveRecord::Base
   end
 
   def votable_by?(user)
-    user && user.level_two_or_three_verified?
+    user && !user.unverified?
   end
 
   def register_vote(user, vote_value)
@@ -141,7 +141,7 @@ class Proposal < ActiveRecord::Base
   protected
 
     def set_responsible_name
-      if author && author.document_number?
+      if author && author.verified?
         self.responsible_name = author.document_number
       end
     end

@@ -1,18 +1,16 @@
 class Verification::Residence
-# <<<<<<< 55cafe0c427adb65b610c3cb28c2bffb58276d31 But no verification on UDC
+#
 #   include ActiveModel::Model
 #   include ActiveModel::Dates
-#   include ActiveModel::Validations::Callbacks
 #
 #   attr_accessor :user, :document_number, :document_type, :date_of_birth, :postal_code, :terms_of_service
-#
-#   before_validation :call_census_api
 #
 #   validates_presence_of :document_number
 #   validates_presence_of :document_type
 #   validates_presence_of :date_of_birth
 #   validates_presence_of :postal_code
 #   validates :terms_of_service, acceptance: { allow_nil: false }
+#
 #   validates :postal_code, length: { is: 5 }
 #
 #   validate :allowed_age
@@ -31,7 +29,6 @@ class Verification::Residence
 #     return false unless valid?
 #     user.update(document_number:       document_number,
 #                 document_type:         document_type,
-#                 geozone:               self.geozone,
 #                 residence_verified_at: Time.now)
 #   end
 #
@@ -68,24 +65,14 @@ class Verification::Residence
 #     })
 #   end
 #
-#   def geozone
-#     Geozone.where(census_code: district_code).first
-#   end
-#
-#   def district_code
-#     @census_api_response.district_code
-#   end
-#
 #   private
 #
-#     def call_census_api
-#       @census_api_response = CensusApi.new.call(document_type, document_number)
-#     end
-#
 #     def residency_valid?
-#       @census_api_response.valid? &&
-#         @census_api_response.postal_code == postal_code &&
-#         @census_api_response.date_of_birth == date_to_string(date_of_birth)
+#       response = CensusApi.new.call(document_type, document_number)
+#
+#       response.valid? &&
+#         response.postal_code == postal_code &&
+#         response.date_of_birth == date_to_string(date_of_birth)
 #     end
 #
 #     def clean_document_number
@@ -95,4 +82,5 @@ class Verification::Residence
 #     def valid_postal_code?
 #       postal_code =~ /^280/
 #     end
+#
 end

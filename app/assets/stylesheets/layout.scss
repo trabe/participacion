@@ -863,7 +863,7 @@ footer {
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .auth-page {
-  background: #065687 image-url("auth_bg.jpg");
+  background: #eeeeee image-url("auth_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -879,7 +879,6 @@ footer {
     @include logo;
 
     a {
-
       span.logo-site {
         vertical-align: middle;
       }
@@ -893,7 +892,7 @@ footer {
   h2 {
     clear: both;
     font-size: rem-calc(18);
-    font-weight: bold;
+    font-weight: normal;
     line-height: $line-height;
 
     @media (min-width: $small-breakpoint) {
@@ -1437,7 +1436,11 @@ table {
 }
 
 .button.button-cas {
-  background: #D31F8B;
+  background: $udc5 image-url("mini_logo_udc_white.png");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 50px auto;
+  font-size: rem-calc(18);
 }
 
 .social-share-button-google_plus {

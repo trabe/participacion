@@ -111,7 +111,7 @@
   }
 
   .not-logged {
-    background: rgba(22,99,135,.9);
+    background: $votes-not-logged;
     color: white;
     font-size: $small-font-size;
     height: 100%;
@@ -221,7 +221,7 @@
   }
 
   .not-logged {
-    background: rgba(255,164,45,.9);
+    background: $proposals-not-logged;
     color: white;
     font-size: $small-font-size;
     height: 100%;
@@ -708,8 +708,8 @@
       position: absolute;
       display: block;
       border-style: solid;
-      border-color: #166387 transparent transparent transparent;
-      bottom: -14px;
+      border-color: $votes-border transparent transparent transparent;
+      bottom: rem-calc(-14);
       border-left-width: 0;
       border-right-color: transparent;
       right: -1px;
@@ -766,8 +766,10 @@
       position: absolute;
       display: block;
       border-style: solid;
-      border-color: #664212 transparent transparent transparent;
-      bottom: -14px;
+
+      border-color: $proposals-border transparent transparent transparent;
+      bottom: rem-calc(-14);
+
       border-left-width: 0;
       border-right-color: transparent;
       right: -1px;

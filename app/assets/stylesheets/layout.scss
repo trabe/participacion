@@ -379,6 +379,10 @@ header {
     padding: 0;
   }
 
+  .logo {
+    height: rem-calc(48);
+  }
+
   .name {
 
     @media (min-width: $small-breakpoint) {

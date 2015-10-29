@@ -1,0 +1,19 @@
+gl:
+  mailers:
+    comment:
+      subject: "Alguén comentou no teu %{commentable}"
+      hi: Ola
+      title: Novo comentario
+      new_comment_by_html: "Hai un novo comentario de <b>%{commenter}</b> en"
+    reply:
+      subject: Alguén respondeu ao teu comentario
+      hi: Ola
+      title: Nova resposta ao teu comentario
+      new_reply_by_html: "Hai unha nova resposta de <b>%{commenter}</b> ao teu comentario en"
+    email_verification:
+      subject: Verifica o teu correo electrónico
+      title:  Verifica a túa conta na seguinte ligazón
+      instructions_html: "Para acabar de verificar a túa conta de usuario no Portal de Goberno Aberto da Universidade da Coruña, necesitamos que premas %{verification_link}."
+      click_here_to_verify: "nesta ligazón"
+      instructions_2_html: "Este correo electrónico é para verificar a túa conta con <b>%{document_type} %{document_number}</b>. Se eses non son os teus datos, por favor non premas na ligazón anterior e ignora este correo electrónico."
+      thanks: "Moitas grazas."

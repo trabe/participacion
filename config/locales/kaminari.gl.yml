@@ -1,0 +1,21 @@
+﻿gl:
+  views:
+    pagination:
+      first: "&laquo; Primeira"
+      last: "Última &raquo;"
+      previous: "&lsaquo; Anterior"
+      next: "Seguinte &rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      entry:
+        zero: "entradas"
+        one: "entrada"
+        other: "entradas"
+      one_page:
+        display_entries:
+          zero: "Non se encontraron %{entry_name}"
+          one: "Hai <b>1</b> %{entry_name}"
+          other: "Hay <b> %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Mostrando <b>%{first}&nbsp;-&nbsp;%{last}</b> dun total de <b>%{total}</b> %{entry_name}"

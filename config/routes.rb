@@ -6,16 +6,6 @@ Rails.application.routes.draw do
                        confirmations: 'users/confirmations',
                        omniauth_callbacks: 'users/omniauth_callbacks'
                      }
-  devise_for :organizations, class_name: 'User',
-             controllers: {
-               registrations: 'organizations/registrations',
-               sessions: 'devise/sessions',
-             },
-             skip: [:omniauth_callbacks]
-
-  devise_scope :organization do
-    get 'organizations/sign_up/success', to: 'organizations/registrations#success'
-  end
 
   devise_scope :user do
     patch '/user/confirmation', to: 'users/confirmations#update', as: :update_user_confirmation
@@ -102,13 +92,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: "dashboard#index"
-    resources :organizations, only: :index do
-      collection { get :search }
-      member do
-        put :verify
-        put :reject
-      end
-    end
 
     resources :users, only: [:index, :show] do
       member do

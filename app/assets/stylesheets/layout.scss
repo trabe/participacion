@@ -223,7 +223,22 @@ a {
 
 .footer, .push {
   clear: both;
-  min-height: $line-height*12;
+  min-height: $line-height*12; /* WAS rem-calc(288); in UDC */
+}
+
+.footer {
+}
+
+.footer .column:first-child {
+  border-left: none;
+}
+
+.footer .column {
+  border-left: 1px solid $footer-border;
+}
+
+.footer .gnu a {
+  text-decoration: underline;
 }
 
 .ie-alert-box {
@@ -670,6 +685,8 @@ header {
 
 footer {
   color: $footer-color;
+  padding-bottom: $line-height; /* Was only on UDC as rem-calc(24) */
+  padding-top: $line-height; /* Was only on UDC as rem-calc(24) */
 
   .logo a {
     font-family: $font-logo;
@@ -682,6 +699,7 @@ footer {
 
   p {
     font-size: $small-font-size;
+    line-height: inherit;
 
     .info a {
       text-decoration: underline;
@@ -694,6 +712,10 @@ footer {
     &:hover {
       color: $footer-color;
     }
+  }
+
+  ul {
+    list-style: none;
   }
 
   .footer-sections {

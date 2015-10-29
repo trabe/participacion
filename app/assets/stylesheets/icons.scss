@@ -140,7 +140,7 @@
   content: "\4b";
 }
 .icon-letter:before {
-  content: "\4c";
+  content: "\4c"; /* WAS content: "L"; in UDC */
 }
 .icon-circle:before {
   content: "\43";

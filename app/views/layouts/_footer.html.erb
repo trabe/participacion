@@ -1,69 +1,49 @@
 <footer>
 	<div class="row-full">
 		<div class="row">
+			<div class="small-12 large-2 column">
+				Universidade da Coruña<br/>
+				Rúa da Maestranza, 9<br/>
+				15001 A Coruña<br/>
+				+34 981 167 000<br/>
+			</div>
 
-      <div class="small-12 large-4 column">
-        <h1 class="logo">
-          <%= link_to t("layouts.header.open_gov", open: "#{t('layouts.header.open')}").html_safe %>
-        </h1>
-
-        <p class="info">
+			<div class="small-12 large-4 column gnu">
+        <p>
           <%= t("layouts.footer.description",
             open_source: link_to(t("layouts.footer.open_source"), t("layouts.footer.open_source_url"), target: "blank"),
-            consul:  link_to(t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank")).html_safe
+            consul:  link_to(t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank"),
+						consul_url_udc: link_to('github', t("layouts.footer.consul_udc_url"))).html_safe
           %>
-          <%= t("layouts.footer.contact_us") %>
-          <%= link_to t("layouts.footer.faq"), page_path('faq') %>
         </p>
       </div>
 
-      <div class="footer-sections small-12 large-8 column">
-        <div class="small-12 medium-4 column">
-          <h2>
-            <%= link_to t("layouts.footer.participation_title"), root_path %>
-          </h2>
-          <p><%= t("layouts.footer.participation_text") %></p>
-        </div>
-      </div>
-    </div>
+			<div class="small-12 large-3 column">
+				<ul>
+					<li><%= link_to t("layouts.footer.more_info"), "/more_information" %></li>
+					<li><%= link_to t("layouts.footer.privacy"), "/privacy" %></li>
+					<li><%= link_to t("layouts.footer.conditions"), "/conditions" %></li>
+					<li><%= link_to t("layouts.footer.accessibility"), "/accessibility" %></li>
+				</ul>
+			</div>
 
-    <div class="subfooter row">
-      <div class="small-12 medium-9 column">
-        <p>
-          <%= t("layouts.footer.copyright", year: Time.now.year) %>&nbsp;|&nbsp;
-          <%= link_to t("layouts.footer.more_info"), page_path('more_information') %>&nbsp;|&nbsp;
-          <%= link_to t("layouts.footer.privacy"), page_path('privacy') %>&nbsp;|&nbsp;
-          <%= link_to t("layouts.footer.conditions"), page_path('conditions') %>&nbsp;|&nbsp;
-          <%= link_to t("layouts.footer.accessibility"), page_path('accessibility') %>
-        </p>
-      </div>
-
-      <div class="small-12 medium-3 column social">
-        <% if setting['twitter_handle'] %>
-          <%= link_to "https://twitter.com/#{setting['twitter_handle']}", target: "_blank", title: t("social.twitter") do %>
-            <span class="sr-only"><%= t("social.twitter") %></span>
-            <i class="icon-twitter"></i>
-          <% end %>
-        <% end %>
-        <% if setting['facebook_handle'] %>
-          <%= link_to "https://www.facebook.com/#{setting['facebook_handle']}/", target: "_blank", title: t("social.facebook") do %>
-            <span class="sr-only"><%= t("social.facebook") %></span>
-            <i class="icon-facebook"></i>
-          <% end %>
-        <% end %>
-        <%  if setting['blog_url'] %>
-          <%= link_to setting['blog_url'], target: "_blank", title: t("social.blog") do %>
-            <span class="sr-only"><%= t("social.blog") %></span>
-            <i class="icon-blog"></i>
-          <% end %>
-        <% end %>
-        <% if setting['youtube_handle'] %>
-          <%= link_to "https://www.youtube.com/#{setting['youtube_handle']}", target: "_blank", title: t("social.youtube") do %>
-            <span class="sr-only"><%= t("social.youtube") %></span>
-            <i class="icon-youtube"></i>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+			<div class="small-12 large-3 column">
+				<ul>
+					<li>
+						<%= link_to "https://twitter.com/UDC_gal", target: "_blank", title: t("social.twitter") do %>
+			        <span class="sr-only"><%= t("social.twitter") %></span>
+			        <i class="icon-twitter"></i>
+							<%= t("social.twitter") %>
+			      <% end %>
+					</li>
+					<li>
+		        <%= link_to "https://www.facebook.com/udc.gal", target: "_blank", title: t("social.facebook") do %>
+		          <span class="sr-only"><%= t("social.facebook") %></span>
+		          <i class="icon-facebook"></i>
+							<%= t("social.facebook") %>
+		        <% end %>
+					</li>
+			</div>
+		</div>
+	</div>
 </footer>

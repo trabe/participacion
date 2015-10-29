@@ -1,0 +1,66 @@
+gl:
+  management:
+    print_info: "Imprimir esta información"
+    username_label: "Nome de usuario"
+    email_label: "Correo electrónico"
+    check: "Comprobar"
+    document_number: "Número de documento"
+    document_type_label: "Tipo de documento"
+    menu:
+      title: "Xestión"
+      users: "Usuarios"
+      create_proposal: "Crear proposta"
+      support_proposals: "Apoiar propostas"
+      print_proposals: "Imprimir propostas"
+    dashboard:
+      index:
+       title: "Xestión"
+    account_info:
+      identified_label: "Identificado como:"
+      username_label: "Usuario:"
+      email_label: "Correo electrónico:"
+      document_number_label: "Número de documento:"
+      document_type_label: "Tipo de documento:"
+      change_user: "Cambiar usuario"
+    sessions:
+      signed_out: "Pechaches a sesión correctamente."
+      signed_out_managed_user: "Pechouse correctamente a sesión do usuario."
+    proposals:
+      create_proposal: "Crear proposta"
+      print:
+       print_button: Imprimir
+      alert:
+        unverified_user: Este usuario non está verificado
+    permissions:
+      debates: "Participar en debates"
+      create_proposals: "Crear novas propostas"
+      support_proposals: "Apoiar propostas"
+      vote_proposals: "Participar nas votacións finais"
+    document_verifications:
+      title: "Xestión de usuarios"
+      please_check_account_data: "Comprobe que os datos anteriores son correctos para proceder a verificar a conta completamente."
+      already_verified: "Esta conta de usuario xa está verificada."
+      n_census_has_following_permissions: "Este usuario pode participar no Portal de Goberno Aberto da Universidade da Coruña coas seguintes posibilidades:"
+      not_in_census: "Este documento non está rexistrado no Padrón Municipal de Madrid."
+      under_age: "Debes ser maior de 16 anos para verificar a túa conta."
+      not_in_census_info: "As persoas non empadroadas en Madrid poden participar no Portal de Goberno Aberto da Universidade da Coruña coas seguintes posibilidades:"
+      has_no_account_html: "Para crear un usuario entre en %{link} e prema na opción <b>'Rexistrarse'</b> na parte superior dereita da pantalla."
+      verify: "Verificar usuario"
+    email_verifications:
+      document_found_in_census: "Este documento está no rexistro do padrón municipal, pero aínda non ten unha conta de usuario asociada. Elixe unha das opcións seguintes:"
+      if_existing_account: "Se a persoa xa creou unha conta de usuario na web"
+      introduce_email: "Introduce o correo electrónico co que creou a conta:"
+      email_placeholder: "Introduce o correo electrónico de rexistro"
+      send_email: "Enviar correo electrónico de verificación"
+      if_no_existing_account: "Se a persoa aínda non creou unha conta de usuario na web"
+      email_sent_instructions: "Para acabar de verificar esta conta é necesario que prema na ligazón que lle enviamos ao enderezo de correo que figura arriba. Este paso é necesario para confirmar que a dita conta de usuario é súa."
+      document_mismatch: "Ese correo electrónico corresponde a un usuario que xa ten asociado o documento %{document_number}(%{document_type})"
+      already_verified: "Esta conta de usuario xa está verificada."
+    users:
+      create_user: "Crear nova conta de usuario"
+      create_user_info: "Procedemos a crear un usuario coa seguinte información:"
+      create_user_submit: "Crear usuario"
+      create_user_success_html:
+        "Enviamos un correo electrónico a <b>%{email}</b> para verificar que é súa.
+        O correo enviado contén unha ligazón que o usuario deberá premer. Entón poderá seleccionar
+        unha clave de acceso, e entrar na web de participación."

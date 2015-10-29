@@ -1,0 +1,126 @@
+gl:
+  devise_views:
+    confirmations:
+      new:
+        title: "Reenviar instrucións de confirmación"
+        email_label: Correo electrónico
+        submit: "Reenviar instrucións"
+      show:
+        title: "Confirmar a miña conta"
+        instructions_html: "Imos proceder a confirmar a conta co correo electrónico <b>%{email}</b>"
+        please_set_password: "Por favor introduce unha nova clave de acceso para a túa conta (permitirache acceder co correo electrónico de arriba)"
+        new_password_label: "Nova clave de acceso"
+        new_password_confirmation_label: "Repite a clave de novo"
+        submit: "Confirmar"
+    mailer:
+      confirmation_instructions:
+        title: "Dámosche a benvida ao Portal de Goberno Aberto da Universidade da Coruña"
+        welcome: "Benvido/a"
+        text: "Podes confirmar a túa conta de correo electrónico na seguinte ligazón:"
+        confirm_link: "Confirmar a miña conta"
+      reset_password_instructions:
+        hello: "Ola"
+        title: "Cambia o teu contrasinal"
+        text: "Solicitóuseche que cambies o teu contrasinal, pódelo facer na seguinte ligazón:"
+        change_link: "Cambiar o meu contrasinal"
+        ignore_text: "Se ti non o solicitaches, podes ignorar este correo electrónico."
+        info_text: "O teu contrasinal non cambiará ata que non accedas á ligazón e a modifiques."
+      unlock_instructions:
+        hello: "Ola"
+        title: A túa conta foi bloqueada
+        info_text: "A túa conta foi bloqueada debido a un excesivo número de intentos errados de alta."
+        instructions_text: "Entra na seguinte ligazón para desbloquear a túa conta:"
+        unlock_link: "Desbloquear a miña conta"
+    menu:
+      login_items:
+        logout: "Saír"
+        signup: "Rexistrarse"
+        login: "Entrar"
+    passwords:
+      edit:
+        title: "Cambia o teu contrasinal"
+        password_label: "Contrasinal novo"
+        password_confirmation_label: "Confirmar o contrasinal novo"
+        change_submit: "Cambiar o meu contrasinal"
+      new:
+        title: "Esqueciches o teu contrasinal?"
+        email_label: "Correo electrónico"
+        send_submit: "Recibir instrucións"
+    users:
+      registrations:
+        edit:
+          edit: "Editar"
+          email_label: "Correo electrónico"
+          waiting_for: "Esperando confirmación de:"
+          leave_blank: "Déixao en branco se non desexas cambialo"
+          password_label: "Contrasinal novo"
+          password_confirmation_label: "Confirmar contrasinal novo"
+          current_password_label: "Contrasinal actual"
+          need_current: "Necesitamos o teu contrasinal actual para confirmar os cambios"
+          update_submit: "Actualizar"
+          back_link: "Atrás"
+        new:
+          title: "Rexistrarse"
+          username_label: "Nome de usuario"
+          username_note: "Nome que aparecerá nas túas publicacións"
+          email_label: "Correo electrónico"
+          password_label: "Contrasinal"
+          password_confirmation_label: "Confirmar contrasinal"
+          submit: "Rexistrarse"
+          organization_signup: "Representas unha organización / colectivo? %{signup_link}"
+          organization_signup_link: "Rexístrate aquí"
+          terms: "Ao rexistrarte aceptas os %{terms}"
+          terms_link: "condicións de uso"
+        success:
+          title: "Revisa o teu correo"
+          thank_you_html: "Grazas por rexistrarte na web. Agora debes <b>confirmar o teu correo</b>."
+          instructions_1_html: "Por favor <b>revisa o teu correo electrónico</b> - enviámosche unha <b>ligazón para confirmar a túa conta</b>."
+          instructions_2_html: "Unha vez confirmado, poderás empezar a participar."
+          back_to_index: "Entendido, volver á páxina principal"
+        delete_form:
+          title: "Darme de baixa"
+          info: "Esta acción non se pode desfacer. Unha vez que deas de baixa a túa conta, non poderás volver acceder con ela."
+          info_reason: "Se queres, escribe o motivo polo que te das de baixa (opcional)."
+          erase_reason_label: "Razón da baixa"
+          submit: "Borrar a miña conta"
+    organizations:
+      registrations:
+        new:
+          title: "Rexistrarse como organización / colectivo"
+          organization_name_label: "Nome da organización"
+          responsible_name_label: "Nome e apelidos da persoa responsable do colectivo"
+          responsible_name_note: "Será a persoa representante da asociación/colectivo en cuxo nome se presenten as propostas"
+          email_label: "Correo electrónico"
+          password_label: "Contrasinal"
+          phone_number_label: "Teléfono"
+          password_confirmation_label: "Confirmar contrasinal"
+          submit: "Rexistrarse"
+        success:
+          title: "Rexistro de organización / colectivo"
+          thank_you_html: "Grazas por rexistrar o teu colectivo na web. Agora está <b>pendente de verificación</b>."
+          instructions_1_html: "En breve <b>poñerémonos en contacto contigo</b> para verificar que realmente representas este colectivo."
+          instructions_2_html: "Mentres <b>revisa o teu correo electrónico</b>, enviámosche unha <b>ligazón para confirmar a túa conta</b>."
+          instructions_3_html: "Unha vez confirmado, poderás empezar a participar como colectivo non verificado."
+          back_to_index: "Entendido, volver á páxina principal"
+    sessions:
+      new:
+        title: "Entrar"
+        email_label: "Correo electrónico"
+        password_label: "Contrasinal"
+        remember_me: "Recordarme"
+        submit: "Entrar"
+    unlocks:
+      new:
+        title: "Reenviar instrucións para desbloquear"
+        email_label: "Correo electrónico"
+        submit: "Reenviar instrucións para desbloquear"
+    shared:
+      links:
+        login: "Entrar"
+        signup: "Non tes unha conta? %{signup_link}"
+        signup_link: "Rexístrate"
+        #organization_signup: "Rexistro para organizacións / colectivos"
+        signin_with_provider: "Entrar con %{provider}"
+        new_password: "Esqueciches o teu contrasinal?"
+        new_confirmation: "Non recibiches instrucións para confirmar a túa conta?"
+        new_unlock: "Non recibiches instrucións para desbloquear?"

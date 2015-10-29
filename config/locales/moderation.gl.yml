@@ -1,0 +1,75 @@
+gl:
+  moderation:
+    menu:
+      proposals: Propostas
+      flagged_debates: Debates
+      flagged_comments: Comentarios
+      users: Bloquear usuarios
+    dashboard:
+      index:
+        title: Moderación
+    comments:
+      index:
+        hide_comments: Ocultar comentarios
+        block_authors: Bloquear autores
+        ignore_flags: Marcar como revisados
+        title: Comentarios
+        headers:
+          comment: Comentario
+          moderate: Moderar
+        filter: Filtrar
+        filters:
+          all: Todos
+          pending_flag_review: Pendentes
+          with_ignored_flag: Marcados como revisados
+        order: Orde
+        orders:
+          created_at: Máis novos
+          flags: Máis denunciados
+        confirm: Estás seguro?
+    debates:
+      index:
+        hide_debates: Ocultar debates
+        block_authors: Bloquear autores
+        ignore_flags: Marcar como revisados
+        title: Debates
+        headers:
+          debate: Debate
+          moderate: Moderar
+        filter: Filtrar
+        filters:
+          all: Todos
+          pending_flag_review: Pendentes
+          with_ignored_flag: Marcados como revisados
+        order: Orde
+        orders:
+          created_at: Máis novos
+          flags: Máis denunciados
+        confirm: Estás seguro?
+    proposals:
+      index:
+        hide_proposals: Ocultar Propostas
+        block_authors: Bloquear autores
+        ignore_flags: Marcar como revisadas
+        title: Propostas
+        headers:
+          proposal: Proposta
+          moderate: Moderar
+        filter: Filtro
+        filters:
+          all: Todas
+          pending_flag_review: Pendentes de revisión
+          with_ignored_flag: Marcadas como revisadas
+        order: Ordenar por
+        orders:
+          created_at: Máis recentes
+          flags: Máis denunciadas
+        confirm: Estás seguro?
+    users:
+      notice_hide: Usuario bloqueado. Ocultáronse todos os seus debates e comentarios.
+      index:
+        title: Bloquear usuarios
+        search_placeholder: correo electrónico ou nome de usuario
+        search: Buscar
+        hide: Bloquear
+        hidden: Bloqueado

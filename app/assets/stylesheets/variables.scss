@@ -31,7 +31,19 @@ $brand:             #ca0083;
       color: #922772;
       outline: 0;
       border-bottom: 1px dotted #a24792;
+
+COLOURCO.DE
 */
+$udc1: #490230;
+$udc2: #620240;
+$udc3: #7b0351;
+$udc4: #940361;
+$udc5: #ae0372;
+$udc6: #c70382;
+$udc7: #e10293;
+$udc8: #fb02a4;
+$udc9: #fe19ad;
+$udc10: #fe32b6;
 
 $text:              #222222;
 $text-medium:       #999999;
@@ -41,9 +53,11 @@ $link:              #a23782;
 $link-hover:        #922772;
 $link-border:       #a24792;
 
-$debates:           #008CCF;
-$votes-bg:          #26AEEE;
-$votes-border:      #1F94CB;
+$debates:           $udc6;
+
+$votes-bg:          lighten($debates, 20%);
+$votes-border:      lighten($debates, 15%);
+$votes-not-logged:  darken($debates, 10%);
 
 $votes-like:        #7BD2A8;
 $votes-like-act:    #5D9E7F;
@@ -53,8 +67,9 @@ $votes-unlike-act:  #BD6A6A;
 $delete:            #F04124;
 $check:             #46DB91;
 
-$proposals:         #FFA42D;
-$proposals-border:  #CC8425;
+$proposals:             $udc2;
+$proposals-border:      darken($proposals, 5%);
+$proposals-not-logged:  darken($proposals, 5%);
 
 $footer-border:     #eeeeee;
 

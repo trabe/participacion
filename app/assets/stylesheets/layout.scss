@@ -272,8 +272,18 @@ h6 {
 }
 
 .footer {
-  background: #DEE0E2;
-  border-top: rem-calc(6) solid $brand;
+}
+
+.footer .column:first-child {
+  border-left: none;
+}
+
+.footer .column {
+  border-left: 1px solid $footer-border;
+}
+
+.footer .gnu a {
+  text-decoration: underline;
 }
 
 .ie-alert-box {
@@ -734,7 +744,8 @@ header {
 
 footer {
   color: #171819;
-  padding: rem-calc(48) 0;
+  padding-bottom: rem-calc(24);
+  padding-top: rem-calc(24);
 
   .logo {
     @include logo;
@@ -749,15 +760,19 @@ footer {
 
   p {
     font-size: rem-calc(14);
+    line-height: inherit;
   }
 
   a, a:active, a:focus {
     color: #454A4C;
-    text-decoration: underline;
 
     &:hover {
       color: #171819;
     }
+  }
+
+  ul {
+    list-style: none;
   }
 
   .footer-sections {

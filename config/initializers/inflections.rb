@@ -15,6 +15,6 @@
 #   inflect.acronym 'RESTful'
 # end
 
-ActiveSupport::Inflector.inflections(:en) do |inflect|
-  inflect.irregular 'organización', 'organizaciones'
+ActiveSupport::Inflector.inflections(:gl) do |inflect|
+  inflect.irregular 'organización', 'organizacions'
 end

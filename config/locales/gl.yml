@@ -135,7 +135,7 @@ gl:
       form:
         submit_button: "Gardar cambios"
     new:
-     start_new: Empezar un debate
+      start_new: Empezar un debate
       info: "Un debate é un foro de discusión, non unha proposta cidadá. Moi pronto abriremos a sección de propostas cidadás, onde calquera poderá presentar propostas e, se reciben apoio, serán postas en marcha pola Universidade."
       more_info: "Máis información"
       back_link: Volver

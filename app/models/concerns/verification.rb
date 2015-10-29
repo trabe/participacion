@@ -7,6 +7,7 @@ module Verification
     scope :level_two_or_three_verified, -> { where("users.verified_at IS NOT NULL OR users.level_two_verified_at IS NOT NULL OR (users.confirmed_phone IS NOT NULL AND users.residence_verified_at IS NOT NULL)") }
     scope :unverified, -> { where("users.verified_at IS NULL AND (users.level_two_verified_at IS NULL AND (users.residence_verified_at IS NULL OR users.confirmed_phone IS NULL))") }
     scope :incomplete_verification, -> { where("(users.residence_verified_at IS NULL AND users.failed_census_calls_count > ?) OR (users.residence_verified_at IS NOT NULL AND (users.unconfirmed_phone IS NULL OR users.confirmed_phone IS NULL))", 0)  }
+    scope :udc_registered, ->{ includes(:identities).where(identities: {provider: 'cas'}) }
   end
 
   def verification_email_sent?
@@ -41,8 +42,16 @@ module Verification
     level_two_verified? || level_three_verified?
   end
 
+  def udc_registered?
+    identities.any?{|i| i.provider == 'cas'}
+  end
+
+  def verified?
+    level_two_or_three_verified? || udc_registered?
+  end
+
   def unverified?
-    !level_two_or_three_verified?
+    !verified?
   end
 
   def failed_residence_verification?

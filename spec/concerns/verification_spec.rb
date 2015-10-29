@@ -117,11 +117,16 @@ shared_examples_for "verifiable" do
       expect(user.level_three_verified?).to eq(false)
     end
 
-    it "unverified? is true only if not level_three_verified and not level_two_verified" do
+    it "unverified? is true only if not level_three_verified and not level_two_verified and not an udc_user" do
       user = create(:user, verified_at: nil, confirmed_phone: nil)
       expect(user.unverified?).to eq(true)
 
       user = create(:user, verified_at: Time.now, confirmed_phone: "123456789", residence_verified_at: Time.now)
+      expect(user.unverified?).to eq(false)
+
+      user = create(:user, verified_at: Time.now, confirmed_phone: "123456789", residence_verified_at: Time.now)
+      identity = create(:identity, user_id: user.id, uid: "test",provider: 'cas')
+      
       expect(user.unverified?).to eq(false)
     end
 

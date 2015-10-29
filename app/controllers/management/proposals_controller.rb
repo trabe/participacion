@@ -33,7 +33,7 @@ class Management::ProposalsController < Management::BaseController
     end
 
     def check_verified_user
-      unless current_user.level_two_or_three_verified?
+      unless current_user.verified?
         redirect_to management_document_verifications_path, alert: t("management.proposals.alert.unverified_user")
       end
     end

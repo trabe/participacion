@@ -37,6 +37,41 @@ body {
   color: $text;
   font-family: $font-sans;
   font-size: $base-font-size;
+
+  font-family: $font-family-sans-serif;
+
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+
+  &::selection, ::-moz-selection {
+    background: $brand !important;
+    color: white !important;
+  }
+}
+
+p {
+  font-size: rem-calc(15);
+  line-height: $line-height*1.25;
+  margin-bottom: rem-calc(12);
+}
+
+a {
+  color: $link;
+
+  &:hover {
+    color: $link-hover;
+    border: none;
+  }
+}
+
+a:hover
+{
+
+}
+a:focus
+{
+    border: none;
+    outline: 1px dotted #ccc;
 }
 
 h1, h2, h3, h4, h5, h6 {

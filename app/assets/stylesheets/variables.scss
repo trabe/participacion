@@ -17,7 +17,7 @@ $font-sans:           "Calibri", "Gill Sans" , "Trebuchet MS" , sans-serif;
 $font-normal:         400;
 $font-bold:           700;
 
-$base-font-size:      rem-calc(17);
+$base-font-size:      rem-calc(13); /* IN consul: font-size: rem-calc(17); */
 $base-line-height:    rem-calc(26);
 
 $h1-font-size:        rem-calc(44);
@@ -49,15 +49,28 @@ $line-height:         rem-calc(24);
 $body:              #FFFFFF;
 $background:        #FFFFFF;
 $border:            #DEE0E3;
-$brand:             #D31F8B;
+
+$brand:             #ca0083;
 $dark:              darken($brand, 10%);
+
+/* MAS COLORES UDC:
+    #D31F8B (logo)
+    #a23782 (link)
+    #d287c2 (link visited)
+    link: hover {
+      border: none;
+      color: #922772;
+      outline: 0;
+      border-bottom: 1px dotted #a24792;
+*/
 
 $text:              #222222;
 $text-medium:       #999999;
 $text-light:        #CCCCCC;
 
-$link:              #2895F1;
-$link-hover:        #2178BF;
+$link:              #a23782;
+$link-hover:        #922772;
+$link-border:       #a24792;
 
 $debates:           #008CCF;
 $votes-bg:          #26AEEE;

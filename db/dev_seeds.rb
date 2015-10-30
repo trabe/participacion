@@ -11,7 +11,7 @@ Setting.create(key: 'official_level_5_name', value: 'Alcaldesa')
 Setting.create(key: 'max_ratio_anon_votes_on_debates', value: '50')
 Setting.create(key: 'max_votes_for_debate_edit', value: '1000')
 Setting.create(key: 'max_votes_for_proposal_edit', value: '1000')
-Setting.create(key: 'proposal_code_prefix', value: 'MAD')
+Setting.create(key: 'proposal_code_prefix', value: 'UDC')
 Setting.create(key: 'votes_for_proposal_success', value: '100')
 
 puts "Creating Users"
@@ -22,15 +22,15 @@ def create_user(email, username = Faker::Name.name)
   User.create!(username: username, email: email, password: pwd, password_confirmation: pwd, confirmed_at: Time.now, terms_of_service: "1")
 end
 
-admin = create_user('admin@madrid.es', 'admin')
+admin = create_user('admin@participa.es', 'admin')
 admin.create_administrator
 
-moderator = create_user('mod@madrid.es', 'mod')
+moderator = create_user('mod@participa.es', 'mod')
 moderator.create_moderator
 
 (1..10).each do |i|
   org_name = Faker::Company.name
-  org_user = create_user("org#{i}@madrid.es", org_name)
+  org_user = create_user("org#{i}@participa.es", org_name)
   org_responsible_name = Faker::Name.name
   org = org_user.create_organization(name: org_name, responsible_name: org_responsible_name)
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 # Default admin user (change password after first deploy to a server!)
 if Administrator.count == 0 && !Rails.env.test?
-  admin = User.create!(username: 'admin', email: 'admin@madrid.es', password: '12345678', password_confirmation: '12345678', confirmed_at: Time.now, terms_of_service: "1")
+  admin = User.create!(username: 'admin', email: 'admin@participa.es', password: '12345678', password_confirmation: '12345678', confirmed_at: Time.now, terms_of_service: "1")
   admin.create_administrator
 end
 
@@ -23,10 +23,10 @@ Setting["max_votes_for_debate_edit"] = 1000
 Setting["max_votes_for_proposal_edit"] = 1000
 
 # Prefix for the Proposal codes
-Setting["proposal_code_prefix"] = 'MAD'
+Setting["proposal_code_prefix"] = 'UDC'
 
 # Number of votes needed for proposal success
-Setting["votes_for_proposal_success"] = 53726
+Setting["votes_for_proposal_success"] = 1000
 
 # Users with this email domain will automatically be marked as level 1 officials
 # Emails under the domain's subdomains will also be included

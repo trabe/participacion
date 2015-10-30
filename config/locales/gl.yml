@@ -275,8 +275,8 @@ gl:
     signin: Iniciar sesión
     signup: Rexistrarte
     anonymous: "Demasiados votos anónimos, para poder votar %{verify_account}."
-    verified_only: "As propostas só poden ser votadas por usuarios verificados, %{verify_account}."
-    verify_account: verifica a túa conta
+    verified_only: "Para votar propostas, %{verify_account}."
+    verify_account: tes que facer login co teu usario da UDC
     organizations: As organizacións non poden votar
   account:
     show:
@@ -301,8 +301,8 @@ gl:
       user_permission_proposal: "Crear novas propostas"
       user_permission_support_proposal: "Apoiar propostas*"
       user_permission_votes: "Participar nas votacións finais*"
-      user_permission_verify: "Para poder realizar todas as accións verifica a túa conta."
-      user_permission_verify_info: "* Só usuarios empadroados no municipio de Madrid."
+      user_permission_verify: "Para poder realizar todas as accións tes entrar co teu usuario da UDC. Podes volver a rexistrarte como tal se así o desexas."
+      user_permission_verify_info: "* Só usuarios da UDC."
   simple_captcha:
     placeholder: "Introduce o texto da imaxe"
     label: "Introduce o texto da imaxe na seguinte caixa"
@@ -352,8 +352,8 @@ gl:
       user_permission_support_proposal: "Apoiar propostas*"
       user_permission_votes: "Participar nas votacións finais*"
       user_permission_verify: "Para poder realizar todas as accións %{verify}."
-      user_permission_verify_url: "verifica a túa conta"
-      user_permission_verify_info: "* Só usuarios empadroados no municipio de Madrid."
+      user_permission_verify_url: "tes que entrar co teu usuario da UDC"
+      user_permission_verify_info: "* Só usuarios da UDC."
   omniauth:
     finish_signup:
       title: Engade o teu correo electrónico

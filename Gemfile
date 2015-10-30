@@ -41,7 +41,9 @@ gem 'ckeditor', '~> 4.1.5'
 gem 'cancancan'
 gem 'social-share-button', git: 'https://github.com/huacnlee/social-share-button.git', ref: 'e46a6a3e82b86023bc'
 gem 'initialjs-rails', '0.2.0.1'
-gem 'unicorn', '~> 5.0.1'
+
+#gem 'unicorn'
+
 gem 'paranoia'
 gem 'rinku', require: 'rails_rinku'
 gem 'savon'
@@ -50,7 +52,7 @@ gem 'rollbar', '~> 2.8.0'
 gem 'delayed_job_active_record', '~> 4.1.0'
 gem 'daemons'
 gem 'devise-async'
-gem 'newrelic_rpm', '~> 3.14'
+#gem 'newrelic_rpm', '~> 3.14'
 gem 'whenever', require: false
 gem 'pg_search'
 
@@ -65,7 +67,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
   gem 'pry-remote'
-  
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

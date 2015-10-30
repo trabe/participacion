@@ -27,11 +27,15 @@
   </table>
 
   <table cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto; max-width: 700px; width:100%; margin-bottom: 40px; padding: 0 20px;">
-    <tbody>
+    <tbody style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif; margin: 0;padding: 0;line-height: 1.5em;color: #797f7f; font-size: 12px;">
     <tr>
       <td style="text-align: center; border-top: 1px solid #dadfe1; padding-top: 20px;">
-        <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif; margin: 0;padding: 0;line-height: 1.5em;color: #797f7f; font-size: 12px;">
-        <%= setting['org_name'] %></p>
+        <p>
+          <a href="mailto:contacto@udc.es" style="color: #398fd1;text-decoration: none;">contacto@udc.es</a>
+        </p>
+        <p>
+          <%= setting.fetch('org_name', "Universidade da Coruña") %>
+        </p>
       </td>
     </tr>
     </tbody>

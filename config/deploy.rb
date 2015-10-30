@@ -7,8 +7,6 @@ def deploysecret(key)
 end
 
 set :rails_env, fetch(:stage)
-set :rvm_ruby_version, '2.2.3'
-set :rvm_type, :user
 
 set :application, 'participacion'
 set :full_app_name, deploysecret(:full_app_name)
@@ -16,7 +14,7 @@ set :full_app_name, deploysecret(:full_app_name)
 set :server_name, deploysecret(:server_name)
 #set :repo_url, 'git@github.com:AyuntamientoMadrid/participacion.git'
 # If ssh access is restricted, probably you need to use https access
-set :repo_url, 'https://github.com/AyuntamientoMadrid/participacion.git'
+set :repo_url, 'https://github.com/trabe/participacion.git'
 
 set :scm, :git
 set :revision, `git rev-parse --short #{fetch(:branch)}`.strip
@@ -42,8 +40,6 @@ set(:config_files, %w(
   log_rotation
   database.yml
   secrets.yml
-  unicorn.rb
-  sidekiq.yml
 ))
 
 set :whenever_roles, -> { :cron }
@@ -57,10 +53,10 @@ namespace :deploy do
   # Custom compile and rsync of assets - works, but it is very slow
   #after 'deploy:symlink:shared', 'deploy:compile_assets_locally'
 
-  after :finishing, 'deploy:beta_testers'
+  #after :finishing, 'deploy:beta_testers'
   after :finishing, 'deploy:cleanup'
   # Restart unicorn
-  after 'deploy:publishing', 'deploy:restart'
+  #after 'deploy:publishing', 'deploy:restart'
   # Restart Delayed Jobs
   after 'deploy:published', 'delayed_job:restart'
 end

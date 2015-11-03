@@ -83,6 +83,8 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-passenger (0.1.1)
+      capistrano (~> 3.0)
     capistrano-rails (1.1.5)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -433,6 +435,7 @@ DEPENDENCIES
   cancancan
   capistrano (= 3.4.0)
   capistrano-bundler (= 1.1.4)
+  capistrano-passenger
   capistrano-rails (= 1.1.5)
   capistrano-rvm
   capistrano3-delayed-job (~> 1.0)

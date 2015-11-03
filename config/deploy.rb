@@ -44,6 +44,8 @@ set(:config_files, %w(
 
 set :whenever_roles, -> { :cron }
 
+set :passenger_restart_with_touch, false
+
 namespace :deploy do
   # Check right version of deploy branch
   # before :deploy, "deploy:check_revision"
@@ -56,8 +58,7 @@ namespace :deploy do
   #after :finishing, 'deploy:beta_testers'
 
   after :finishing, 'deploy:cleanup'
-  # Restart unicorn
-  #after 'deploy:publishing', 'deploy:restart'
   # Restart Delayed Jobs
   after 'deploy:published', 'delayed_job:restart'
+  after 'deploy:published', 'cache:clear'
 end

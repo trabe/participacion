@@ -4,7 +4,7 @@ module ApplicationHelper
     return false if user_signed_in?
     # Using path because fullpath yields false negatives since it contains
     # parameters too
-    ['/', '/participa'].include? request.path
+    ['/', '/participa/'].include? request.path
   end
 
   def header_css

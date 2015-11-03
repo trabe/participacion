@@ -27,7 +27,7 @@
       <%= link_to t("layouts.header.highlights"), highlights_path, class: ("active" if current_page? highlights_path) %>
       <%= link_to t("layouts.header.debates"), debates_path, class: ("active" if current_page?(controller: "/debates")) %>
       <%= link_to t("layouts.header.proposals"), proposals_path, class: ("active" if current_page?(controller: "/proposals")) %>
-      <%= link_to t("layouts.header.more_information"), "/more_information", class: ("active" if current_page?("/more_information"))  %>
+      <%= link_to t("layouts.header.more_information"), more_information_path, class: ("active" if current_page?("/more_information"))  %>
       </div>
       <div class="small-12 medium-4 column right">
         <%= yield :header_addon %>
@@ -41,7 +41,7 @@
         <h1><%= t("layouts.header.open_city_title") %></h1>
         <h2><%= t("layouts.header.open_city_slogan_html") %></h2>
         <%= link_to t("layouts.header.see_all"), proposals_path, class: "button radius see-more warning" %>
-        <%= link_to t("layouts.header.more_information"), "/more_information", class: "more-info" %>
+        <%= link_to t("layouts.header.more_information"), more_information_path, class: "more-info" %>
       </div>
 
       <div class="show-for-medium-up small-12 medium-5 column text-center">

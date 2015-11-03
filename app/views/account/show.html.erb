@@ -73,7 +73,7 @@
             <li><i class="icon-check"></i>&nbsp;<%= t("account.show.user_permission_debates") %></li>
             <li><i class="icon-check"></i>&nbsp;<%= t("account.show.user_permission_proposal") %></li>
             <li>
-              <% if current_user.level_two_or_three_verified? %>
+              <% if current_user.verified? %>
                 <i class="icon-check"></i>
               <% else %>
                 <i class="icon-x"></i>
@@ -81,7 +81,7 @@
               <%= t("account.show.user_permission_support_proposal") %>
             </li>
             <li>
-              <% if current_user.level_three_verified? %>
+              <% if current_user.verified? %>
                 <i class="icon-check"></i>
               <% else %>
                 <i class="icon-x"></i>
@@ -93,25 +93,10 @@
           <p>
             <span><%= t("account.show.user_permission_verify_info") %></span>
             <br>
-            <%= t("account.show.user_permission_verify") %>
+            <% unless @account.udc_registered? %>
+              <%= t("account.show.user_permission_verify") %>
+            <% end %>
           </p>
-
-          <% unless @account.organization? %>
-            <div>
-              <span class="verify-account">
-                <% if current_user.level_three_verified? %>
-                  <p class="already-verified">
-                    <i class="icon-check"></i>
-                    <%= t("account.show.verified_account") %>
-                  </p>
-                <% elsif current_user.level_two_verified? %>
-                  <%= link_to t("account.show.finish_verification"), verification_path, class: "button radius success" %>
-                <% else %>
-                  <%= link_to t("account.show.verify_my_account"), verification_path, class: "button radius success" %>
-                <% end %>
-              </span>
-            </div>
-          <% end %>
         </div>
       </div>
     <% end %>

@@ -1,11 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   prepend_before_action :authenticate_scope!, only: [:edit, :update, :destroy, :finish_signup, :do_finish_signup]
 
-  def new
-    super do |user|
-      user.use_redeemable_code = true if params[:use_redeemable_code].present?
-    end
-  end
+  before_action :require_udc_user, only: [:edit, :update]
 
   def create
     build_resource(sign_up_params)
@@ -69,6 +65,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     def after_inactive_sign_up_path_for(resource_or_scope)
       users_sign_up_success_path
+    end
+
+    def require_udc_user
+      if current_user.udc_registered?
+        flash[:alert] = "Debes ser usuario rexistrado por email para editar o teu contrasinal"
+        redirect_to account_path
+      end
     end
 
 end

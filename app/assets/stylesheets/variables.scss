@@ -53,11 +53,11 @@ $link:              #a23782;
 $link-hover:        #922772;
 $link-border:       #a24792;
 
-$debates:           $udc6;
+$debates:           #d287c2;
 
-$votes-bg:          lighten($debates, 20%);
+$votes-bg:          darken($debates, 10%);
 $votes-border:      lighten($debates, 15%);
-$votes-not-logged:  darken($debates, 10%);
+$votes-not-logged:  darken($debates, 15%);
 
 $votes-like:        #7BD2A8;
 $votes-like-act:    #5D9E7F;

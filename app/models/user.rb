@@ -52,20 +52,29 @@ class User < ActiveRecord::Base
 
   before_validation :clean_document_number
 
-  # Get the existing user by email if the provider gives us a verified email.
-  def self.first_or_initialize_for_oauth(auth)
-    oauth_email           = auth.info.email
-    oauth_email_confirmed = oauth_email.present? && (auth.info.verified || auth.info.verified_email)
-    oauth_user            = User.find_by(email: oauth_email) if oauth_email_confirmed
+  # If no verified email was provided we assign a temporary email and ask the
+  # user to verify it on the next step via RegistrationsController.finish_signup
+  def self.first_or_create_for_oauth(auth)
+    email = auth.info.email if auth.info.verified || auth.info.verified_email
+    email = auth.extra.mail if auth.extra.mail # Just for our cas :S
 
-    oauth_user || User.new(
-      username:  auth.info.name || auth.uid,
-      email: oauth_email,
-      oauth_email: oauth_email,
-      password: Devise.friendly_token[0,20],
-      terms_of_service: '1',
-      confirmed_at: oauth_email_confirmed ? DateTime.now : nil
-    )
+    name = auth.extra.firstName || auth.info.nickname || auth.extra.raw_info.name.parameterize('-') || auth.uid
+
+    user  = User.where(email: email).first if email
+
+    # Create the user if it's a new registration
+    if user.nil?
+      user = User.new(
+        username: name,
+        email: email ? email : "#{OMNIAUTH_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
+        password: Devise.friendly_token[0,20],
+        terms_of_service: '1'
+      )
+      user.skip_confirmation!
+      user.save!
+    end
+
+    user
   end
 
   def name

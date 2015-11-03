@@ -8,6 +8,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_and_redirect @user, event: :authentication
       set_flash_message(:notice, :success, kind: t('omniauth.cas.user_kind') ) if is_navigational_format?
     else
+      # First time here
       session["devise.cas_data"] = env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
@@ -28,7 +29,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
       auth = env["omniauth.auth"]
 
-      identity = Identity.first_or_create_from_oauth(auth)
+      identity = Identity.find_for_oauth(auth)
       @user = current_user || identity.user || User.first_or_initialize_for_oauth(auth)
 
       if save_user(@user)

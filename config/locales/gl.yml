@@ -31,7 +31,7 @@ gl:
       debates: Debates
       proposals: Propostas cidadás
     footer:
-      description: "Este portal usa a %{consul}, aplicación de participación cidadá de %{open_source}, liberada pola comunidade de Madrid. Podes ver o código fonte do fork do proxecto creado para a UDC en %{consul_url_udc}."
+      description: "Este portal usa a %{consul}, aplicación de participación cidadá de %{open_source}, liberada polo concello de Madrid. Podes ver o código fonte do fork do proxecto creado para a UDC en %{consul_url_udc}."
       open_source: "software libre"
       open_source_url: "http://www.gnu.org/licenses/agpl-3.0.html"
       consul: "aplicación Consul"
@@ -188,7 +188,7 @@ gl:
         zero: Sen apoios
         one: 1 apoio
         other: "%{count} apoios"
-      supports_necessary: "53 726 apoios necesarios"
+      supports_necessary: "%{supports_necessary} apoios necesarios"
       census_percent: "2% do censo"
       total_percent: "100%"
       already_supported: "Xa apoiaches esta proposta, compártea!"

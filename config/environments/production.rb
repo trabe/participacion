@@ -80,4 +80,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.i18n.available_locales = [:gl]
+
+  config.relative_url_root = "/participa"
 end

@@ -4,19 +4,11 @@ module ApplicationHelper
     return false if user_signed_in?
     # Using path because fullpath yields false negatives since it contains
     # parameters too
-    request.path == '/'
-  end
-
-  def transparency_page?
-    request.path == '/transparency'
-  end
-
-  def opendata_page?
-    request.path == '/opendata'
+    ['/', '/participa'].include? request.path
   end
 
   def header_css
-    home_page? || transparency_page? || opendata_page? ? '' : 'results'
+    home_page? ? '' : 'results'
   end
 
   # if current path is /debates current_path_with_query_params(foo: 'bar') returns /debates?foo=bar

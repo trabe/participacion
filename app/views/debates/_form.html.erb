@@ -3,7 +3,7 @@
   <div class="row">
     <div class="small-12 column">
       <%= f.label :title, t("debates.form.debate_title") %>
-      <%= f.text_field :title, maxlength: Debate.title_max_length, placeholder: t("debates.form.debate_title"), label: false, data: {js_suggest_result: "js_suggest_result", js_suggest: "#js-suggest", js_url: suggest_debates_path}%>        
+      <%= f.text_field :title, maxlength: Debate.title_max_length, placeholder: t("debates.form.debate_title"), label: false, data: {js_suggest_result: "js_suggest_result", js_suggest: "#js-suggest", js_url: suggest_debates_path}%>
     </div>
     <div id="js-suggest"></div>
     <div class="ckeditor small-12 column">
@@ -25,8 +25,8 @@
           <%= f.check_box :terms_of_service, label: false %>
           <span class="checkbox">
             <%= t("form.accept_terms",
-                policy: link_to(t("form.policy"), "/privacy", target: "blank"),
-                conditions: link_to(t("form.conditions"), "/conditions", target: "blank")).html_safe %>
+                policy: link_to(t("form.policy"), page_path('privacy'), target: "blank"),
+                conditions: link_to(t("form.conditions"), page_path('conditions'), target: "blank")).html_safe %>
           </span>
         <% end %>
       <% end %>

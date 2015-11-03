@@ -69,12 +69,16 @@ class User < ActiveRecord::Base
   # user to verify it on the next step via RegistrationsController.finish_signup
   def self.first_or_create_for_oauth(auth)
     email = auth.info.email if auth.info.verified || auth.info.verified_email
+    email = auth.extra.mail if auth.extra.mail # Just for our cas :S
+
+    name = auth.extra.firstName || auth.info.nickname || auth.extra.raw_info.name.parameterize('-') || auth.uid
+
     user  = User.where(email: email).first if email
 
     # Create the user if it's a new registration
     if user.nil?
       user = User.new(
-        username: auth.info.nickname || auth.extra.raw_info.name.parameterize('-') || auth.uid,
+        username: name,
         email: email ? email : "#{OMNIAUTH_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
         password: Devise.friendly_token[0,20],
         terms_of_service: '1'

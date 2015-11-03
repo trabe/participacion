@@ -369,3 +369,4 @@ gl:
     cas:
       sign_in: Entra co teu usuario da UDC
       sign_up: Rexístrate co teu usuario da UDC
+      user_kind: usuario da UDC

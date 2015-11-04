@@ -40,9 +40,11 @@
           </div>
         <% end %>
 
-        <div class="show-for-small-only">
-          <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button radius expand' %>
-        </div>
+        <% if can? :create, Proposal %>
+          <div class="show-for-small-only">
+            <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button radius expand' %>
+          </div>
+        <% end %>
 
         <% if @featured_proposals.present? %>
           <div id="featured-proposals" class="row featured-proposals-container">
@@ -69,9 +71,12 @@
 
     <div class="small-12 medium-3 column">
       <aside class="sidebar" role="complementary">
-        <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button radius expand' %>
+        <% if can? :create, Proposal %>
+          <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button radius expand' %>
+        <% end %>
         <%= render "shared/tag_cloud", taggable: 'proposal' %>
       </aside>
     </div>
+
   </div>
 </section>

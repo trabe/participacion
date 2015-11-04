@@ -21,7 +21,7 @@ module Abilities
 
       can :create, Comment
       can :create, Debate
-      can :create, Proposal
+      #can :create, Proposal
 
       can :suggest, Debate
       can :suggest, Proposal

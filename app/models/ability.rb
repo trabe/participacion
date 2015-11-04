@@ -11,6 +11,8 @@ class Ability
         self.merge Abilities::Administrator.new(user)
       elsif user.moderator?
         self.merge Abilities::Moderator.new(user)
+      elsif user.udc_registered?
+        self.merge Abilities::Udc.new(user)
       else
         self.merge Abilities::Common.new(user)
       end

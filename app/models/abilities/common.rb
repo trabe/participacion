@@ -19,7 +19,7 @@ module Abilities
 
       can :create, Comment
       can :create, Debate
-      can :create, Proposal
+      #can :create, Proposal
 
       can [:flag, :unflag], Comment
       cannot [:flag, :unflag], Comment, user_id: user.id

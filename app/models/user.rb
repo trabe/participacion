@@ -73,6 +73,8 @@ class User < ActiveRecord::Base
 
     name = auth.extra.firstName || auth.info.nickname || auth.extra.raw_info.name.parameterize('-') || auth.uid
 
+    document_number = auth.extra.documentNumber
+
     user  = User.where(email: email).first if email
 
     # Create the user if it's a new registration
@@ -80,12 +82,16 @@ class User < ActiveRecord::Base
       user = User.new(
         username: name,
         email: email ? email : "#{OMNIAUTH_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
+        document_number: document_number,
+        document_type: 1, # TODO: Save the correct type, see: UserHelper
         password: Devise.friendly_token[0,20],
         terms_of_service: '1'
       )
       user.skip_confirmation!
       user.save!
     end
+
+    user.update_document_number(document_number) unless user.document_number.present? # Can be if the user was registered first as non-udc with an udc email
 
     user
   end
@@ -207,6 +213,10 @@ class User < ActiveRecord::Base
   private
     def clean_document_number
       self.document_number = self.document_number.gsub(/[^a-z0-9]+/i, "").upcase unless self.document_number.blank?
+    end
+
+    def update_document_number(document_number)
+      user.update_attributes(document_number: document_number, document_type: 1) # TODO: Save the correct type, see: UserHelper
     end
 
     def validate_username_length

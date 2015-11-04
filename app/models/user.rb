@@ -170,6 +170,7 @@ class User < ActiveRecord::Base
       reset_password_token: nil,
       email_verification_token: nil
     )
+    self.identities.destroy_all
   end
 
   def erased?
@@ -210,13 +211,13 @@ class User < ActiveRecord::Base
     !erased?
   end
 
+  def update_document_number(document_number)
+    self.update_attributes(document_number: document_number, document_type: 1) # TODO: Save the correct type, see: UserHelper
+  end
+
   private
     def clean_document_number
       self.document_number = self.document_number.gsub(/[^a-z0-9]+/i, "").upcase unless self.document_number.blank?
-    end
-
-    def update_document_number(document_number)
-      user.update_attributes(document_number: document_number, document_type: 1) # TODO: Save the correct type, see: UserHelper
     end
 
     def validate_username_length

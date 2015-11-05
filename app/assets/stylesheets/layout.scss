@@ -153,6 +153,10 @@ h6 {
   padding: rem-calc(15) rem-calc(32);
 }
 
+button:hover, button:focus, .button:hover, .button:focus {
+  background: $button-hover;
+}
+
 .postfix.button {
   padding: 0;
 }
@@ -619,7 +623,7 @@ header {
   }
 
   ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
-    background-color: #007095 !important;
+    background-color: $button-hover !important;
   }
 
   ul li, ul li:hover:not(.has-form) > a:not(.button) {
@@ -987,7 +991,7 @@ form {
     min-height: rem-calc(312);
   }
 
-  trix-toolbar button, .button {
+  trix-toolbar button, trix-toolbar .button {
     padding: inherit;
   }
 

@@ -206,7 +206,6 @@ feature 'Debates' do
       visit new_debate_path
 
       fill_in 'debate_title', with: 'A test'
-      fill_in_ckeditor 'debate_description', with: 'A test'
       fill_in 'debate_captcha', with: correct_captcha_text
       check 'debate_terms_of_service'
 

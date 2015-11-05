@@ -1,4 +1,13 @@
 <% provide :title do %><%= @debate.title %><% end %>
+
+<% provide :social_media_meta_tags do %>
+  <%= render "shared/social_media_meta_tags",
+              social_url: debate_url(@debate),
+              social_title: @debate.title,
+              social_description: @debate.description %>
+<% end %>
+
+
 <% cache [locale_and_user_status(@debate), @debate, @debate.author, Flag.flagged?(current_user, @debate), @debate_votes] do %>
   <section class="debate-show">
     <div id="<%= dom_id(@debate) %>" class="row">
@@ -53,7 +62,7 @@
         </div>
         <div class="sidebar-divider"></div>
         <h3><%= t("debates.show.share") %></h3>
-        <%= social_share_button_tag(@debate.title) %>
+        <%= social_share_button_tag(@debate.title, url: debate_url(@debate), via: "julioabalde") %>
       </aside>
     </div>
   </section>

@@ -84,15 +84,18 @@ $link:              #a23782;
 $link-hover:        #922772;
 $link-border:       #a24792;
 
-$debates:           #d287c2;
+$debates:           #da9cc0; /* #d287c2; */
 
 $votes-bg:          darken($debates, 10%);
 $votes-border:      lighten($debates, 15%);
 $votes-not-logged:  darken($debates, 15%);
 
-$votes-like:        #7BD2A8;
+$no: #af0404;
+$yes: #4d995e;
+
+$votes-like:        $yes;
 $votes-like-act:    #5D9E7F;
-$votes-unlike:      #EF8585;
+$votes-unlike:      lighten($no, 10%);
 $votes-unlike-act:  #BD6A6A;
 
 $delete:            #F04124;

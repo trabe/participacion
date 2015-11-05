@@ -189,8 +189,8 @@ feature 'Debates' do
 
       visit new_debate_path
 
-      fill_in 'debate_title', with: 'Testing auto link'
-      fill_in 'debate_description', with: "<script>alert('hey')</script> <a href=\"javascript:alert('surprise!')\">click me<a/> http://example.org"
+      fill_in 'debate_title', with: 'A test'
+
       fill_in 'debate_captcha', with: correct_captcha_text
       check 'debate_terms_of_service'
 

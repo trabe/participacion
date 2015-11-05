@@ -38,8 +38,7 @@ gem 'foundation_rails_helper'
 gem 'acts_as_votable'
 gem 'simple_captcha2', require: 'simple_captcha'
 
-gem 'ckeditor'
-gem 'non-stupid-digest-assets'
+gem 'trix'
 
 gem 'cancancan'
 gem 'social-share-button', git: 'https://github.com/huacnlee/social-share-button.git', ref: 'e46a6a3e82b86023bc'

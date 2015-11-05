@@ -17,7 +17,7 @@
 //= require foundation
 //= require turbolinks
 
-//= require ckeditor/init
+//= require trix
 
 //= require social-share-button
 //= require initial

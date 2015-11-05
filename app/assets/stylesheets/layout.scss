@@ -941,8 +941,12 @@ form {
     }
   }
 
-  .ckeditor {
-    min-height: $line-height*13;
+  trix-editor {
+    min-height: rem-calc(312);
+  }
+
+  trix-toolbar button, .button {
+    padding: inherit;
   }
 
   .checkbox {

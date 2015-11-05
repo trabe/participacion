@@ -101,6 +101,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     chronic (0.10.2)
+<<<<<<< d67f9b1338e741585319d4e3e65ec2c1d30735a0
     ckeditor (4.1.6)
       cocaine
       orm_adapter (~> 0.5.0)
@@ -111,6 +112,11 @@ GEM
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.1)
     coffee-rails (4.1.1)
+=======
+    cliver (0.3.2)
+    coderay (1.1.0)
+    coffee-rails (4.1.0)
+>>>>>>> Quit using ckeditor and start using basecamp/trix. TODO: max_length
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
     coffee-script (2.4.1)
@@ -234,10 +240,17 @@ GEM
     multipart-post (2.0.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
+<<<<<<< d67f9b1338e741585319d4e3e65ec2c1d30735a0
     net-ssh (3.0.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     non-stupid-digest-assets (1.0.5)
+=======
+    net-ssh (3.0.1)
+    netrc (0.10.3)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
+>>>>>>> Quit using ckeditor and start using basecamp/trix. TODO: max_length
     nori (2.6.0)
     oauth (0.5.0)
     oauth2 (1.1.0)
@@ -413,9 +426,14 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.2)
     tins (1.6.0)
+<<<<<<< d67f9b1338e741585319d4e3e65ec2c1d30735a0
     tolk (1.9.3)
       rails (>= 4.0, < 4.3)
       safe_yaml (>= 0.8.6)
+=======
+    trix (0.9.0)
+      rails
+>>>>>>> Quit using ckeditor and start using basecamp/trix. TODO: max_length
     turbolinks (2.5.3)
       coffee-rails
     turnout (2.2.1)
@@ -465,7 +483,6 @@ DEPENDENCIES
   capistrano-rvm
   capistrano3-delayed-job (~> 1.0)
   capybara
-  ckeditor
   coffee-rails (~> 4.1.0)
   coveralls
   daemons
@@ -488,7 +505,6 @@ DEPENDENCIES
   kaminari
   launchy
   letter_opener_web (~> 1.3.0)
-  non-stupid-digest-assets
   omniauth
   omniauth-cas
   omniauth-facebook
@@ -512,8 +528,12 @@ DEPENDENCIES
   simple_captcha2
   social-share-button!
   spring
+<<<<<<< d67f9b1338e741585319d4e3e65ec2c1d30735a0
   spring-commands-rspec
   tolk
+=======
+  trix
+>>>>>>> Quit using ckeditor and start using basecamp/trix. TODO: max_length
   turbolinks
   turnout
   uglifier (>= 1.3.0)

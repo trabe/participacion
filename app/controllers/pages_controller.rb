@@ -1,9 +1,6 @@
 class PagesController < ApplicationController
   skip_authorization_check
 
-  def accessibility
-  end
-
   def census_terms
   end
 
@@ -28,15 +25,6 @@ class PagesController < ApplicationController
   def more_information
   end
 
-  def opendata
-  end
-
-  def participation
-  end
-
-  def transparency
-  end
-
   def proposals_info
   end
 
@@ -49,6 +37,4 @@ class PagesController < ApplicationController
   def verify
   end
 
-  def blog
-  end
 end

@@ -35,8 +35,8 @@ gl:
         one: Organización
         other: Organizacións
       proposal:
-        one: Proposta cidadá
-        other: Propostas cidadás
+        one: Proposta
+        other: Propostas
     attributes:
       comment:
         body: Comentario

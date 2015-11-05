@@ -12,7 +12,8 @@ gl:
       external_link_opendata_url: "http://www.udc.es/transparencia"
       external_link_blog: Blog
       external_link_blog_url: "/blog"
-      open_gov: "Goberno %{open}"
+      open_gov: "Portal de participación"
+      candidate: "Candidatura Julio Abalde"
       open: "aberto"
       participation: "Participación"
       transparency: "Transparencia"
@@ -29,7 +30,7 @@ gl:
       highlights: "Portada"
       more_information: "Máis información"
       debates: Debates
-      proposals: Propostas cidadás
+      proposals: Propostas
     footer:
       description: "Este portal usa a %{consul}, aplicación de participación cidadá de %{open_source}, liberada polo concello de Madrid. Podes ver o código fonte do fork do proxecto creado para a UDC en %{consul_url_udc}."
       open_source: "software libre"
@@ -137,7 +138,7 @@ gl:
         submit_button: "Gardar cambios"
     new:
       start_new: Empezar un debate
-      info: "Un debate é un foro de discusión, non unha proposta cidadá. Moi pronto abriremos a sección de propostas cidadás, onde calquera poderá presentar propostas e, se reciben apoio, serán postas en marcha pola Universidade."
+      info: "Un debate é un foro de discusión, non unha proposta cidadá. Moi pronto abriremos a sección de propostas, onde calquera poderá presentar propostas e, se reciben apoio, serán postas en marcha pola Universidade."
       more_info: "Máis información"
       back_link: Volver
       recommendations_title: Recomendacións para crear un debate
@@ -155,7 +156,7 @@ gl:
         submit_button: "Gardar cambios"
   proposals:
     index:
-      title: Propostas cidadás
+      title: Propostas
       featured_proposals_html: "Propostas<br>destacadas"
       start_proposal: Crea unha proposta
       select_order: Ordenar por
@@ -172,7 +173,7 @@ gl:
       search_form:
         title: Search
         button: Search
-        placeholder: "Buscar propostas cidadás..."
+        placeholder: "Buscar propostas..."
       search_results:
         one: " que contén '%{search_term}'"
         other: " que conteñen '%{search_term}'"
@@ -229,7 +230,7 @@ gl:
         submit_button: "Gardar cambios"
     new:
       start_new: Crear unha proposta
-      more_info: "Como funcionan as propostas cidadás?"
+      more_info: "Como funcionan as propostas?"
       back_link: Volver
       recommendations_title: Recomendacións para crear unha proposta
       recommendation_one: "Non escribas o título da proposta ou frases enteiras en maiúsculas. En internet iso considérase gritar. E a ninguén lle gusta que lle griten."
@@ -336,7 +337,7 @@ gl:
       description: "Encontrarnos, debater e compartir o que nos parece importante na nosa universidade."
     proposal:
       title: "Propós"
-      description: "Espazo aberto para propostas cidadás sobre o tipo de cidade en que queremos vivir."
+      description: "Espazo aberto para propostas sobre o tipo de universidade que queremos."
     decide:
       title: "Decides"
       description: "A cidadanía decide se acepta ou rexeita as propostas máis apoiadas."

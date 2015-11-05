@@ -1,8 +1,9 @@
 <ul class="right">
   <% if user_signed_in? %>
     <li>
-      <%= link_to(t("layouts.header.my_account_link"), account_path) %>
+      <%= link_to(current_user.email, account_path) %>
     </li>
+    <li><span>|</span></li>
     <li>
       <%= link_to(t("devise_views.menu.login_items.logout"), destroy_user_session_path, method: :delete) %>
     </li>
@@ -10,6 +11,7 @@
     <li>
       <%= link_to(t("devise_views.menu.login_items.login"), new_user_session_path)  %>
     </li>
+    <li><span>|</span></li>
     <li>
       <%= link_to(t("devise_views.menu.login_items.signup"), new_user_registration_path, class: "button radius small") %>
     </li>

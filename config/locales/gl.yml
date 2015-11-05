@@ -18,9 +18,9 @@ gl:
       participation: "Participación"
       transparency: "Transparencia"
       open_data: "Datos abertos"
-      open_city_title: "A cidade que queres será a cidade que queiras."
+      open_city_title: "A universidade que queres será a universidade que queiras."
       open_city_slogan_html:
-        "Existen cidades gobernadas directamente polos seus habitantes, que <b>debaten</b> sobre temas que lles preocupan, <b>propoñen</b> ideas para mellorar
+        "Existen comunidades gobernadas directamente polos seus participantes, que <b>debaten</b> sobre temas que lles preocupan, <b>propoñen</b> ideas para mellorar
         as súas vidas e <b>deciden</b> entre todas e todos as que se levan a cabo."
       see_all: "Ver propostas"
       my_account_link: A miña conta
@@ -340,10 +340,10 @@ gl:
       description: "Espazo aberto para propostas sobre o tipo de universidade que queremos."
     decide:
       title: "Decides"
-      description: "A cidadanía decide se acepta ou rexeita as propostas máis apoiadas."
+      description: "A comunidade decide se acepta ou rexeita as propostas máis apoiadas."
     do:
       title: "Faise"
-      description: "Se a proposta é aceptada maioritariamente, o Concello asúmea como propia e faise."
+      description: "Se a proposta é aceptada maioritariamente, a Universidade asúmea como propia e faise."
     welcome:
       title: "Empeza a participar"
       go_to_index: "Ver propostas"

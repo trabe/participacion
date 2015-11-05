@@ -157,6 +157,14 @@ button:hover, button:focus, .button:hover, .button:focus {
   background: $button-hover;
 }
 
+button.warning, .button.warning {
+  background-color:$brand;
+}
+
+button.warning:hover, .button.warning:hover, button.warning:focus, .button.warning:focus {
+  background: darken($brand, 15%);
+}
+
 .postfix.button {
   padding: 0;
 }

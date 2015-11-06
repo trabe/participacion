@@ -20,6 +20,7 @@
 // 18. Comments
 // 19. Flags
 // 20. Accesibility
+// A1. Custom classes
 //
 
 // 01. Variables
@@ -2009,4 +2010,12 @@ table {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+// A1. Custom classes
+
+.page.info {
+  h2, h3 {margin-bottom: 0.5em; margin-top: 1.5em;}
+  h2 {border-bottom: 1px solid $text-light; padding-bottom:0.2em;}
+
 }

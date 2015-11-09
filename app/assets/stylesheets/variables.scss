@@ -17,65 +17,47 @@ $line-height: rem-calc(24);
 // 02. Colors
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$body:              #FFFFFF;
-$background:        #FFFFFF;
+$body:              #F5F5F5;
+$header-background: #FFFFFF;
+$background:        #F5F5F5;
 $border:            #DEE0E3;
-$brand:             #ca0083;
+$brand:             #5CBFE0;
 
-/* MAS COLORES UDC:
-    #D31F8B (logo)
-    #a23782 (link)
-    #d287c2 (link visited)
-    link: hover {
-      border: none;
-      color: #922772;
-      outline: 0;
-      border-bottom: 1px dotted #a24792;
+$udc: #ae0372;
 
-COLOURCO.DE
-*/
-$udc1: #490230;
-$udc2: #620240;
-$udc3: #7b0351;
-$udc4: #940361;
-$udc5: #ae0372;
-$udc6: #c70382;
-$udc7: #e10293;
-$udc8: #fb02a4;
-$udc9: #fe19ad;
-$udc10: #fe32b6;
-
-$button-hover: $udc1;
+$button-hover: darken($brand, 20%);
 
 $text:              #222222;
-$text-dark:       #666666;
+$text-dark:         #666666;
 $text-medium:       #999999;
 $text-light:        #CCCCCC;
 
-$link:              #a23782;
-$link-hover:        #922772;
-$link-border:       #a24792;
+$link:              darken($brand, 10%);
+$link-hover:        darken($link, 20%);
+$link-border:       darken($link, 15%);
 
-$debates:           #da9cc0; /* #d287c2; */
-
+$debates:           $brand;
 $votes-bg:          darken($debates, 10%);
 $votes-border:      lighten($debates, 15%);
 $votes-not-logged:  darken($debates, 15%);
 
-$no: #af0404;
-$yes: #4d995e;
+$no:  #E7422C;
+$yes: #4F8B60;
 
 $votes-like:        $yes;
-$votes-like-act:    #5D9E7F;
-$votes-unlike:      lighten($no, 10%);
-$votes-unlike-act:  #BD6A6A;
+$votes-like-act:    lighten($votes-like, 15%);
+$votes-unlike:      $no;
+$votes-unlike-act:  lighten($votes-unlike, 15%);
 
 $delete:            #F04124;
 $check:             #46DB91;
 
-$proposals:             $udc2;
+$proposals:             #086787;
 $proposals-border:      darken($proposals, 5%);
 $proposals-not-logged:  darken($proposals, 5%);
+$proposals-percentage:  darken($proposals, 10%);
+$proposals-meter:       $votes-like;
+$proposals-progress:    rgba(255,255,255,.8);
 
 $footer-border:     #eeeeee;
 

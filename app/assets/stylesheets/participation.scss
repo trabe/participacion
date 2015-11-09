@@ -163,19 +163,19 @@
   position: relative;
 
   .progress {
-    background-color: rgba(255,255,255,.8);
+    background-color: $proposals-progress;
     height: rem-calc(12);
     margin-bottom: rem-calc(6);
     margin-top: rem-calc(4);
 
     .meter {
-      background: $votes-like;
+      background: $proposals-meter;
     }
   }
 
   .percentage {
     font-size: rem-calc(10);
-    color: $brand;
+    color: $proposals-percentage ;
     vertical-align: top;
     position: absolute;
     top: 17px;
@@ -198,7 +198,7 @@
     margin-top: rem-calc(12);
 
     &:hover {
-      background: $proposals-border;
+      background: lighten($proposals, 35%);
       color: white;
       cursor: pointer;
     }
@@ -601,8 +601,8 @@
         clear: both;
         color: $text;
         display: block;
-        font-size: rem-calc(16);
-        line-height: $line-height;
+        font-size: rem-calc(18);
+        line-height: $line-height + 0.2;
         text-transform: lowercase;
 
         &:first-letter {

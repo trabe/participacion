@@ -81,7 +81,7 @@ html, body {
 }
 
 body {
-  background: white;
+  background: $background;
   font-family: $font-family-sans-serif;
   font-size: rem-calc(13);
   font-weight: normal;
@@ -201,7 +201,7 @@ button.warning:hover, .button.warning:hover, button.warning:focus, .button.warni
 }
 
 .sub-nav {
-  background-color: #f2f2f2;
+  background-color: $background;
   border-radius: rem-calc(3);
   padding: rem-calc(10) rem-calc(10) rem-calc(10) 0;
   margin: rem-calc(12) 0;
@@ -234,7 +234,7 @@ button.warning:hover, .button.warning:hover, button.warning:focus, .button.warni
   }
 
   li:hover, .f-dropdown li:focus {
-    background: white;
+    background: $background;
   }
 
   &.open {
@@ -276,7 +276,7 @@ button.warning:hover, .button.warning:hover, button.warning:focus, .button.warni
 }
 
 .wrap {
-  background: white;
+  background: $background;
 }
 
 .footer, .push {
@@ -480,11 +480,11 @@ header {
 }
 
 .contain-to-grid {
-  background: $background;
+  background: $header-background;
 }
 
 .top-bar {
-  background: $background !important;
+  background: $header-background !important;
   color: $text-medium;
   height: rem-calc(48);
   max-width: 1170px !important;
@@ -1453,7 +1453,7 @@ table {
 }
 
 .button.button-cas {
-  background: $udc5 image-url("mini_logo_udc_white.png");
+  background: $udc image-url("mini_logo_udc_white.png");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 50px auto;

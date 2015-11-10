@@ -23,18 +23,35 @@ $body:              #F5F5F5;
 $header-background: #FFFFFF;
 $background:        #F5F5F5;
 $border:            #DEE0E3;
-$brand:             #5CBFE0;
+$brand:             #00BFFF;
 
 $udc: darken(#DA54A9, 10%);
 
+/*
+lighter-background-color: #FFF
+medium-background-color: #F5F5F5
+dark-background-color: #555
+
+text-color: #555
+pale-text-color: #999
+countertype-text-color: #FFF
+link-color: #00BFFF
+
+highlight-color: #00BFFF
+highlight-color-rgba-50: rgba(0, 191, 255, 0.50)
+
+border-dotted-color: #CCC
+button-shadow-color: #00ace6
+*/
+
 $button-hover: darken($brand, 20%);
 
-$text:              #222222;
+$text:              #555;
 $text-dark:         #666666;
 $text-medium:       #999999;
 $text-light:        #CCCCCC;
 
-$link:              darken($brand, 10%);
+$link:              darken($brand, 15%);
 $link-hover:        darken($link, 20%);
 $link-border:       darken($link, 15%);
 

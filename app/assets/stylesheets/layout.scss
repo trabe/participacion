@@ -148,7 +148,7 @@ h6 {
 }
 
 .button {
-  background: $brand;
+  background: darken($brand, 10%);
   font-size: rem-calc(14);
   font-family: $font-family-sans-serif !important;
   padding: rem-calc(15) rem-calc(32);

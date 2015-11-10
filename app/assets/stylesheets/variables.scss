@@ -57,7 +57,7 @@ $link-border:       darken($link, 15%);
 
 $debates:           $brand;
 $votes-bg:          darken($debates, 10%);
-$votes-border:      lighten($debates, 15%);
+$votes-border:      darken($debates, 15%);
 $votes-not-logged:  darken($debates, 15%);
 
 $no:  #E7422C;

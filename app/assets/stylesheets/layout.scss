@@ -41,7 +41,7 @@
 
   a {
     color: white;
-    font-family: 'Lato' !important;
+    font-family: 'Helvetica' !important;
     font-size: rem-calc(20);
     font-weight: lighter;
     line-height: $line-height*4;
@@ -503,7 +503,7 @@ header {
 
     a {
       color: $text-medium;
-      font-family: 'Lato';
+      font-family: $font-family-sans-serif-2;
       font-size: rem-calc(16);
       font-weight: lighter;
       line-height: $line-height*2;

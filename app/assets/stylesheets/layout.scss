@@ -261,7 +261,7 @@ a {
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 header {
-  background: $brand;
+  background: $body;
   border-bottom: 1px solid $border;
   margin-bottom: $line-height;
 
@@ -291,8 +291,8 @@ header {
 }
 
 .top-bar {
-  background: $brand !important;
-  color: white;
+  background: $body !important;
+  color: $text-medium;
   height: $line-height*2;
   line-height: $line-height*2;
   padding-bottom: 0;
@@ -302,12 +302,19 @@ header {
     padding: 0;
   }
 
-  .top-bar-title a {
-    @include logo;
-    line-height: rem-calc(80) !important;
+  .top-bar-title {
 
-    &:hover {
-      text-decoration: none;
+    padding-left: 0.4em;
+    font-size: 1.8em;
+    font-family: Helvetica, sans-serif;
+
+    a {
+      color: $text-medium;
+      line-height: rem-calc(80) !important;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
@@ -324,7 +331,7 @@ header {
       }
 
       a {
-        color: white;
+        color: $text-medium;
         padding-left: 0;
 
         @media (min-width: $small-breakpoint) {
@@ -349,20 +356,20 @@ header {
     height: 20px;
 
     &::after, &:hover::after {
-      background: white;
-      box-shadow: 0 7px 0 white, 0 14px 0 white;
+      background: $text-medium;
+      box-shadow: 0 7px 0 $text-medium, 0 14px 0 $text-medium;
     }
   }
 }
 
 .top-links {
   background: $dark;
-  color: white;
+  color: $text-medium;
   font-size: $small-font-size;
   padding-right: $line-height/2;
 
   a {
-    color: white;
+    color: $text-medium;
     margin: 0 rem-calc(6);
 
     &:hover {
@@ -389,7 +396,7 @@ header {
       }
 
       a {
-        color: white;
+        color: $text-medium;
         display: inline-block;
         line-height: $line-height*2;
         position: relative;
@@ -493,29 +500,38 @@ header {
 
 footer {
   color: $footer-color;
+  padding-bottom: rem-calc(24);
+  padding-top: rem-calc(24);
 
-  .logo a {
-    font-family: $font-logo;
-    text-decoration: none;
+  .logo {
+    @include logo;
 
-    &:hover {
-      text-decoration: underline;
+    a {
+      color: #454A4C;
+      line-height: rem-calc(36);
+      padding-left: 0;
+      text-decoration: none;
     }
   }
 
   p {
-    font-size: $small-font-size;
-
-    .info a {
-      text-decoration: underline;
-    }
+    font-size: rem-calc(14);
+    line-height: inherit;
   }
 
   a, a:active, a:focus {
-    color: $footer-link;
+    color: #454A4C;
 
     &:hover {
-      color: $footer-color;
+      color: #171819;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      font-size: rem-calc(14);
     }
   }
 
@@ -523,26 +539,37 @@ footer {
     padding-left: 0;
   }
 
-  h2 a {
+  h4 {
 
-    border-bottom: 1px solid $footer-border;
-    display: block;
-    font-size: $h3-font-size;
-    line-height: $h3-line-height;
-    padding-bottom: $line-height/4;
-    text-decoration: none;
+    a {
+      border-bottom: 1px solid #BFC1C3;
+      display: block;
+      margin-bottom: rem-calc(6);
+      padding-bottom: rem-calc(6);
+      text-decoration: none;
+    }
   }
 }
 
 .footer {
-  background: $footer-bg;
-  border-top: 6px solid $brand;
-  padding-top: $line-height;
 }
 
+.footer .column:first-child {
+  border-left: none;
+}
+
+.footer .column {
+  border-left: 1px solid $footer-border;
+}
+
+.footer .gnu a {
+  text-decoration: underline;
+}
+
+
 .subfooter {
-  border-top: 1px solid $footer-border;
-  padding-top: $line-height/2;
+  border-top: 1px solid #BFC1C3;
+  opacity: .75;
 }
 
 // 04. Tags
@@ -594,7 +621,7 @@ h3.sidebar-title {
     @include logo;
 
     a {
-      color: white;
+      color: $text-medium;
       display: block;
       line-height: rem-calc(80); // Same as logo image height
       text-align: center;

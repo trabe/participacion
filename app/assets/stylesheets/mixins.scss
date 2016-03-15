@@ -13,7 +13,7 @@
 }
 
 @mixin logo {
-  color: white;
+  color: $text-medium;
   font-family: $font-logo;
   font-size: $h3-font-size;
   font-weight: lighter;

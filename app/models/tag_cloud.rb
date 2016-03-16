@@ -11,7 +11,7 @@ class TagCloud
     resource_model_scoped.
     last_week.tag_counts.
     where("lower(name) NOT IN (?)", category_names + geozone_names + default_blacklist).
-    order("#{table_name}_count": :desc, name: :asc).
+    order(Hash["#{table_name}_count".to_sym, :desc, :name, :asc]).
     limit(10)
   end
 

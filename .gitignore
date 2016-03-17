@@ -15,6 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
+tmux-client-*.log
 
 /spec/examples.txt
 /config/database.yml

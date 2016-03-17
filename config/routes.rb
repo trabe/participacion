@@ -259,5 +259,6 @@ Rails.application.routes.draw do
 
   # static pages
   get '/blog' => redirect("http://diario.madrid.es/participa/")
+  #TODO: Blog url should be the one configured
   resources :pages, path: '/', only: [:show]
 end

@@ -7,18 +7,16 @@ def deploysecret(key)
 end
 
 set :rails_env, fetch(:stage)
-set :rvm_ruby_version, '2.2.3'
-set :rvm_type, :user
+set :application, 'participacion'
 
-set :application, 'consul'
 set :full_app_name, deploysecret(:full_app_name)
 
-set :server_name, deploysecret(:server_name)
+set :server, deploysecret(:server)
 #set :repo_url, 'git@github.com:consul/consul.git'
 # If ssh access is restricted, probably you need to use https access
-set :repo_url, 'https://github.com/consul/consul.git'
+set :repo_url, 'https://github.com/trabe/participacion.git'
 
-set :scm, :git
+#set :scm, :git
 set :revision, `git rev-parse --short #{fetch(:branch)}`.strip
 
 set :log_level, :info
@@ -42,11 +40,11 @@ set(:config_files, %w(
   log_rotation
   database.yml
   secrets.yml
-  unicorn.rb
-  sidekiq.yml
 ))
 
 set :whenever_roles, -> { :cron }
+
+set :passenger_restart_with_touch, false
 
 namespace :deploy do
   # Check right version of deploy branch
@@ -59,7 +57,7 @@ namespace :deploy do
 
   after :finishing, 'deploy:cleanup'
   # Restart unicorn
-  after 'deploy:publishing', 'deploy:restart'
   # Restart Delayed Jobs
   after 'deploy:published', 'delayed_job:restart'
+  after 'deploy:published', 'cache:clear'
 end

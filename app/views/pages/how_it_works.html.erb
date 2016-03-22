@@ -1,23 +1,111 @@
-<div class="row margin-top">
-  <div class="small-12 medium-3 column">
-    <%= link_to "/more_information", class: 'back' do %>
-      <span class="icon-angle-left"></span>
-      <%= t("debates.show.back_link") %>
-    <% end %>
+<div class="page row-full">
+  <div class="row">
+    <div class="menu small-12 medium-3 column">
+      <i class="icon-angle-left left"></i>&nbsp;
+      <%= link_to t("debates.show.back_link"), page_path(:more_information), class: 'left back' %>
+      <ul class="clear">
+          <li>
+            <a href="#i">I. Usuarios</a>
+            <ul>
+              <li><a href="#i1">I.1. Usuario anónimo</a></li>
+              <li><a href="#i2">I.2. Usuario rexistrado</a></li>
+              <li><a href="#i3">I.1. Usuario rexistrado da UDC</a></li>
 
-    <ul class="menu vertical margin-top">
-        <li>
-          <a href="#i"><strong>I. <%= t('pages.more_information.how_it_works.i') %></strong></a>
-          <ul class="nested vertical menu">
-            <li><a href="#i1"><strong>I.1. <%= t('pages.more_information.how_it_works.i1') %></strong></a></li>
-            <li><a href="#i2"><strong>I.2. <%= t('pages.more_information.how_it_works.i2') %></strong></a></li>
+            </ul>
+
+            <a href="#ii">II. Mecanismos de participación</a>
+            <ul>
+              <li><a href="#ii1">II.1. Debates</a></li>
+              <li><a href="#ii2">II.2. Propostas</a></li>
+              <li><a href="#ii3">II.3. Comentarios</a></li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+
+    <div class="text small-12 medium-9 column">
+
+      <h1>Cómo funciona este Portal de Goberno Aberto?</h1>
+
+      <h2 id="i">Tipos de usuarios e permisos</h2>
+
+      <h3 id="i1">I.1. Usuario anónimo</h3>
+      <p>
+        Calquera usuario poderá acceder ao portal e visualizar os <a href="ii1">debates</a> e <a href="ii2">propostas</a>.
+      </p>
+      <h3 id="i2">I.2. Usuario rexistrado</h3>
+      <p>
+        Para poder votar ou crear <a href="ii1">debates</a> terás que ser un membro rexistrado.
+        Non fai falla que teñas usuario da universidade. Os usuarios rexistrados non poden votar ou crear <a href="ii1">debates</a>.
+      </p>
+      <p>
+        Se te rexistraches co teu email da UDC, pero non entraches como "usuario UDC" basta con que te rexistres outra vez para
+        que o teu usuario adquira privilexios da UDC. Se non foi así terás que crear un novo usiario.
+      </p>
+      <h3 id="i3">I.3. Usuario rexistrado da UDC</h3>
+      <p>
+        Os usuarios que se rexistran co seu nome de usuario e contrasinal da UDC poderán votar e crear <a href="ii2">propostas</a>.
+        Non poderán cambiar a contrasinal nin o correo electrónico que usan no portal (xa que se conectan co usuario da UDC).
+      </p>
+
+      <hr/>
+
+      <h2 id="ii">II. Mecanismos de participación</h2>
+
+      <h3 id="ii1">II.1. Debates</h3>
+      <p>
+          Cualquer usuario rexistrado pode comezar unha debate sobre calquera tema relacionado coa universidade.
+          Todos os debates se publican no portal, poidendo os usuarios rexistrados posteriormente:
+          <ul style="margin-left: 50px;">
+            <li>Votalos positivamente (este voto pódese cambiar)</li>
+            <li>Votalos negativamente (este voto pódese cambiar)</li>
+            <li>Compartila nas redes sociais</li>
+            <li><a href="#ii3">Comentar</a> sobre eles</li>
+            <li>Marcalos coma inapropiados. Se sucede demasiado será revisado e avisarase.</li>
           </ul>
-        </li>
-    </ul>
-  </div>
+      </p>
+      <p>
+          Na páxina de Debates listaranse todos os debates creados na plataforma, podéndose ordenar polos debates con máis comentrios,
+          os máis novos, os máis controvertidos, etc.
+      </p>
 
-  <div class="small-12 medium-9 column">
-    <h1><%= t('pages.more_information.titles.how_it_works') %></h1>
-    <%= markdown t('pages.more_information.how_it_works.text') %>
+      <p>Cada uno de los trabajadores del Ayuntamiento tiene un usuario propio, que será resaltado como tal, permitiendo que participen en los debates al mismo nivel que todos los demás ciudadanos. Esto permitirá crear espacios de comunicación directos entre unos y otros, evitando los inconvenientes que implica la comunicación medidada, y respondiendo a un planteamiento claro por parte del nuevo gobierno de Madrid por el cual el Ayuntamiento trabaja para la ciudadanía, y ante ella debe responder.</p>
+
+      <h3 id="ii2">II.2. Propostas</h3>
+
+      <p>
+        Calquera usuario rexistrado como usuario da UDC poderá crear e apoiar propostas.
+        De este xeito será só a propia Universidade a que decida sobre cales son as propostas que lle interesa, como comunidade.
+      </p>
+
+      <p>
+        Cando unha proposta alcance unha cantidade de votos elevada (o 100% do que marca na barra de progreso)
+        pasará a ser estudiada automáticamete por un grupo de traballo da Universidade e pasará á seguinte fase
+        na que se votará se se leva a cabo ou non.
+      </p>
+
+      <p>
+        As accións que se poden facer sobre as propostas son:
+        <ul style="margin-left: 50px;">
+          <li>Apoiala. Ten en conta que esta acción non se pode desfacer</li>
+          <li>Compartila nas redes sociais</li>
+          <li><a href="#ii3">Comentar</a> sobre elas</li>
+        </ul>
+      </p>
+
+      <h3 id="ii3">II.3. Comentarios</h3>
+
+      <p>
+        É posible comentar tanto nos debates coma nas propostas. Todos os usuarios rexistrados poden realizar comentarios.
+        Os comentarios e posible:
+        <ul style="margin-left: 50px;">
+          <li>Votalos positivamente</li>
+          <li>Votalos negativamente</li>
+          <li>Reponderlos</li>
+          <li>Marcalos coma inapropiados. Se un comentario recibe demasiados será revisado.</li>
+        </ul>
+      </p>
+
+    </div>
   </div>
 </div>

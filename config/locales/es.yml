@@ -243,6 +243,9 @@ es:
     twitter:
       sign_in: Entra con Twitter
       sign_up: Regístrate con Twitter
+    cas:
+      sign_in: Entra con tu usuario de la UDC
+      sign_up: Regístrate con tu usuario de la UDC
   proposals:
     create:
       form:

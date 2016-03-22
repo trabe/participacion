@@ -71,6 +71,8 @@ GEM
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
     bcrypt (3.1.10)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     browser (1.1.0)
     builder (3.2.2)
     bullet (5.0.0)
@@ -247,9 +249,13 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
-    omniauth (1.3.1)
+    omniauth (1.2.2)
       hashie (>= 1.2, < 4)
-      rack (>= 1.0, < 3)
+      rack (~> 1.0)
+    omniauth-cas (1.1.0)
+      addressable (~> 2.3)
+      nokogiri (~> 1.5)
+      omniauth (~> 1.2.0)
     omniauth-facebook (3.0.0)
       omniauth-oauth2 (~> 1.2)
     omniauth-google-oauth2 (0.3.1)
@@ -417,10 +423,11 @@ GEM
     wasabi (3.5.0)
       httpi (~> 2.0)
       nokogiri (>= 1.4.2)
-    web-console (3.1.1)
-      activemodel (>= 4.2)
-      debug_inspector
-      railties (>= 4.2)
+    web-console (2.3.0)
+      activemodel (>= 4.0)
+      binding_of_caller (>= 0.7.2)
+      railties (>= 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -473,6 +480,7 @@ DEPENDENCIES
   letter_opener_web (~> 1.3.0)
   newrelic_rpm (~> 3.14)
   omniauth
+  omniauth-cas
   omniauth-facebook (~> 3.0.0)
   omniauth-google-oauth2 (~> 0.3.0)
   omniauth-twitter
@@ -498,7 +506,7 @@ DEPENDENCIES
   turnout
   uglifier (>= 1.3.0)
   unicorn (~> 5.0.1)
-  web-console (~> 3.0)
+  web-console (~> 2.0)
   whenever
 
 BUNDLED WITH

@@ -26,6 +26,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook', '~> 3.0.0'
 gem 'omniauth-google-oauth2', '~> 0.3.0'
+gem 'omniauth-cas'
 
 gem 'kaminari'
 gem 'ancestry'
@@ -92,5 +93,5 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 3.0'
+  gem 'web-console', '~> 2.0'
 end

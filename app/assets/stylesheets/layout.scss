@@ -1243,6 +1243,21 @@ table {
   }
 }
 
+.button.button-cas {
+  background: $brand;
+
+  &:before {
+    content: "E";
+    font-family: "icons" !important;
+    font-size: rem-calc(24);
+    left: 0;
+    line-height: $line-height*2;
+    padding: 0 rem-calc(20);
+    position: absolute;
+    top: 0;
+  }
+}
+
 .social-share-button-google_plus {
   background: #DE4C34;
   color: white;

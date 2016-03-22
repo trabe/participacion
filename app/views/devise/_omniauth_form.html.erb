@@ -14,6 +14,10 @@
       <%= link_to t("omniauth.google_oauth2.sign_in"), user_omniauth_authorize_path(:google_oauth2), class: "button-google button expanded" %>
     <% end %>
 
+    <% if feature? :cas_login %>
+      <%= link_to t("omniauth.cas.sign_in"), user_omniauth_authorize_path(:cas), class: "button-cas button radius expand" %>
+    <% end %>
+
     <hr/>
   <% elsif current_page?(new_user_registration_path) %>
 
@@ -27,6 +31,10 @@
 
     <% if feature? :google_login %>
       <%= link_to t("omniauth.google_oauth2.sign_up"), user_omniauth_authorize_path(:google_oauth2), class: "button-google button expanded" %>
+    <% end %>
+
+    <% if feature? :cas_login %>
+      <%= link_to t("omniauth.cas.sign_up"), user_omniauth_authorize_path(:cas), class: "button-cas button radius expand" %>
     <% end %>
 
     <hr/>

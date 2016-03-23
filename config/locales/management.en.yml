@@ -49,7 +49,7 @@ en:
       support_proposals: Support proposals
       vote_proposals: Vote proposals
     print:
-      info: Create yor proposal on http://decide.madrid.es
+      info: Create yor proposal on http://udcdecide.udc.gal
       note: The proposals more supported will be voted. If are accepted by a majority, the city Council shall be carried out.
       proposals_title: 'Proposals:'
     print_info: Print this info

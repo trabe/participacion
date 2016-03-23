@@ -49,7 +49,7 @@ es:
       support_proposals: Apoyar propuestas
       vote_proposals: Participar en las votaciones finales
     print:
-      info: Haz tu propuesta en http://decide.madrid.es
+      info: Haz tu propuesta en http://udcdecide.udc.gal
       note: Las propuestas más apoyadas serán llevadas a votación. Y si las acepta una mayoría, el Ayuntamiento las llevará a cabo.
       proposals_title: 'Propuestas:'
     print_info: Imprimir esta información

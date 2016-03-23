@@ -6,6 +6,7 @@
       previous: "&lsaquo; Anterior"
       next: "Seguinte &rsaquo;"
       truncate: "&hellip;"
+      current: Estás na páxina
   helpers:
     page_entries_info:
       entry:

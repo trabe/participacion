@@ -10,6 +10,7 @@ gl:
       title: "Xestión"
       users: "Usuarios"
       create_proposal: "Crear proposta"
+      create_spending_proposal: "Crear proposta de gasto"
       support_proposals: "Apoiar propostas"
       print_proposals: "Imprimir propostas"
     dashboard:
@@ -25,12 +26,20 @@ gl:
     sessions:
       signed_out: "Pechaches a sesión correctamente."
       signed_out_managed_user: "Pechouse correctamente a sesión do usuario."
+    spending_proposals:
+      alert:
+        unverified_user: Este usuario non está verificado
+      create: Crear proposta de gasto
     proposals:
       create_proposal: "Crear proposta"
       print:
        print_button: Imprimir
       alert:
         unverified_user: Este usuario non está verificado
+    print:
+      info: Fai a túa proposta en http://udcdecide.udc.gal
+      note: As propostas máis apoiadas serán levadas a votación. Se as acepta una maioría, a Universidade levaraas a cabo.
+      proposals_title: 'Propostas:'
     permissions:
       debates: "Participar en debates"
       create_proposals: "Crear novas propostas"
@@ -40,13 +49,14 @@ gl:
       title: "Xestión de usuarios"
       please_check_account_data: "Comprobe que os datos anteriores son correctos para proceder a verificar a conta completamente."
       already_verified: "Esta conta de usuario xa está verificada."
-      n_census_has_following_permissions: "Este usuario pode participar no Portal de Goberno Aberto da Universidade da Coruña coas seguintes posibilidades:"
+      in_census_has_following_permissions: "Este usuario pode participar no Portal de Goberno Aberto da Universidade da Coruña coas seguintes posibilidades:"
       not_in_census: "Este documento non está rexistrado no Padrón Municipal de Madrid."
       under_age: "Debes ser maior de 16 anos para verificar a túa conta."
       not_in_census_info: "As persoas non empadroadas en Madrid poden participar no Portal de Goberno Aberto da Universidade da Coruña coas seguintes posibilidades:"
       has_no_account_html: "Para crear un usuario entre en %{link} e prema na opción <b>'Rexistrarse'</b> na parte superior dereita da pantalla."
       verify: "Verificar usuario"
     email_verifications:
+      choose_options: "Elixe unha das opcións seguintes:"
       document_found_in_census: "Este documento está no rexistro do padrón municipal, pero aínda non ten unha conta de usuario asociada. Elixe unha das opcións seguintes:"
       if_existing_account: "Se a persoa xa creou unha conta de usuario na web"
       introduce_email: "Introduce o correo electrónico co que creou a conta:"

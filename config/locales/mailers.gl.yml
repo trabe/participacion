@@ -17,3 +17,5 @@ gl:
       click_here_to_verify: "nesta ligazón"
       instructions_2_html: "Este correo electrónico é para verificar a túa conta con <b>%{document_type} %{document_number}</b>. Se eses non son os teus datos, por favor non premas na ligazón anterior e ignora este correo electrónico."
       thanks: "Moitas grazas."
+    config:
+      manage_email_subscriptions: Podes deixar de recibir estos emails cambiando a túa configuración en

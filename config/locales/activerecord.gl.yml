@@ -37,6 +37,9 @@ gl:
       proposal:
         one: Proposta
         other: Propostas
+      spending_proposal:
+        one: Propostas de gasto
+        other: Propostas de gasto
     attributes:
       comment:
         body: Comentario
@@ -55,10 +58,12 @@ gl:
       user:
         email: Correo electrónico
         username: Nome de usuario
+        password_confirmation: Confirmación de contrasinal
         password: Contrasinal
         phone_number: Teléfono
         official_position: Cargo público
         official_level: Nivel do cargo
+        redeemable_code: Código de verificación recibido por email
       organization:
         name: Nome da organización
         responsible_name: Persoa responsable do colectivo
@@ -72,3 +77,5 @@ gl:
           attributes:
             tag_list:
               less_than_or_equal_to: os temas deben ser menor ou igual que %{count}
+        spending_proposal:
+          administrator_id: Administrador

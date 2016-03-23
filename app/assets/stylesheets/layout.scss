@@ -632,7 +632,7 @@ h3.sidebar-title {
 
 .auth {
   text-align: left;
-  
+
   p, a, .checkbox {
     font-size: $small-font-size;
   }
@@ -641,6 +641,10 @@ h3.sidebar-title {
     border-radius: 8px;
     background-color: #F5F5F5;
     padding: 2em;
+  }
+
+  form input[type]:not([type=submit]) {
+    background-color: white !important;
   }
 }
 

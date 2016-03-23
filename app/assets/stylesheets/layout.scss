@@ -613,13 +613,9 @@ h3.sidebar-title {
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .auth-page {
-  background: $brand image-url("auth_bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
 
   h1:not(.logo) {
-    @include logo;
-
     a {
       color: $text-medium;
       display: block;
@@ -635,14 +631,16 @@ h3.sidebar-title {
 }
 
 .auth {
-
+  text-align: left;
+  
   p, a, .checkbox {
     font-size: $small-font-size;
   }
 
   .panel {
-    background: white;
-    border: 0;
+    border-radius: 8px;
+    background-color: #F5F5F5;
+    padding: 2em;
   }
 }
 

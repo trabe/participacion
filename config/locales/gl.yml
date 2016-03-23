@@ -1,0 +1,373 @@
+gl:
+  locale: "Galego"
+  errors:
+    messages:
+      user_not_found: "Non se encontrou o usuario"
+  layouts:
+    header:
+      logo: "UDC"
+      external_link_transparency: Transparencia
+      external_link_transparency_url: "http://www.udc.es/transparencia"
+      external_link_opendata: Datos abertos
+      external_link_opendata_url: "http://www.udc.es/transparencia"
+      external_link_blog: Blog
+      external_link_blog_url: "/blog"
+      open_gov: "Portal de participación"
+      candidate: "Candidatura de Julio Abalde"
+      open: "aberto"
+      participation: "Participación"
+      transparency: "Transparencia"
+      open_data: "Datos abertos"
+      open_city_title: "A universidade que queres será a universidade que queiras."
+      open_city_slogan_html:
+        "Existen comunidades gobernadas directamente polos seus participantes, que <b>debaten</b> sobre temas que lles preocupan, <b>propoñen</b> ideas para mellorar
+        as súas vidas e <b>deciden</b> entre todas e todos as que se levan a cabo."
+      see_all: "Ver propostas"
+      my_account_link: A miña conta
+      locale: "Idioma:"
+      administration: Administrar
+      moderation: Moderar
+      highlights: "Portada"
+      more_information: "Máis información"
+      debates: Debates
+      proposals: Propostas
+    footer:
+      description: "Este portal usa a %{consul}, aplicación de participación cidadá de %{open_source}, liberada polo concello de Madrid. Podes ver o código fonte do fork do proxecto creado para a UDC en %{consul_url_udc}."
+      open_source: "software libre"
+      open_source_url: "http://www.gnu.org/licenses/agpl-3.0.html"
+      consul: "aplicación Consul"
+      consul_url: "https://github.com/ayuntamientomadrid"
+      consul_udc_url: https://github.com/trabe/participacion
+      copyright: "Concello de Madrid, %{year}"
+      participation_title: "Participación"
+      participation_text: "Decide como debe ser a Universidade da Coruña que queres."
+      transparency_title: Transparencia
+      transparency_text: "Obtén calquera información sobre a Universidade da Coruña."
+      open_data_title: Datos Abertos
+      open_data_text: "Todos os datos da Universidade son teus."
+      contact_us: "Para asistencia técnica contáctenos en"
+      privacy: "Política de privacidade"
+      conditions: "Condicións de uso"
+      more_info: "Máis información"
+      accessibility: "Accesibilidade"
+    application:
+      ie_title: "Esta web non está optimizada para o teu navegador"
+      ie:
+        "Detectamos que estás navegando desde Internet Explorer.
+        Para unha mellor experiencia recomendámosche utilizar %{chrome} ou %{firefox}."
+      chrome: "Google Chrome"
+      firefox: "Firefox"
+  social:
+    twitter: "Twitter"
+    facebook: "Facebook"
+    blog: "Blog"
+    youtube: "YouTube"
+  form:
+      error: erro
+      errors: erros
+      not_saved: "impediron gardar %{resource}:"
+      accept_terms: "Acepto a %{policy} e as %{conditions}"
+      policy: "Política de privacidade"
+      conditions: "Condicións de uso"
+      user: a conta
+      debate: o debate
+      proposal: a proposta
+      verification::sms: o teléfono
+      verification::letter: a verificación
+  application:
+    alert:
+      only_beta_testers: "Sentímolo só os usuarios de probas teñen acceso de momento"
+    close: "Pechar"
+    menu: "Menú"
+  debates:
+    index:
+      title: Debates
+      start_debate: Empeza un debate
+      select_order: Ordenar por
+      select_order_long: Estás vendo os debates
+      orders:
+        confidence_score: "mellor valorados"
+        hot_score: "máis activos"
+        created_at: "máis novos"
+        most_commented: "máis comentados"
+        random: "aleatorio"
+      filter_topic:
+        one: " co tema '%{topic}'"
+        other: " co tema '%{topic}'"
+      search_form:
+        title: Buscar
+        button: Buscar
+        placeholder: "Buscar debates..."
+      search_results:
+        one: " que contén '%{search_term}'"
+        other: " que conteñen '%{search_term}'"
+    debate:
+      debate: Debate
+      comments:
+        zero: Sen comentarios
+        one: 1 comentario
+        other: "%{count} comentarios"
+      votes:
+        zero: Sen votos
+        one: 1 voto
+        other: "%{count} votos"
+    form:
+      debate_title: Título do debate
+      debate_text: Texto inicial do debate
+      tags_label: Temas
+      tags_instructions: >
+        Etiqueta este debate. Podes elixir entre as nosas propostas ou introducir as que desexes.
+      tags_placeholder: "Escribe as etiquetas que desexes separadas por coma (',')"
+    show:
+      back_link: Volver
+      author_deleted: Usuario eliminado
+      comments_title: Comentarios
+      comments:
+        zero: Sen comentarios
+        one: 1 comentario
+        other: "%{count} comentarios"
+      login_to_comment: "Necesitas %{signin} ou %{signup} para comentar."
+      edit_debate_link: "Editar debate"
+      share: Compartir
+      flag: "Este debate foi marcado como inapropiado por varios usuarios."
+    edit:
+      editing: Editar debate
+      show_link: Ver debate
+      back_link: Volver
+      form:
+        submit_button: "Gardar cambios"
+    new:
+      start_new: Empezar un debate
+      info: "Un debate é un foro de discusión, non unha proposta cidadá. Moi pronto abriremos a sección de propostas, onde calquera poderá presentar propostas e, se reciben apoio, serán postas en marcha pola Universidade."
+      more_info: "Máis información"
+      back_link: Volver
+      recommendations_title: Recomendacións para crear un debate
+      recommendation_one: "Non escribas o título do debate ou frases enteiras en maiúsculas. En internet iso considérase gritar. E a ninguén lle gusta que lle griten."
+      recommendation_two: "Calquera debate ou comentario que implique unha acción ilegal será eliminado, tamén os que teñan a intención de sabotear os espazos de debate, todo o demais está permitido."
+      recommendation_three: "As críticas despiadadas son moi benvidas. Este é un espazo de pensamento. Pero recomendámosche que conserves a elegancia e a intelixencia. O mundo é mellor con elas presentes."
+      recommendation_four: "Goza con este espazo, coas voces que o enchen, tamén é teu."
+      form:
+        submit_button: "Empeza un debate"
+    create:
+      form:
+        submit_button: "Empeza un debate"
+    update:
+      form:
+        submit_button: "Gardar cambios"
+  proposals:
+    index:
+      title: Propostas
+      featured_proposals_html: "Propostas<br>destacadas"
+      start_proposal: Crea unha proposta
+      select_order: Ordenar por
+      select_order_long: Estás vendo as propostas
+      orders:
+        confidence_score: "máis apoiadas"
+        hot_score: "máis activas hoxe"
+        created_at: "máis novas"
+        most_commented: "máis comentadas"
+        random: "aleatorias"
+      filter_topic:
+        one: " co tema '%{topic}'"
+        other: " co tema '%{topic}'"
+      search_form:
+        title: Search
+        button: Search
+        placeholder: "Buscar propostas..."
+      search_results:
+        one: " que contén '%{search_term}'"
+        other: " que conteñen '%{search_term}'"
+    proposal:
+      proposal: Proposta
+      support: "Apoiar"
+      support_title: "Apoiar esta proposta"
+      comments:
+        zero: Sen comentarios
+        one: 1 comentario
+        other: "%{count} comentarios"
+      supports:
+        zero: Sen apoios
+        one: 1 apoio
+        other: "%{count} apoios"
+      supports_necessary: "%{supports_necessary} apoios necesarios"
+      census_percent: "2% do censo"
+      total_percent: "100%"
+      already_supported: "Xa apoiaches esta proposta, compártea!"
+    form:
+      proposal_title: Título da proposta
+      proposal_question: Pregunta da proposta
+      proposal_question_example_html: "Debe ser resumida nunha pregunta cuxa resposta sexa Si ou Non. <em>Ex. 'Está vostede de acordo en peonalizar o campus?'</em>"
+      proposal_summary: "Resumo da proposta"
+      proposal_summary_note: "(máximo 200 caracteres)"
+      proposal_text: Texto desenvolvido da proposta
+      proposal_external_url: Ligazón a documentación adicional
+      proposal_video_url: "Ligazón a vídeo externo"
+      proposal_video_url_note: "Podes engadir unha ligazón a YouTube ou Vimeo"
+      proposal_responsible_name: "Nome e apelidos da persoa que fai esta proposta"
+      proposal_responsible_name_note: "(individualmente ou como representante dun colectivo; non se mostrará publicamente)"
+      tags_label: Temas
+      tags_instructions: >
+        Etiqueta esta proposta. Podes elixir entre as nosas propostas ou introducir as que desexes.
+      tags_placeholder: "Escribe as etiquetas que desexes separadas por una coma (',')"
+    show:
+      back_link: Volver
+      author_deleted: Usuario eliminado
+      code: "Código da proposta:"
+      comments_title: Comentarios
+      comments:
+        zero: Sen comentarios
+        one: 1 comentario
+        other: "%{count} comentarios"
+      login_to_comment: "Necesitas %{signin} ou %{signup} para comentar."
+      edit_proposal_link: "Editar proposta"
+      share: Compartir
+      flag: "Esta proposta foi marcada como inapropiada por varios usuarios."
+    edit:
+      editing: Editar proposta
+      show_link: Ver proposta
+      back_link: Volver
+      form:
+        submit_button: "Gardar cambios"
+    new:
+      start_new: Crear unha proposta
+      more_info: "Como funcionan as propostas?"
+      back_link: Volver
+      recommendations_title: Recomendacións para crear unha proposta
+      recommendation_one: "Non escribas o título da proposta ou frases enteiras en maiúsculas. En internet iso considérase gritar. E a ninguén lle gusta que lle griten."
+      recommendation_two: "Calquera proposta ou comentario que implique unha acción ilegal será eliminada, tamén as que teñan a intención de sabotear os espazos de proposta, todo o demais está permitido."
+      recommendation_three: "Goza con este espazo, coas voces que o enchen, tamén é teu."
+      form:
+        submit_button: "Crear proposta"
+    create:
+      form:
+        submit_button: "Crear proposta"
+    update:
+      form:
+        submit_button: "Gardar cambios"
+  comments:
+    form:
+      leave_comment: Deixa o teu comentario
+      comment_as_moderator: Comentar como moderador
+      comment_as_admin: Comentar como administrador
+    comment:
+      author: Autor
+      moderator: Moderador
+      admin: Administrador
+      deleted: Este comentario foi eliminado
+      user_deleted: Usuario eliminado
+      responses:
+        zero: Sen respostas
+        one: 1 resposta
+        other: "%{count} respostas"
+      votes:
+        zero: Sen votos
+        one: 1 voto
+        other: "%{count} votos"
+  comments_helper:
+    comment_link: Comentar
+    comment_button: Publicar comentario
+    reply_link: Responder
+    reply_button: Publicar resposta
+  votes:
+    agree: Estou de acordo
+    disagree: Non estou de acordo
+    supports: Apoios
+    unauthenticated: "Necesitas %{signin} ou %{signup} para continuar."
+    signin: Iniciar sesión
+    signup: Rexistrarte
+    anonymous: "Demasiados votos anónimos, para poder votar %{verify_account}."
+    verified_only: "Para votar propostas, %{verify_account}."
+    verify_account: tes que facer login co teu usario da UDC
+    organizations: As organizacións non poden votar
+  account:
+    show:
+      title: "A miña conta"
+      save_changes_submit: "Gardar cambios"
+      change_credentials_link: "Cambiar os meus datos de acceso"
+      email_on_comment_label: "Recibir un correo electrónico cando alguén comenta as miñas propostas ou debates"
+      email_on_comment_reply_label: "Recibir un correo electrónico cando alguén contesta aos meus comentarios"
+      erase_account_link: "Darme de baixa"
+      personal: "Datos persoais"
+      username_label: "Nome de usuario"
+      phone_number_label: "Teléfono"
+      organization_name_label: "Nome da organización"
+      organization_responsible_name_placeholder: "Representante da asociación/colectivo"
+      notifications: Notificacións
+      finish_verification: "Finalizar verificación"
+      verified_account: Conta verificada
+      verify_my_account: Verificar a miña conta
+      user_permission_title: "Participación"
+      user_permission_info: "Coa túa conta xa podes..."
+      user_permission_debates: "Participar en debates"
+      user_permission_proposal: "Crear novas propostas"
+      user_permission_support_proposal: "Apoiar propostas*"
+      user_permission_votes: "Participar nas votacións finais*"
+      user_permission_verify: "Para poder realizar todas as accións tes entrar co teu usuario da UDC. Podes volver a rexistrarte como tal se así o desexas."
+      user_permission_verify_info: "* Só usuarios da UDC."
+  simple_captcha:
+    placeholder: "Introduce o texto da imaxe"
+    label: "Introduce o texto da imaxe na seguinte caixa"
+    refresh_button_text: "Refrescar"
+    message:
+      user: "O código secreto non coincide coa imaxe"
+      debate: "O código secreto non coincide coa imaxe"
+      proposal: "O código secreto non coincide coa imaxe"
+  shared:
+    author_info:
+      author_deleted: Usuario eliminado
+    tags_cloud:
+      tags: Tendencias
+    print:
+      print_button: "Imprimir esta información"
+    flag: Denunciar como inapropiado
+    unflag: Desfacer denuncia
+    collective: Colectivo
+    check: Seleccionar
+    check_all: Todos
+    check_none: Ningún
+  unauthorized:
+    default: "Non tes permiso para acceder a esta páxina."
+    manage:
+      all: "Non tes permiso para realizar a acción '%{action}' sobre %{subject}."
+  welcome:
+    highlights: "Portada: "
+    signed_in_home_title: Actividade recente
+    debates:
+      title: "Debates"
+      description: "Encontrarnos, debater e compartir o que nos parece importante na nosa universidade."
+    proposal:
+      title: "Propós"
+      description: "Espazo aberto para propostas sobre o tipo de universidade que queremos."
+    decide:
+      title: "Decides"
+      description: "A comunidade decide se acepta ou rexeita as propostas máis apoiadas."
+    do:
+      title: "Faise"
+      description: "Se a proposta é aceptada maioritariamente, a Universidade asúmea como propia e faise."
+    welcome:
+      title: "Empeza a participar"
+      go_to_index: "Ver propostas"
+      user_permission_info: "Coa túa conta xa podes..."
+      user_permission_debates: "Participar en debates"
+      user_permission_proposal: "Crear novas propostas"
+      user_permission_support_proposal: "Apoiar propostas*"
+      user_permission_votes: "Participar nas votacións finais*"
+      user_permission_verify: "Para poder realizar todas as accións %{verify}."
+      user_permission_verify_url: "tes que entrar co teu usuario da UDC"
+      user_permission_verify_info: "* Só usuarios da UDC."
+  omniauth:
+    finish_signup:
+      title: Engade o teu correo electrónico
+    twitter:
+      sign_in: Entra con Twitter
+      sign_up: Rexístrate con Twitter
+    facebook:
+      sign_in: Entra con Facebook
+      sign_up: Rexístrate con Facebook
+    google_oauth2:
+      sign_in: Entra con Google
+      sign_up: Rexístrate con Google
+    cas:
+      sign_in: Entra co teu usuario da UDC
+      sign_up: Rexístrate co teu usuario da UDC
+      user_kind: usuario da UDC

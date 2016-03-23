@@ -1,0 +1,29 @@
+gl:
+  pages:
+    titles:
+      more_information: "Máis información"
+      privacy: "Política de Privacidade"
+      transparency: "Transparencia"
+      opendata: "Datos abertos"
+      conditions: "Condicións de uso"
+      accessibility: "Accesibilidade"
+    conditions:
+      "Condicións de uso"
+    privacy:
+      "Política de Privacidade"
+    general_terms:
+      "Termos e condicións"
+    census_terms:
+      "Para verificar a conta hai que ser membro da UDC."
+    transparency:
+      "Transparencia"
+    opendata:
+      "Datos abertos"
+    verify:
+      title: "Verifica a túa conta"
+      info: "Para verificar a túa conta introduce os datos cos que te rexistraches:"
+      info_code: "Agora introduce o código que recibiches na túa carta:"
+      email: "Correo electrónico"
+      password: "Contrasinal"
+      code: "Código que recibiches na túa carta"
+      submit: "Verificar a miña conta"

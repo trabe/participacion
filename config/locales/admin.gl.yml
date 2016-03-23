@@ -1,0 +1,178 @@
+gl:
+  admin:
+    settings:
+      index:
+        title: Configuración global
+        update_setting: Actualizar
+      flash:
+        updated: 'Valor actualizado'
+    dashboard:
+      index:
+        title: Administración
+    menu:
+      settings: Configuración global
+      debate_topics: Temas de debate
+      hidden_proposals: Propostas ocultas
+      hidden_debates: Debates ocultos
+      hidden_comments: Comentarios ocultos
+      hidden_users: Usuarios bloqueados
+      incomplete_verifications: Verificacións incompletas
+      organizations: Organizacións
+      officials: Cargos públicos
+      moderators: Moderadores
+      stats: Estatísticas
+      activity: Actividade de moderadores
+    shared:
+      user_search:
+        placeholder: 'Buscar usuario por nome ou correo electrónico'
+        button: 'Buscar'
+      proposal_search:
+        placeholder: 'Buscar propostas por título, descrición ou pregunta'
+        button: 'Buscar'
+    organizations:
+      index:
+        title: Organizacións
+        search_placeholder: "Nome, correo electrónico ou teléfono"
+        search: Buscar
+        verify: Verificar
+        reject: Rexeitar
+        verified: Verificada
+        rejected: Rexeitada
+        filter: Filtro
+        filters:
+          all: Todas
+          pending: Pendentes
+          verified: Verificadas
+          rejected: Rexeitadas
+        hidden_count:
+          one: "Hai ademais unha organización sen usuario ou co usuario bloqueado"
+          other: "Hai %{count} organizacións sen usuario ou co usuario bloqueado"
+      search:
+        title: "Buscar organizacións"
+    actions:
+      hide: Ocultar
+      hide_author: Bloquear o autor
+      restore: Volver mostrar
+      confirm: 'Estás seguro?'
+      confirm_hide: Confirmar
+    tags:
+      index:
+        title: 'Temas de debate'
+        add_tag: 'Engade un novo tema de debate'
+      mark_as_featured: 'Propoñer tema ao crear debate'
+      name:
+        placeholder: 'Escribe o nome do tema'
+      create: Crear tema
+      update: Actualizar tema
+      destroy: Eliminar tema
+    comments:
+      index:
+        title: Comentarios ocultos
+        hidden_proposal: "Proposta oculta"
+        hidden_debate: "Debate oculto"
+        filter: Filtro
+        filters:
+          all: Todos
+          with_confirmed_hide: Confirmados
+          without_confirmed_hide: Pendentes
+    debates:
+      index:
+        title: Debates ocultos
+        filter: Filtro
+        filters:
+          all: Todos
+          with_confirmed_hide: Confirmados
+          without_confirmed_hide: Pendentes
+    proposals:
+      index:
+        title: Propostas ocultas
+        filter: Filtro
+        filters:
+          all: Todas
+          with_confirmed_hide: Confirmadas
+          without_confirmed_hide: Pendentes
+    users:
+      index:
+        title: Usuarios bloqueados
+        filter: Filtro
+        filters:
+          all: Todos
+          with_confirmed_hide: Confirmados
+          without_confirmed_hide: Pendentes
+      show:
+        title: "Actividade do usuario %{user}"
+        back: Volver
+        email: "Correo electrónico:"
+        registered_at: "Data de alta:"
+        hidden_at: "Bloqueado:"
+    verifications:
+      index:
+        title: Verificacións incompletas
+        phone_not_given: 'Non deu o seu teléfono'
+        sms_code_not_confirmed: 'Non introduciu o seu código de seguridade'
+    officials:
+      level_0: "Non é cargo público"
+      level_1: Nivel 1
+      level_2: Nivel 2
+      level_3: Nivel 3
+      level_4: Nivel 4
+      level_5: Nivel 5
+      index:
+        title: Cargos Públicos
+      search:
+        title: 'Cargos Públicos: Procura de usuarios'
+        edit_official: Editar cargo público
+        make_official: Convertir en cargo público
+      edit:
+        title: 'Cargos Públicos: Editar usuario'
+        destroy: "Eliminar condición de 'Cargo Público'"
+        back: Volver
+      flash:
+        official_updated: 'Datos do cargo público gardados'
+        official_destroyed: 'Datos gardados: o usuario xa non é cargo público'
+    moderators:
+      index:
+        title: Moderadores
+      search:
+        email_placeholder: 'Buscar usuario por correo electrónico'
+        search: Buscar
+        user_not_found: 'Usuario non encontrado'
+      moderator:
+        delete: Borrar
+        add: Engadir
+    activity:
+      show:
+        title: Actividade dos moderadores
+        action: 'Acción'
+        by: Moderado por
+        type: Tipo
+        filter: Mostrar
+        filters:
+          all: Todo
+          on_proposals: Propostas
+          on_debates: Debates
+          on_comments: Comentarios
+          on_users: Usuarios
+        actions:
+          hide: Ocultado
+          restore: Restaurado
+          block: Bloqueado
+    stats:
+      show:
+        stats_title: Estatísticas
+        visits_title: Visitas
+        combined_title: Combinado
+        summary:
+          visits: Visitas
+          debates: Debates
+          proposals: Propostas
+          comments: Comentarios
+          debate_votes: Votos en debates
+          proposal_votes: Votos en propostas
+          comment_votes: Votos en comentarios
+          votes: Votos
+          user_level_three: Usuarios de nivel tres
+          user_level_two: Usuarios de nivel dous
+          unverified_users: Usuarios sen verificar
+          verified_users: Usuarios verificados
+          users: Usuarios

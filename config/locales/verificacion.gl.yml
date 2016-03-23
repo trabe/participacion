@@ -1,0 +1,107 @@
+es:
+  verification:
+    back: "Volver á miña conta"
+    step_1: "Residencia"
+    step_2: "SMS de confirmación"
+    step_3: "Verificación final"
+    alert:
+      lock: "Chegaches ao máximo número de intentos. Por favor inténtao de novo máis tarde."
+    user_permission_info: "Ao verificar os teus datos poderás..."
+    user_permission_debates: "Participar en debates"
+    user_permission_proposal: "Crear novas propostas"
+    user_permission_support_proposal: "Apoiar propostas"
+    user_permission_votes: "Participar nas votacións finais"
+    residence:
+      new:
+        title: "Verificar residencia"
+        document_type_label: "Tipo de documento"
+        document_type:
+          spanish_id: "DNI"
+          passport: "Pasaporte"
+          residence_card: "Tarxeta de residencia"
+        document_number: "Número de documento"
+        date_of_birth: "Data de nacemento"
+        postal_code: "Código postal"
+        postal_code_note: "Para verificar os teus datos debes ser membro da UDC"
+        accept_terms_text: "Acepto %{terms_url} o Padrón"
+        terms: "os termos de acceso"
+        verify_residence: "Verificar residencia"
+        form_errors: "evitaron verificar a túa residencia"
+        error_verifying_census: "Non poidemos verificar a túa información. Por favor, confirma que os teus datos de acceso sexan correctos chamando ao 981167000 ou ponte en contacto connosco."
+        error_not_allowed_age: "Hai que ter polo menos 16 anos"
+        error_not_allowed_postal_code: "Para verificarte debes ser membro da UDC."
+      create:
+        flash:
+          success: "Residencia verificada"
+      alert:
+        unconfirmed_residency: "Aínda non verificaches a túa residencia"
+    sms:
+      new:
+        title: "SMS de confirmación"
+        phone: "Introduce o teu teléfono móbil para recibir o código"
+        phone_note: "Só usaremos o teu teléfono para che enviar un código, nunca te contactaremos."
+        submit_button: "Enviar"
+      create:
+        flash:
+          success: "Introduce o código de confirmación que che enviamos por mensaxe de texto"
+      edit:
+        title: "SMS de confirmación"
+        confirmation_code: "Introduce o código que recibiches no teu móbil"
+        resend_sms_text: "Non recibiches unha mensaxe de texto co teu código de confirmación?"
+        resend_sms_link: "Solicitar un novo código"
+        submit_button: "Enviar"
+      update:
+        error: "Código de confirmación incorrecto"
+        flash:
+          level_three:
+            success: "Código correcto. A túa conta xa está verificada"
+          level_two:
+            success: "Código correcto"
+    email:
+      show:
+        flash:
+          success: "Es un usuario verificado"
+        alert:
+          failure: "Código de verificación incorrecto"
+      create:
+        flash:
+          success: "Enviámosche un correo electrónico de confirmación á túa conta: %{email}"
+        alert:
+          failure: "Houbo un problema ao enviarche un correo electrónico á túa conta"
+    letter:
+      new:
+        title: "Felicidades!"
+        user_permission_info: "Coa túa conta xa podes..."
+        explanation: "Para participar nas votacións finais podes:"
+        office: "Verificarte presencialmente en calquera %{office}"
+        offices: "Centro da UDC"
+        offices_url: "http://www.udc.es/sobreUDC/localizacion/index.html"
+        send_letter: "Solicitar unha carta por correo postal"
+        go_to_index: "Ver propostas"
+      create:
+        flash:
+          success_html: "Antes das votacións recibirás unha carta coas instrucións para verificar a túa conta.<br> Lembra que podes aforrar o envío verificándote presencialmente en calquera das %{offices}."
+          offices: "Oficinas de Atención ao Cidadán"
+          offices_url: "http://www.udc.es/sobreUDC/localizacion/index.html"
+      edit:
+        title: "Carta solicitada"
+        see_all: "Ver propostas"
+      update:
+        flash:
+          success: "A túa conta xa está verificada"
+      alert:
+        unconfirmed_code: "Aínda non introduciches o código de confirmación"
+      errors:
+        incorrect_code: "Código de verificación incorrecto"
+    verified_user:
+      show:
+        title: "Información dispoñible"
+        explanation: "Actualmente dispoñemos dos seguintes datos no Padrón, selecciona onde queres que enviemos o código de confirmación."
+        email_title: "Correo electrónico"
+        phone_title: "Teléfonos"
+        use_another_phone: "Utilizar outro teléfono"
+      form:
+        submit_button: "Enviar código"
+    redirect_notices:
+      email_already_sent: "Xa che enviamos un correo electrónico cunha ligazón de confirmación, se non o encontras podes solicitar aquí que cho reenviemos"
+      already_verified: "A túa conta xa está verificada"

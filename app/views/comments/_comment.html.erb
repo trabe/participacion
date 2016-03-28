@@ -73,7 +73,7 @@
             </span>
 
             <% if comment.children.size > 0 %>
-              <%= link_to "", class: "js-toggle-children", data:  {'id': "#{dom_id(comment)}"} do %>
+              <%= link_to "", class: "js-toggle-children", data:  {:id => "#{dom_id(comment)}"} do %>
                 <span id="<%= dom_id(comment) %>_children_arrow" class="icon-angle-down"></span> <%= t("comments.comment.responses", count: comment.children.size) %>
               <% end %>
             <% else %>
@@ -83,7 +83,7 @@
             <% if user_signed_in? %>
               <span class="divider">&nbsp;|&nbsp;</span>
               <%= link_to(comment_link_text(comment), "",
-                          class: "js-add-comment-link", data: {'id': dom_id(comment)}) %>
+                          class: "js-add-comment-link", data: {:id => dom_id(comment)}) %>
 
               <%= render 'comments/actions', comment: comment %>
 

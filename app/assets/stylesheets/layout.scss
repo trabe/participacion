@@ -1246,18 +1246,10 @@ table {
 }
 
 .button.button-cas {
-  background: $brand;
-
-  &:before {
-    content: "E";
-    font-family: "icons" !important;
-    font-size: rem-calc(24);
-    left: 0;
-    line-height: $line-height*2;
-    padding: 0 rem-calc(20);
-    position: absolute;
-    top: 0;
-  }
+  background: $brand image-url("mini_logo_udc_white.png");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 45px auto;
 }
 
 .social-share-button-google_plus {

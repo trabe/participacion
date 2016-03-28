@@ -1,4 +1,4 @@
-<% if feature?(:twitter_login) || feature?(:facebook_login) || feature?(:google_login) %>
+<% if any_feature? [:twitter_login, :facebook_login, :google_login, :cas_login] %>
 
   <% if current_page?(new_user_session_path) %>
 
@@ -15,7 +15,7 @@
     <% end %>
 
     <% if feature? :cas_login %>
-      <%= link_to t("omniauth.cas.sign_in"), user_omniauth_authorize_path(:cas), class: "button-cas button radius expand" %>
+      <%= link_to t("omniauth.cas.sign_in"), user_omniauth_authorize_path(:cas), class: "button-cas button expanded" %>
     <% end %>
 
     <hr/>
@@ -34,7 +34,7 @@
     <% end %>
 
     <% if feature? :cas_login %>
-      <%= link_to t("omniauth.cas.sign_up"), user_omniauth_authorize_path(:cas), class: "button-cas button radius expand" %>
+      <%= link_to t("omniauth.cas.sign_up"), user_omniauth_authorize_path(:cas), class: "button-cas button expanded" %>
     <% end %>
 
     <hr/>

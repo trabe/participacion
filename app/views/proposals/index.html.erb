@@ -38,7 +38,7 @@
         </div>
       <% end %>
 
-      <%= render "shared/advanced_search", search_path: proposals_path(page: 1)%>
+      <%# render "shared/advanced_search", search_path: proposals_path(page: 1)%>
 
       <%= render 'shared/order_links', i18n_namespace: "proposals.index" %>
 
@@ -57,11 +57,11 @@
         <% if can? :create, Proposal %>
           <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button expanded' %>
         <% end %>
-        
+
         <%= render "shared/tag_cloud", taggable: 'proposal' %>
         <%= render 'categories' %>
         <%= render 'geozones' %>
-        <%= render 'popular' %>
+        <%# render 'popular' %>
       </aside>
     </div>
 

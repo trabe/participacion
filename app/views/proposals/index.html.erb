@@ -42,9 +42,11 @@
 
       <%= render 'shared/order_links', i18n_namespace: "proposals.index" %>
 
-      <div class="show-for-small-only">
-        <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button expanded' %>
-      </div>
+      <% if can? :create, Proposal %>
+        <div class="show-for-small-only">
+          <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button expanded' %>
+        </div>
+      <% end %>
 
       <%= render partial: 'proposals/proposal', collection: @proposals %>
       <%= paginate @proposals %>
@@ -52,7 +54,10 @@
 
     <div class="small-12 medium-3 column">
       <aside class="margin-bottom">
-        <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button expanded' %>
+        <% if can? :create, Proposal %>
+          <%= link_to t("proposals.index.start_proposal"), new_proposal_path, class: 'button expanded' %>
+        <% end %>
+        
         <%= render "shared/tag_cloud", taggable: 'proposal' %>
         <%= render 'categories' %>
         <%= render 'geozones' %>

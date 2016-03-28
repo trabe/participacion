@@ -34,8 +34,12 @@ module Verification
     level_two_verified_at.present? || (residence_verified? && sms_verified?)
   end
 
+  def udc_registered?
+    identities.map(&:provider).include? 'cas'
+  end
+  
   def level_three_verified?
-    verified_at.present?
+    verified_at.present? || udc_registered?
   end
 
   def level_two_or_three_verified?

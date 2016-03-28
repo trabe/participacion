@@ -356,6 +356,8 @@ gl:
     verified_only: "Para votar propostas, %{verify_account}."
     verify_account: tes que facer login co teu usario da UDC
     organizations: As organizacións non poden votar
+    unauthenticated: Necesitas iniciar sesión ou rexistrarte para continuar.
+
   account:
     show:
       title: "A miña conta"
@@ -512,12 +514,16 @@ gl:
     twitter:
       sign_in: Entra con Twitter
       sign_up: Rexístrate con Twitter
+      user_kind: usuario de Twitter
     facebook:
       sign_in: Entra con Facebook
       sign_up: Rexístrate con Facebook
+      user_kind: usuario de Facebook
+
     google_oauth2:
       sign_in: Entra con Google
       sign_up: Rexístrate con Google
+      user_kind: usuario de Google
     cas:
       sign_in: Entra co teu usuario da UDC
       sign_up: Rexístrate co teu usuario da UDC

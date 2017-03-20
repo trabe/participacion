@@ -126,6 +126,10 @@ a {
   }
 }
 
+ul.sidebar-list {
+  font-size: 0.8em;
+}
+
 .f-dropdown {
   li a {
     font-size: $small-font-size;
@@ -598,6 +602,11 @@ footer {
     background: $highlight;
     color: $link-hover;
   }
+}
+
+.geozone a {
+  background: $highlight;
+  color: $link;
 }
 
 h3.sidebar-title {

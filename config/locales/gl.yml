@@ -435,6 +435,8 @@ gl:
     tags_cloud:
       tags: Tendencias
       districts: "Centros"
+      most_used_districts: "Centros con máis propostas"
+      view_all_disctricts: "Ver todos os centros"
       categories: "Categorías"
     print:
       print_button: "Imprimir esta información"

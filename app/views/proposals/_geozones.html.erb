@@ -1,6 +1,11 @@
 <div class="sidebar-divider"></div>
-<h3 class="sidebar-title"><%= t("shared.tags_cloud.districts") %></h3>
+<h3 class="sidebar-title"><%= t("shared.tags_cloud.most_used_districts") %></h3>
 <br>
-<%= link_to map_proposals_path, id: 'map' do %>
-  <%= image_tag("map.jpg") %>
-<% end %>
+
+<div class="geozone">
+  <% @geozones.each do |geozone| %>
+    <%= link_to geozone.name, proposals_path(search: geozone.name) %>
+  <% end %>
+</div>
+
+<%= link_to  t("shared.tags_cloud.view_all_disctricts"), map_proposals_path %>

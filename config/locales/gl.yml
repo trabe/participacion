@@ -14,7 +14,7 @@ gl:
       title: "¿Cómo podo comentar este documento?"
   map:
     title: "Centros"
-    proposal_for_district: "Crea una propuesta para o teu centro"
+    proposal_for_district: "Crea una proposta para o teu centro"
     select_district: "Ámbito de actuación"
     start_proposal: Crea unha proposta
   notifications:

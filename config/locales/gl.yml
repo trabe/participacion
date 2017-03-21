@@ -378,7 +378,7 @@ gl:
       user_permission_title: "Participación"
       user_permission_info: "Coa túa conta xa podes..."
       user_permission_debates: "Participar en debates"
-      user_permission_proposal: "Crear novas propostas"
+      user_permission_proposal: "Crear novas propostas*"
       user_permission_support_proposal: "Apoiar propostas*"
       user_permission_votes: "Participar nas votacións finais*"
       user_permission_verify: "Para poder realizar todas as accións tes entrar co teu usuario da UDC. Podes volver a rexistrarte como tal se así o desexas."
@@ -436,7 +436,7 @@ gl:
       tags: Tendencias
       districts: "Centros"
       most_used_districts: "Centros con máis propostas"
-      view_all_disctricts: "Ver todos os centros"
+      view_all_disctricts: "Ver todos"
       categories: "Categorías"
     print:
       print_button: "Imprimir esta información"

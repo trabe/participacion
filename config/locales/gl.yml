@@ -60,12 +60,12 @@ gl:
       debates: Debates
       proposals: Propostas
     footer:
-      description: "Este portal usa a %{consul}, aplicación de participación cidadá de %{open_source}, liberada polo concello de Madrid. Podes ver o código fonte do fork do proxecto creado para a UDC en %{consul_url_udc}."
+      description: "Este portal usa a %{consul}, aplicación de participación cidadá de %{open_source}, liberada polo concello de Madrid. Podes ver o código fonte do fork do proxecto creado para a UDC no %{consul_url_udc}."
       open_source: "software libre"
       open_source_url: "http://www.gnu.org/licenses/agpl-3.0.html"
       consul: "aplicación Consul"
       consul_url: "https://github.com/ayuntamientomadrid"
-      consul_udc_url: https://github.com/trabe/participacion
+      consul_udc_url: https://git.cixug.es/osl/participacion
       copyright: "Concello de Madrid, %{year}"
       participation_title: "Participación"
       participation_text: "Decide como debe ser a Universidade da Coruña que queres."

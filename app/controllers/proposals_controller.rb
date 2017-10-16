@@ -64,7 +64,7 @@ class ProposalsController < ApplicationController
     def most_used_geozones
       ids = Debate.pluck(:geozone_id) + Proposal.pluck(:geozone_id)
       most_used_geozones_ids = ids.each_with_object(Hash.new(0)) { |id,counts| counts[id] += 1 }.sort_by{ |_,v| v }.last(5).map{|id, _| id}
-      Geozone.find(most_used_geozones_ids)
+      Geozone.find(most_used_geozones_ids.compact)
     end
 
 end

@@ -14,7 +14,7 @@ set :full_app_name, deploysecret(:full_app_name)
 set :server, deploysecret(:server)
 #set :repo_url, 'git@github.com:consul/consul.git'
 # If ssh access is restricted, probably you need to use https access
-set :repo_url, ' http://git.cixug.es/osl/participacion.git'
+set :repo_url, 'http://git.cixug.es/osl/participacion.git'
 
 #set :scm, :git
 set :revision, `git rev-parse --short #{fetch(:branch)}`.strip

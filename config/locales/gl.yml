@@ -90,6 +90,8 @@ gl:
     facebook: "Facebook"
     blog: "Blog"
     youtube: "YouTube"
+    email: "Correo electrónico"
+    email_subject: "Solicitude de contacto dende UDC Decide"
   form:
     error: erro
     errors: erros

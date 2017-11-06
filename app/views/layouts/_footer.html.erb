@@ -1,47 +1,54 @@
 <footer>
-	<div class="row-full">
-		<div class="row">
-			<div class="small-12 large-3 column">
-				<strong>Universidade da Coruña</strong><br/>
-				Rúa da Maestranza, 9<br/>
-				15001 A Coruña<br/>
-				+34 981 167 000<br/>
-			</div>
+  <div class="row-full">
+    <div class="row">
+      <div class="small-12 large-3 column">
+        <strong>Universidade da Coruña</strong><br/>
+        Rúa da Maestranza, 9<br/>
+        15001 A Coruña<br/>
+        +34 981 167 000<br/>
+      </div>
 
-			<div class="small-12 large-4 column gnu">
+      <div class="small-12 large-4 column gnu">
         <p>
           <%= t("layouts.footer.description",
             open_source: link_to(t("layouts.footer.open_source"), t("layouts.footer.open_source_url"), target: "blank"),
             consul:  link_to(t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank"),
-						consul_url_udc: link_to('repositorio da CIXUG', t("layouts.footer.consul_udc_url"))).html_safe
+            consul_url_udc: link_to('repositorio da CIXUG', t("layouts.footer.consul_udc_url"))).html_safe
           %>
         </p>
       </div>
 
-			<div class="small-12 large-3 column">
-				<ul>
-					<li><%= link_to t("layouts.footer.more_info"), page_path('more_information') %></li>
-					<li><%= link_to t("layouts.footer.privacy"), page_path('privacy') %></li>
-				</ul>
-			</div>
+      <div class="small-12 large-3 column">
+        <ul>
+          <li><%= link_to t("layouts.footer.more_info"), page_path('more_information') %></li>
+          <li><%= link_to t("layouts.footer.privacy"), page_path('privacy') %></li>
+        </ul>
+      </div>
 
-			<div class="small-12 large-2 column">
-				<ul>
-					<li>
-						<%= link_to "https://twitter.com/UDC_gal", target: "_blank", title: t("social.twitter") do %>
-			        <span class="sr-only"><%= t("social.twitter") %></span>
-			        <i class="icon-twitter"></i>
-							<%= t("social.twitter") %>
-			      <% end %>
-					</li>
-					<li>
-		        <%= link_to "https://www.facebook.com/udc.gal", target: "_blank", title: t("social.facebook") do %>
-		          <span class="sr-only"><%= t("social.facebook") %></span>
-		          <i class="icon-facebook"></i>
-							<%= t("social.facebook") %>
-		        <% end %>
-					</li>
-			</div>
-		</div>
-	</div>
+      <div class="small-12 large-2 column">
+        <ul>
+          <li>
+            <%= link_to "https://twitter.com/UDC_gal", target: "_blank", title: t("social.twitter") do %>
+              <span class="sr-only"><%= t("social.twitter") %></span>
+              <i class="icon-twitter"></i>
+              <%= t("social.twitter") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "https://www.facebook.com/udc.gal", target: "_blank", title: t("social.facebook") do %>
+              <span class="sr-only"><%= t("social.facebook") %></span>
+              <i class="icon-facebook"></i>
+              <%= t("social.facebook") %>
+            <% end %>
+          </li>
+          <li>
+            <%= mail_to "participacion.vepeu@udc.gal", subject: t("social.email_subject") do %>
+              <span class="sr-only"><%= t("social.email") %></span>
+              <i class="icon-email"></i>
+              <%= t("social.email") %>
+            <% end %>
+          </li>
+      </div>
+    </div>
+  </div>
 </footer>

@@ -209,7 +209,7 @@
   .total-supports {
     color: white;
     text-align: center;
-    font-size: $small-font-size;
+    font-size: 2em; /* Just while we hide the progress to fill more space, it was $small-font-size */
 
     span {
       display: block;

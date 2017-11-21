@@ -251,7 +251,8 @@ body.admin {
   padding: rem-calc(6) rem-calc(12);
 }
 
-.button.small.success {
+.button.small.success,
+.button.small.alert {
   margin-left: rem-calc(12);
 
   &.no-margin {
@@ -348,4 +349,3 @@ body.admin {
 .spending-proposal-info p {
   margin-bottom: 0;
 }
-

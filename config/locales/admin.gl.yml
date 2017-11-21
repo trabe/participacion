@@ -7,6 +7,9 @@ gl:
       hide: Ocultar
       hide_author: Bloquear al autor
       restore: Volver a mostrar
+      erase_user: Borrar usuario
+      confirm_erase_user: Borrar usuario definitivamente
+      confirm_erase_user_alert: Está seguro?
     activity:
       show:
         action: Acción
@@ -219,6 +222,8 @@ gl:
           with_confirmed_hide: Confirmados
           without_confirmed_hide: Pendientes
         title: Usuarios bloqueados
+        erase_user_warning: Está vostede a piques de borrar unha conta de usuario. <br/> Teña en conta que esto non pode desfacerse.
+        erase_user_notice: Usuario borrado correctamente
       show:
         back: Volver
         email: 'Email:'

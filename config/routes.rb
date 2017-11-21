@@ -113,6 +113,7 @@ Rails.application.routes.draw do
       member do
         put :restore
         put :confirm_hide
+        delete :erase
       end
     end
 

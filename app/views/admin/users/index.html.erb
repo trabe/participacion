@@ -9,21 +9,37 @@
   <li id="<%= dom_id(user) %>">
     <%= link_to user.name, admin_user_path(user) %>
 
+    <%= link_to  t("admin.actions.erase_user"), "#",
+          class: "button small alert float-right js-toggle-link",
+          data: { "toggle-selector" => "#erase-account-form" } %>
+
     <%= link_to t("admin.actions.restore"),
           restore_admin_user_path(user, request.query_parameters),
           method: :put,
           data: { confirm: t("admin.actions.confirm") },
           class: "button small success float-right" %>
+
     <% unless user.confirmed_hide? %>
       <%= link_to t("admin.actions.confirm_hide"),
           confirm_hide_admin_user_path(user, request.query_parameters),
           method: :put,
           class: "button small warning float-right" %>
     <% end %>
+
+    <div id="erase-account-form" style="display:none">
+      <div class="callout alert medium-6">
+        <%= t("admin.users.index.erase_user_warning").html_safe %>
+      </div>
+
+      <%= link_to t("admin.actions.confirm_erase_user"),
+            erase_admin_user_path(user.id),
+            method: :delete,
+            class: "button hollow alert",
+            data: { confirm: t("admin.actions.confirm_erase_user_alert") } %>
+    </div>
+
   </li>
 <% end %>
 </ul>
 
 <%= paginate @users %>
-
-

@@ -339,6 +339,42 @@ De ser una operación habitual se aconseja solicitar una herramienta para hacer 
 
 ### _ Otros cambios
 
+#### Borrar Usuarios / Bloquear usuarios
+
+Los usuarios pueden borrar su cuenta desde su menú de usuario. Pulsando en la parte superior de la pantalla "A miña conta" y luego en "Darme de baixa".
+
+Un **administrador** también podrá borrar usuarios que han sido bloqueados. Para ello podrá acceder a la sección de [usuarios bloqueados](http://udc-participa.dev/admin/users) donde se listan los usuarios que han sido bloqueados. Ahí verá un botón para eliminarlo en los botones de acción. Además podrá confirmas su bloqueo (simplemente lo quita de la cola de revisión) o cancelar el bloqueo.
+
+Si se quiere eliminar un usuario del que no se ha solicitado bloqueo previamente hay que bloquearlo en esa sección de moderación > [bloquear usuarios](http://udc-participa.dev/moderation/users).
+
+Téngase en cuenta que:
+* En cuanto se bloquea un usuario desde moderación el usuario no podrá volver a acceder a la web, y todas sus Propuestas/Debates/Comentarios serán ocultados y dejarán de ser visibles en la web.
+
+* La confirmación del bloqueo por parte del administrador simplemente lo quita de la cola de revisión. Además ahí dispone de otras acciones, como cancelar el bloqueo o eliminar el usuario.
+
+* Cuando se elimina un usuario se borra la información del usuario y sus identidades, por lo que el usuario podría volver a registrarse con el CAS.
+
+* Si un usuario se bloquea no podría volver a regirstarse con la misma identidad.
+
+#### Otros textos
+
+La mayoría de los textos de la aplicación están extraidos para facilitar su internacionalización.
+
+Cuando en un fichero erb se encuentre el heper `t`, por ejemplo <%= t "admin.users.name" %> significa que en `config/locales` hay un fichero [yaml](https://learnxinyminutes.com/docs/yaml/) que tiene esa cadena de texto.
+
+Una buena opción para enccontrar donde está definido es buscar por una de las cadenas, si queremos saber dónde se encuentra la cadenadel texto anterior, por ejemplo, podemos buscar "admin:". La cadena en concreto se encontrará anidada bajo `admin` en alguno de los ficheros como sigue:
+
+```
+gl:
+  admin:
+    users:
+      name: "Nome"
+```
+
+Si no se sabe que cadena corresponde a un texto podemos optar por buscar la cadena. Una búsqueda de "Nome" en el directorio dará varios resultados, entre los que podemos encontrar el anterior.
+
+#### Otros cambios
+
 Otro tipo de cambios de funcionamiento en la plataforma requieren conocimientos de rails y del sistema cónsul más en detalle.
 
 De existir interés en algún tema concreto pueden contactar con [nosotros](mailto:contact@trabe.io).

@@ -1,5 +1,5 @@
 > Documentación de UDCDecide.
-> Versión 1: Noviembre 2017
+> Versión 3: Marzo 2018
 
 # Manual de instalación y cambios básicos en UDCDecide
 
@@ -200,6 +200,7 @@ En producción hacemos lo mismo, pero usando las semillas en `seeds`:
 
 Estos datos iniciales, semillas o _seeds_, se pueden configurar en `db/seeds.rb` y `db/dev-seeds.rb`.
 
+
 ## 2.4 Correr la app (desarrollo)
 
 Usaremos el comando de rails [`rails server`](http://guides.rubyonrails.org/command_line.html#rails-server), llamándolo así arrancaremos el servidor en el puerto 3000:
@@ -227,12 +228,17 @@ La máquina de producción en la UDC es, actualmente la que se encuentra en:
 * Usuario con privilegios de sudo: `usuario`
 * Usuario de deploy: `participa`
 
-> Solicitar passwords para los usuarios a: participacion.vepeu@udc.gal
+> Solicitar passwords para los usuarios al [servizo de informática](https://www.udc.es/sic/index.html)
+
+De no existir máquina de produción, consultar también con el [servizo de informática](https://www.udc.es/sic/index.html)
+para obtener una.
 
 ### 2.5.2 Configuración
 
-> * Las cosas que cambian en producción
-> * apache? -> David
+La configuración es la misma que para la máquina de desarrollo, pero en las secciones de configuración que se indican, los datos se meten bajo 'desarrollo:'
+
+Además, hay que instalar y configurar Passenger y Apache. Como se explica [aquí]
+(https://www.phusionpassenger.com/library/install/apache/install/oss/trusty).
 
 ## 2.6 Despliegue
 
@@ -240,7 +246,7 @@ Hay que estar en la red de la universidad, sino no se podrá realizar el desplie
 
 El script `config/deploy.rb` automatiza todo el proceso, así que sólo tendremos que ejecutar esta tarea de [capistrano](http://capistranorb.com/):
 
-      $ bundle exec cap deploy
+      $ bundle exec cap production deploy
 
 Cuando acabe el comando, que puede tardar varios minutos, lo que tengamos en la rama `udcdecide` y empujado al repositorio de la UDC estará correctamente desplegado en http://udcdecide.udc.gal.
 
@@ -248,9 +254,48 @@ Cuando acabe el comando, que puede tardar varios minutos, lo que tengamos en la 
 
 Explicaciones de algunos cambios que se pueden realizar en la plataforma.
 
-## 3.1 Cambiar textos html
+Para realizar cualquiera de los cambios que se detallan es recomendable tener el sistema instalado en desarrollo.
 
-### 3.1.1 Máis información / Política de privacidade / etc.
+Para ello hay que seguir los pasos de la <a href="#instalacion">sección 2</a>
+
+
+
+## 3.1 Pasos comunes para cambios en la plataforma
+
+Los cambios que se indican en los puntos siguientes requieren haber conover el manejo del software que se lista en el punto 2.1.
+
+En concreto, para poder realizar cualquier cambio se tiene que hacer:
+
+1. Clonar el repositorio: `git clone git@git.cixug.es:osl/participacion.git`
+
+2. Entar en el directorio: `cd participacion`
+
+3. Ir a la rama de udcparticipa: `git checkout udcdecide`
+
+4. Seguir los pasos de Instalación del sistema del punto 2.3
+
+5. Correr la aplicación en local, como se explica en el punto 2.4
+
+6. Realizar los cambios que se consideren necesarios. Se pueden ir viendo en local (se explica en el cada punto dónde).
+
+5. Añadir al commit, poner un mensaje descriptivo y empujar al repositorio remoto
+
+   ````
+   git add .
+   git commit -m "Añadidas condiciones a más información"
+   git push
+   ````
+
+8. Desplegar en producción: `bundle exec cap production deploy`
+
+   ​
+
+
+Si ya tuviésemos el repositorio descargado y el sistema instalado en desarrollo bastaría con comprobar que no tenemos cambios locales, y, desde el directorio de participa hacer `git pull` o `git fetch` y `git merge` y continuar desde el punto 5.
+
+## 3.2 Cambiar textos html
+
+### 3.2.1 Máis información / Política de privacidade / etc.
 
 Son ficheiros ERB (Embedded Ruby) que generan html. Se encuentran en `app/views/pages/`, en concreto los que nos interesan son:
 
@@ -277,15 +322,15 @@ Para que los cambios se hagan efectivos en producción habría además que hacer
   $ git add app/views/pages/more_information.html.erb
   $ git commit -m "Modificadas instruccións de 'Máis información'"
   $ git push
-  $ bundle exec cap deploy
+  $ bundle exec cap production deploy
 ```
 
-### 3.1.2 Pie de página
+### 3.2.2 Pie de página
 
 El _footer_ o pie de página se encuentra en `app/views/layouts/_footer.html.erb` y los pasos para modificarlo son los mismos que en el caso de las páginas de información.
 
 
-## 3.2 Nombres de los centros
+## 3.3 Nombres de los centros
 
 Los "centros" son simplemente etiquetas especiales de clasificación de elementos del portal. Cuando se actualizó el primer portal participativo de la UDC a la última versión de Cónsul todavía era un elemento novedoso, por lo que no se dispone de una  herramienta de administración visual.
 
@@ -340,7 +385,7 @@ Se recomienda no eliminar ninguna, pero si se comprueba que no hay ningún eleme
 De ser una operación habitual se aconseja solicitar una herramienta para hacer estas operaciones más seguras y cómodas. Ya sea en forma de herramienta de línea de comandos o una opción en administración.
 
 
-## 3.3 Borrar Usuarios / Bloquear usuarios
+## 3.4 Borrar Usuarios / Bloquear usuarios
 
 Los usuarios pueden borrar su cuenta desde su menú de usuario. Pulsando en la parte superior de la pantalla "A miña conta" y luego en "Darme de baixa".
 
@@ -357,7 +402,7 @@ Téngase en cuenta que:
 
 * Si un usuario se bloquea no podría volver a regirstarse con la misma identidad.
 
-## 3.4 Otros textos
+## 3.5 Otros textos
 
 La mayoría de los textos de la aplicación están extraidos para facilitar su internacionalización.
 
@@ -378,7 +423,17 @@ Si no se sabe que cadena corresponde a un texto podemos optar por buscar la cade
 
 Otro tipo de cambios de funcionamiento en la plataforma requieren conocimientos de rails y del sistema cónsul más en detalle.
 
+### Errores
+
+Siempre con conocimientso de Rails y cónsul, ante errors del sistema se puede analizar el fichero de log, que está en `log/production.log` en producción y `log/development.log` en desarrollo.
+
+
+
+### Outros
+
 De existir interés en algún tema concreto pueden contactar con [participacion.vepeu@udc.gal](mailto:participacion.vepeu@udc.gal).
+
+
 
 ---
 
